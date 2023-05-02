@@ -1,0 +1,39 @@
+.form-group__icon {
+    position: relative;
+}
+
+.form-group__icon i[class*="icon"] {
+    position: absolute;
+    padding: 13px 11px;
+    font-size: 18px;
+    color: #2B50B4;
+}
+
+.form-group__icon:before {
+    position: absolute;
+    content: "";
+    top: 11px;
+    height: calc(100% - 22px);
+    border-right: 1px solid #E6E6E6;
+    left: 41px;
+}
+
+.form-group__icon .form-control {
+    padding-left: 53px;
+}
+
+.form-group__icon .form-control::-webkit-input-placeholder {
+    color: #A8A8A8;
+}
+
+.form-group__icon .form-control::-moz-placeholder {
+    color: #A8A8A8;
+}
+
+.form-group__icon .form-control:-ms-input-placeholder {
+    color: #A8A8A8;
+}
+
+.form-group__icon .form-control::placeholder {
+    color: #A8A8A8;
+}

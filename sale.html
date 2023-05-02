@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@buildwithangga" />
+    <meta name="description" content="Promo kelas online untuk mempelajari software development dan ui/ux design bersama mentor berpengalaman di BuildWithAngga." />
+    <meta name="keywords" content="Flutter, HTML, CSS, JavaScript, Python, Web Development, PHP, Laravel, React Native, React JS, Data Scientist, Data Analyst, Android, Kotlin, and more." />
+    <meta name="author" content="BuildWithAngga" />
+    <meta image="images/meta/kelas-online-belajar-ui-ux-design-dan-web-development-build-with-angga.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="images/meta/kelas-online-belajar-ui-ux-design-dan-web-development-build-with-angga.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Promo Flash Sale Kelas Online Design Coding BuildWithAngga" />
+    <meta property="og:site_name" content="BuildWithAngga" />
+    <meta property="og:url" content="https://buildwithangga.com/sale" />
+    <meta property="og:description" content="Promo kelas online untuk mempelajari software development dan ui/ux design bersama mentor berpengalaman di BuildWithAngga." />
+
+    <!-- {{-- main theme --}} -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- {{-- Bootsrap 5 cdn --}} -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/nd.css" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/favicon.ico" />
+
+    <!-- {{-- Swiper --}} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <script defer src="scripts/notification-icon.js"></script>
+  </head>
+
+  <body>
+    <div class="d-none d-sm-block">
+      <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
+        <div class="container-fluid">
+          <!-- {{-- Logo --}} -->
+          <a class="navbar-brand" href="">
+            <img src="images/logo_bwa_new.svg" width="50" height="50" class="d-inline-block align-top" alt="logo buildwithangga" />
+          </a>
+          <!-- {{-- MOBILE Toggler Button --}} -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- {{-- Menus --}} -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- {{-- LEFT Menu --}} -->
+            <ul class="basic-menus navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- @if (\App\Models\Kelas::where('is_promo', 1)->count() > 1) -->
+              <li class="nav-item">
+                <a class="nav-link" href="sale.html"> Flash Sale </a>
+              </li>
+              <!-- @endif -->
+
+              <!-- {{-- Kelas --}} -->
+              <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="listKelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Kelas </a>
+                <ul class="dropdown-menu __2022" aria-labelledby="listKelasDropdown">
+                  <li class="sidecontent">
+                    <p>Trusted by 900K+ Students</p>
+                    <h5>
+                      Build Your <br />
+                      Future Career
+                    </h5>
+                    <p>
+                      Explore kelas gratis dan berbayar <br />
+                      bersama mentor expert
+                    </p>
+                    <a href="" class="btn btn-primary">All Courses</a>
+                    <img src="images/silhouette-project-bwa.png" alt="icon buildwith angga" />
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="row row-cols-lg-3 row-cols-2 dd-item-list">
+                      <div class="col">
+                        <a href="uiux-design">
+                          <p>UI/UX Design</p>
+                        </a>
+                        <a href="graphic-design">
+                          <p>Graphic Design</p>
+                        </a>
+                        <a href="web-development">
+                          <p>Web Development</p>
+                        </a>
+                        <a href="data-analysis">
+                          <p>Data Analysis</p>
+                        </a>
+                        <a href="android-development">
+                          <p>Android Development</p>
+                        </a>
+                        <a href="ios-development">
+                          <p>iOS Development</p>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="html-css">
+                          <p>HTML & CSS</p>
+                        </a>
+                        <a href="javascript">
+                          <p>JavaScript</p>
+                        </a>
+                        <a href="php">
+                          <p>PHP</p>
+                        </a>
+                        <a href="python">
+                          <p>Python</p>
+                        </a>
+                        <a href="kotlin">
+                          <p>Kotlin</p>
+                        </a>
+                        <a href="java">
+                          <p>Java</p>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a href="figma">
+                          <p>Figma</p>
+                        </a>
+                        <a href="laravel">
+                          <p>Laravel</p>
+                        </a>
+                        <a href="flutter">
+                          <p>Flutter</p>
+                        </a>
+                        <a href="react-native">
+                          <p>React Native</p>
+                        </a>
+                        <a href="vue-js">
+                          <p>Vue JS</p>
+                        </a>
+                        <a href="react-js">
+                          <p>React JS</p>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- {{-- Alur Belajar --}} -->
+              <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="listAlurBelajarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Alur Belajar </a>
+                <ul class="dropdown-menu __2022" aria-labelledby="listAlurBelajarDropdown">
+                  <li class="sidecontent">
+                    <p>Trusted by 900K+ Students</p>
+                    <h5>
+                      Follow Our <br />
+                      Best Roadmap
+                    </h5>
+                    <p>
+                      Panduan mentor expert untuk <br />
+                      belajar jadi lebih terarah
+                    </p>
+                    <a href="" class="btn btn-primary">All Roadmap</a>
+                    <img src="images/silhouette-roadmap-bwa.png" alt="roadmap" />
+                  </li>
+                  <div class="dd-item-list">
+                    <!-- {{-- Full-Stack Website Developer --}} -->
+                    <li class="dropdown-item">
+                      <a href="">
+                        <img src="images/ic_appcode.svg" class="icon" alt="bwa-icon" />
+                      </a>
+                      <a href="">
+                        <h3 class="title">Full-Stack Website Developer</h3>
+                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
+                      </a>
+                    </li>
+                    <!-- {{-- UI/UX Designer --}} -->
+                    <li class="dropdown-item">
+                      <a href="">
+                        <img src="images/ic_design.svg" class="icon" alt="bwa-icon" />
+                      </a>
+                      <a href="">
+                        <h3 class="title">UI/UX Designer</h3>
+                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
+                      </a>
+                    </li>
+                    <!-- {{-- Mobile App Developer --}} -->
+                    <li class="dropdown-item">
+                      <a href="">
+                        <img src="images/ic_flutter.svg" class="icon" alt="bwa-icon" />
+                      </a>
+                      <a href="">
+                        <h3 class="title">Mobile App Developer</h3>
+                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
+                      </a>
+                    </li>
+                    <!-- {{-- Product Manager --}} -->
+                    <li class="dropdown-item">
+                      <a href="">
+                        <img src="images/ic_flag.svg" class="icon" alt="bwa-icon" />
+                      </a>
+                      <a href="">
+                        <h3 class="title">Product Manager</h3>
+                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
+                      </a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+
+              <!-- {{-- Bootcamp --}} -->
+              <li class="nav-item">
+                <a class="nav-link" href=""> Bootcamp </a>
+              </li>
+            </ul>
+
+            <!-- {{-- RIGHT Menu --}} -->
+            <ul class="navbar-nav right-menu ms-auto">
+              <li class="nav-item d-flex align-items-center">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="CTRL+P" data-bs-custom-class="font-poppins">
+                  <button type="button" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
+                    <img class="search" src="images/ic_search.svg" alt="search buildwith angga" />
+                  </button>
+                </span>
+              </li>
+
+              <!-- @if (Auth::check()) -->
+              <!-- New Notification Icon -->
+              <div id="app">
+                <li class="nav-item d-flex align-items-center">
+                  <button type="button" class="nav-icon position-relative">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.0186 2.91016C8.70862 2.91016 6.01862 5.60016 6.01862 8.91016V11.8002C6.01862 12.4102 5.75862 13.3402 5.44862 13.8602L4.29862 15.7702C3.58862 16.9502 4.07862 18.2602 5.37862 18.7002C9.68862 20.1402 14.3386 20.1402 18.6486 18.7002C19.8586 18.3002 20.3886 16.8702 19.7286 15.7702L18.5786 13.8602C18.2786 13.3402 18.0186 12.4102 18.0186 11.8002V8.91016C18.0186 5.61016 15.3186 2.91016 12.0186 2.91016Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M13.8719 3.19945C12.6626 2.85504 11.3812 2.85504 10.1719 3.19945C10.4619 2.45945 11.1819 1.93945 12.0219 1.93945C12.8619 1.93945 13.5819 2.45945 13.8719 3.19945V3.19945Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.33769 20.6179 9.02132 19.8557 9.01953 19.0605"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                      />
+                    </svg>
+
+                    <img class="position-absolute" src="images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
+                  </button>
+                </li>
+              </div>
+
+              <!-- {{-- User Avatar --}} -->
+              <!-- {{-- <li class="nav-item d-none d-sm-block d-lg-flex dropdown"> --}} -->
+              <li class="nav-item d-none d-sm-flex flex-column justify-content-start align-items-start dropdown">
+                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user-name">
+                    Halo, UserName
+                    <!-- @if (Auth::user()->hasRole('author'))
+                                          <span class="badge-blue" style="margin-left:6px;padding: 5px 10px;font-weight: 700;font-size: 12px;line-height: 18px;">Mentor</span>
+                                      @endif -->
+                  </span>
+                  <img class="user-photo" src="images/default-avatar.svg" alt="username" />
+                </a>
+                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left: auto; right: 0">
+                  <!-- @if (Auth::user()->hasRole('author'))
+                                      <li>
+                                          <a class="dropdown-item"
+                                              href="">
+                                              Dashboard Mentor
+                                          </a>
+                                      </li>
+                                      <li><a class="dropdown-item" href="">Settings</a></li>
+                                      <li><a class="dropdown-item" href="">Logout</a></li>
+                                  @else -->
+                  <li><a class="dropdown-item" href="">My Courses</a></li>
+                  <li><a class="dropdown-item" href=""> My Certificates </a></li>
+                  <li><a class="dropdown-item" href="">Progress Belajar</a></li>
+                  <li><a class="dropdown-item" href="">Settings</a></li>
+                  <li><a class="dropdown-item" href="">Logout</a></li>
+                  <!-- @endif -->
+                </ul>
+              </li>
+              <!-- @else -->
+              <!-- <li class="nav-item wrap-btn-daftar">
+                              <a class="btn btn-secondary btn-auth btn-daftar d-xl-none"
+                                  href="">Masuk</a>
+                              <button
+                                  class="btn btn-secondary btn-auth btn-daftar btn-auth d-none d-xl-flex justify-content-center align-items-center">Masuk/Daftar</button>
+                          </li> -->
+              <!-- @if (!Route::currentRouteNamed('welcome'))
+                              <li class="nav-item">
+                                  <a class="btn btn-primary btn-masuk btn-auth {{ Route::currentRouteName() == 'front.start.index' ? 'd-none' : '' }}"
+                                      href="">Daftar</a>
+                              </li>
+                          @endif -->
+              <!-- @endif -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="py-5 search-module d-none d-sm-block">
+      <header class="d-flex flex-column align-items-center gap-3 px-3">
+        <h1 class="header-primary mb-0">Flash Sale</h1>
+        <p class="subtitle-primary text-center">
+          Belajar dengan mentor expert dengan<br class="desktop" />
+          harga yang lebih terjangkau 😎
+        </p>
+      </header>
+
+      <article class="container py-5">
+        <div class="mb-4">
+          <h1 class="mb-4">
+            <header class="front-text-group">
+              <p class="text-support text-primary-green">Best Sale Ever</p>
+              <h2 class="header-primary mb-0">
+                Belajar Jadi Lebih <br class="desktop" />
+                Mudah & Asyik
+              </h2>
+            </header>
+          </h1>
+        </div>
+        <section class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 gy-4">
+          <!-- @forelse ($courses as $course) -->
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-3.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-2.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-2.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-3.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col item-flash">
+            <div class="course-card-responsive">
+              <div class="d-flex align-items-start flex-row flex-md-column course-card-content">
+                <a
+                  href="javascript:void(0);"
+                  class="position-relative z-10 thumbnailContainer"
+                  onclick="trailerSet(this)"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTrailerCourse"
+                  data-trailer="WrjkHX5HtOs"
+                  data-course-name="WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio"
+                >
+                  <img src="images/play_btn_blue.svg" alt="trailer - WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio" class="_btn-play" />
+                  <img src="images\thumbnail\thumbnail_roadmap-1.webp" class="thumbnail-course" alt="Kelas WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio di BuildWith Angga" />
+                </a>
+                <div class="course-detail">
+                  <a class="link-course-title" href="https://buildwithangga.com/kelas/wordpress-dan-elementor-mastery-bikin-website-professional-dan-menarik-untuk-portfolio?thumbnail=wOkiT7C96Y.652&amp;main_leads=salepage">
+                    <h3 class="course-name line-clamp-mobile line-clamp">WordPress dan Elementor Mastery: Bikin Website Professional dan Menarik Untuk Portfolio</h3>
+                  </a>
+                  <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                    <span class="disc-price blink_me">Rp 455,000 </span>
+                    <span class="origin-price">Rp 225,000 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-footer mt-auto">
+                <div class="star-rating w-100 d-sm-flex">
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <img src="https://buildwithangga.com/themes/front/images/ic_star.svg" alt="ic_star" />
+                  <span> (217) </span>
+                </div>
+                <div class="d-none d-md-block">
+                  <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" src="https://buildwithangga.com/themes/front/images/ic_lv_hard.svg" class="icon-level" alt="ic_level" aria-label="All Levels" />
+                </div>
+                <div class="d-block d-md-none">
+                  <div class="d-flex justify-content-start align-items-center mentor-wrapper">
+                    <img src="/storage/assets/images/avatars/foto.png" class="author_avatar" alt="author avatar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- @empty
+          <div class="col">
+            <p>There is no course</p>
+          </div>
+          @endforelse -->
+        </section>
+      </article>
+    </section>
+
+    <!-- @if (isPhone())
+    <section class="--bwa-mobile-version d-block d-sm-none">@include('front.mobile.front.sale')</section>
+    @endif -->
+  </body>
+</html>

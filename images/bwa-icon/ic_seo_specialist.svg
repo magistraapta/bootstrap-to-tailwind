@@ -1,0 +1,47 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_987_708)">
+<circle cx="24" cy="24" r="24" fill="#E8EFFF"/>
+<mask id="mask0_987_708" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<circle cx="24" cy="24" r="24" fill="#E8EFFF"/>
+</mask>
+<g mask="url(#mask0_987_708)">
+<circle cx="5" cy="40" r="1" transform="rotate(-90 5 40)" fill="#C6D4F2"/>
+<circle cx="-4.37114e-08" cy="40" r="1" transform="rotate(-90 -4.37114e-08 40)" fill="#C6D4F2"/>
+<circle cx="10" cy="40" r="1" transform="rotate(-90 10 40)" fill="#C6D4F2"/>
+<circle cx="5" cy="36" r="1" transform="rotate(-90 5 36)" fill="#C6D4F2"/>
+<circle cx="-4.37114e-08" cy="36" r="1" transform="rotate(-90 -4.37114e-08 36)" fill="#C6D4F2"/>
+<circle cx="10" cy="36" r="1" transform="rotate(-90 10 36)" fill="#C6D4F2"/>
+<circle cx="5" cy="32" r="1" transform="rotate(-90 5 32)" fill="#C6D4F2"/>
+<circle cx="-4.37114e-08" cy="32" r="1" transform="rotate(-90 -4.37114e-08 32)" fill="#506FFF"/>
+<circle cx="10" cy="32" r="1" transform="rotate(-90 10 32)" fill="#C6D4F2"/>
+<circle cx="5" cy="28" r="1" transform="rotate(-90 5 28)" fill="#C6D4F2"/>
+<circle cx="-4.37114e-08" cy="28" r="1" transform="rotate(-90 -4.37114e-08 28)" fill="#C6D4F2"/>
+<circle cx="10" cy="28" r="1" transform="rotate(-90 10 28)" fill="#F4A42B"/>
+<rect x="19" y="14" width="28" height="41" rx="5" fill="#B7C8EC"/>
+<rect x="22" y="12" width="34" height="42.5" rx="3" fill="#6A84FF"/>
+<rect x="22" y="18.375" width="34" height="42.5" fill="#506FFF"/>
+<mask id="mask1_987_708" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="26" y="21" width="12" height="12">
+<circle cx="32" cy="27" r="6" fill="#F65D6D"/>
+</mask>
+<g mask="url(#mask1_987_708)">
+<circle cx="32" cy="27" r="6" fill="#6F89FF"/>
+<circle cx="32" cy="25" r="2" fill="white"/>
+<circle cx="32" cy="34" r="6" fill="white"/>
+</g>
+<rect x="26" y="37" width="15" height="1.73611" rx="0.868056" fill="white"/>
+<rect x="26" y="40.4722" width="10" height="1.73611" rx="0.868056" fill="#A7B7FF"/>
+<circle cx="19.5" cy="15.5" r="7.5" fill="#48C5A1"/>
+<g clip-path="url(#clip1_987_708)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.9056 20C20.3077 20 20.6382 19.6829 20.655 19.2812L20.6807 18.6627C20.7556 18.6347 20.8292 18.6042 20.9014 18.5712L21.3571 18.9904C21.6529 19.2626 22.1109 19.2531 22.3952 18.9688L22.9688 18.3952C23.2531 18.1109 23.2626 17.6529 22.9904 17.357L22.5712 16.9014C22.6042 16.8292 22.6347 16.7556 22.6627 16.6807L23.2812 16.655C23.6829 16.6382 24 16.3077 24 15.9056V15.0944C24 14.6923 23.6829 14.3618 23.2812 14.3451L22.6627 14.3193C22.6347 14.2444 22.6042 14.1708 22.5712 14.0986L22.9904 13.6429C23.2626 13.347 23.2531 12.8891 22.9688 12.6048L22.3952 12.0312C22.1109 11.7469 21.6529 11.7374 21.357 12.0096L20.9014 12.4288C20.8292 12.3958 20.7556 12.3653 20.6807 12.3373L20.655 11.7188C20.6382 11.3171 20.3077 11 19.9056 11H19.0944C18.6923 11 18.3618 11.3171 18.3451 11.7188L18.3193 12.3373C18.2444 12.3652 18.1708 12.3958 18.0986 12.4288L17.6429 12.0096C17.347 11.7374 16.8891 11.7469 16.6048 12.0312L16.0312 12.6048C15.7469 12.8891 15.7374 13.347 16.0096 13.6429L16.4288 14.0986C16.3958 14.1708 16.3652 14.2444 16.3373 14.3193L15.7188 14.3451C15.3171 14.3618 15 14.6923 15 15.0944V15.9056C15 16.3077 15.3171 16.6382 15.7188 16.655L16.3373 16.6807C16.3653 16.7556 16.3958 16.8292 16.4288 16.9014L16.0096 17.357C15.7374 17.6529 15.7469 18.1109 16.0312 18.3952L16.6048 18.9688C16.8891 19.2531 17.347 19.2626 17.6429 18.9904L18.0986 18.5712C18.1708 18.6042 18.2444 18.6347 18.3193 18.6627L18.3451 19.2812C18.3618 19.6829 18.6923 20 19.0944 20H19.9056ZM19.5 17C20.3284 17 21 16.3284 21 15.5C21 14.6716 20.3284 14 19.5 14C18.6716 14 18 14.6716 18 15.5C18 16.3284 18.6716 17 19.5 17Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_987_708">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+<clipPath id="clip1_987_708">
+<rect width="9" height="9" fill="white" transform="translate(15 11)"/>
+</clipPath>
+</defs>
+</svg>
