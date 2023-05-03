@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <meta name="description" content="Beberapa benefit utama ketika mengikuti dan belajar di kelas online ui ux dan koding di BuildWithAngga." />
-    <meta name="keywords" content="kelas ui ux, kelas website developer, kelas flutter, kelas react js, kelas online, bwa, buildwithAngga" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@buildwithangga" />
+    <meta name="description" content="BuildWithAngga menyediakan kelas online terpercaya untuk belajar UI/UX Design, Web/Mobile Development, Data Science, dan Freelancer dari tingkat pemula ke mahir." />
+    <meta name="keywords" content="Belajar, UI/UX Design, Web Development, Data Science, Freelancer, Kelas Online, BuildWithAngga" />
     <meta name="author" content="BuildWithAngga" />
-    <meta image="https://buildwithangga.com/themes/front/images/meta/kelas-online-belajar-ui-ux-design-dan-web-development-build-with-angga.png" />
-    <meta property="og:image" content="https://buildwithangga.com/themes/front/images/meta/kelas-online-belajar-ui-ux-design-dan-web-development-build-with-angga.png" />
+
+    <meta image="images/meta/kelas-online-belajar-ui-ux-design-dan-web-development-build-with-angga.png" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Benefit Utama Belajar Online Coding & UI/UX Design di BuildWithAngga" />
+    <meta property="og:image" content="images/meta/kelas-online-belajar-ui-ux-design-dan-web-development-build-with-angga.png" />
+
+    <meta property="og:title" content="Kelas Belajar Design & Web Development BuildWithAngga" />
     <meta property="og:site_name" content="BuildWithAngga" />
-    <meta property="og:url" content="https://buildwithangga.com/buildwithangga-vs-others" />
-    <meta property="og:description" content="Beberapa benefit utama ketika mengikuti dan belajar di kelas online ui ux dan koding di BuildWithAngga." />
+    <meta property="og:url" content="https://buildwithangga.com/" />
+    <meta property="og:description" content="BuildWithAngga menyediakan kelas online terpercaya untuk belajar UI/UX Design, Web/Mobile Development, Data Science, dan Freelancer dari tingkat pemula ke mahir." />
 
     <!-- {{-- main theme --}} -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     <!-- {{-- Bootsrap 5 cdn --}} -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/nd.css" />
 
     <!-- favicon -->
@@ -33,9 +33,23 @@
     <!-- {{-- Swiper --}} -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-    <script defer src="scripts/notification-icon.js"></script>
+    <script src="scripts/notification-icon.js"></script>
+
+    <!-- {{-- Flickty slider library --}} -->
+    <link rel="stylesheet" href="vendor/flickity/flickity.css" />
+    <script src="vendor/flickity/flickity.pkgd.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/hero-aos-animation.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="scripts/desktop-navbar.js"></script>
   </head>
   <body>
+    <!-- navbar -->
     <div class="d-none d-sm-block">
       <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
         <div class="container-fluid">
@@ -222,7 +236,7 @@
 
               <!-- @if (Auth::check()) -->
               <!-- New Notification Icon -->
-              <div id="app">
+              <!-- <div id="app">
                 <li class="nav-item d-flex align-items-center">
                   <button type="button" class="nav-icon position-relative">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -252,22 +266,22 @@
                     <img class="position-absolute" src="images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
                   </button>
                 </li>
-              </div>
+              </div> -->
 
               <!-- {{-- User Avatar --}} -->
               <!-- {{-- <li class="nav-item d-none d-sm-block d-lg-flex dropdown"> --}} -->
-              <li class="nav-item d-none d-sm-flex flex-column justify-content-start align-items-start dropdown">
+              <!-- <li class="nav-item d-none d-sm-flex flex-column justify-content-start align-items-start dropdown">
                 <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="user-name">
-                    Halo, UserName
-                    <!-- @if (Auth::user()->hasRole('author'))
+                    Halo, UserName -->
+              <!-- @if (Auth::user()->hasRole('author'))
                                       <span class="badge-blue" style="margin-left:6px;padding: 5px 10px;font-weight: 700;font-size: 12px;line-height: 18px;">Mentor</span>
                                   @endif -->
-                  </span>
+              <!-- </span>
                   <img class="user-photo" src="images/default-avatar.svg" alt="username" />
                 </a>
-                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left: auto; right: 0">
-                  <!-- @if (Auth::user()->hasRole('author'))
+                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left: auto; right: 0"> -->
+              <!-- @if (Auth::user()->hasRole('author'))
                                   <li>
                                       <a class="dropdown-item"
                                           href="">
@@ -277,21 +291,19 @@
                                   <li><a class="dropdown-item" href="">Settings</a></li>
                                   <li><a class="dropdown-item" href="">Logout</a></li>
                               @else -->
-                  <li><a class="dropdown-item" href="">My Courses</a></li>
+              <!-- <li><a class="dropdown-item" href="">My Courses</a></li>
                   <li><a class="dropdown-item" href=""> My Certificates </a></li>
                   <li><a class="dropdown-item" href="">Progress Belajar</a></li>
                   <li><a class="dropdown-item" href="">Settings</a></li>
-                  <li><a class="dropdown-item" href="">Logout</a></li>
-                  <!-- @endif -->
-                </ul>
-              </li>
+                  <li><a class="dropdown-item" href="">Logout</a></li> -->
+              <!-- @endif -->
+              <!-- </ul>
+              </li> -->
               <!-- @else -->
-              <!-- <li class="nav-item wrap-btn-daftar">
-                          <a class="btn btn-secondary btn-auth btn-daftar d-xl-none"
-                              href="">Masuk</a>
-                          <button
-                              class="btn btn-secondary btn-auth btn-daftar btn-auth d-none d-xl-flex justify-content-center align-items-center">Masuk/Daftar</button>
-                      </li> -->
+              <li class="nav-item wrap-btn-daftar">
+                <a class="btn btn-secondary btn-auth btn-daftar d-xl-none" href="">Masuk</a>
+                <button class="btn btn-secondary btn-auth btn-daftar btn-auth d-none d-xl-flex justify-content-center align-items-center" style="width: 160px !important">Masuk/Daftar</button>
+              </li>
               <!-- @if (!Route::currentRouteNamed('welcome'))
                           <li class="nav-item">
                               <a class="btn btn-primary btn-masuk btn-auth {{ Route::currentRouteName() == 'front.start.index' ? 'd-none' : '' }}"
@@ -305,264 +317,539 @@
       </nav>
     </div>
 
-    <section id="bwavsothers" class="my-5">
-      <div class="container">
-        <h1 class="mb-4">
-          <header class="front-text-group">
-            <p class="text-support text-primary-green">#EveryoneDeserveBetter</p>
+    <div class="d-none d-sm-block">
+      <section class="d-none d-md-block hero-banner-one pb-50" id="hero-section">
+        <div class="container">
+          <div class="row d-flex justify-content-start align-items-center gx-5">
+            <!-- {{-- Hero Headline --}} -->
+            <div class="col-lg-5 col-12 px-lg-0">
+              <h3 class="text-primary-green hero-label mb-0">#SpiritOfLearning</h3>
+
+              <h1 class="header-title mb-0">
+                Your Dream Career <br />
+                Starts With Us
+              </h1>
+              <p class="subtitle">BuildWithAngga menyediakan kelas UI/UX design, Web Development, dan Freelancer untuk pemula.</p>
+              <div class="d-flex justify-content-start align-items-center">
+                <a class="btn btn-primary btn-free-course mb-0" href="">Alur Belajar</a>
+                <a class="btn btn-secondary" href="">Panduan Karir</a>
+              </div>
+            </div>
+
+            <!-- {{-- START: Hero Image --}} -->
+            <div class="col-lg-7 col-12 d-none d-sm-flex mt-md-5 mt-lg-0 justify-content-end px-lg-0">
+              <a href="" class="d-flex justify-content-center justify-content-lg-start align-items-start">
+                <div class="hero-image position-relative">
+                  <!-- {{-- START: Progress illustration --}} -->
+                  <div class="progress-illustration__" data-aos="zoom-in" data-aos-delay="2700" data-aos-duration="600" data-aos-easing="ease-in-out-back">
+                    <h5 class="my_progress">My Progress</h5>
+                    <!-- {{-- Flutter --}} -->
+                    <div class="progress-item__ flutter">
+                      <div class="logo-container">
+                        <img src="images/logo/flutter-logo 2.svg" alt="logo" />
+                      </div>
+
+                      <div class="progress-detail">
+                        <h6>App Developer</h6>
+                        <div class="status">
+                          <div class="progress-bar-container">
+                            <div class="bar"></div>
+                          </div>
+                          <span> 0% </span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- {{-- Figma --}} -->
+                    <div class="progress-item__ figma">
+                      <div class="logo-container">
+                        <img src="images/logo/figma-logomark.svg" alt="logo" />
+                      </div>
+
+                      <div class="progress-detail">
+                        <h6>UI/UX Designer</h6>
+                        <div class="status">
+                          <div class="progress-bar-container">
+                            <div class="bar"></div>
+                          </div>
+                          <span> 0% </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- {{-- END: Progress illustration --}} {{-- Main Image --}} -->
+                  <img src="images/landing-page/hero/belajar-design-code-untuk-bangun-karir-impian-buildwith-angga.webp" alt="BuildWithAngga" class="img-fluid" data-aos="zoom-in" data-aos-duration="600" data-aos-easing="ease-in-out-back" />
+
+                  <!-- {{-- START: GROUP CHAT illustration --}} -->
+                  <div class="group-chat-illustration" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="600" data-aos-easing="ease-in-out-back">
+                    <img src="images/landing-page/hero/group-chat-illustration-buildwith-angga.webp" alt="BuildWithAngga" />
+                    <div class="chat-items">
+                      <img src="images/landing-page/hero/chat-1.webp" alt="BuildWithAngga" data-aos="fade-up" data-aos-delay="800" data-aos-duration="900" data-aos-easing="ease-in-out-back" />
+                      <img src="images/landing-page/hero/chat-2.webp" alt="BuildWithAngga" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="900" data-aos-easing="ease-in-out-back" />
+                      <img src="images/landing-page/hero/chat-3.webp" alt="BuildWithAngga" data-aos="fade-up" data-aos-delay="2000" data-aos-duration="900" data-aos-easing="ease-in-out-back" data-aos-offset="0" />
+                    </div>
+                  </div>
+                  <!-- {{-- END: GROUP CHAT illustration --}} -->
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- {{-- Companies --}} -->
+          <div class="d-lg-flex d-none mt-70 hero-logos">
+            <img src="images/landing-page/hero/companies-x-bwa.svg" alt="BuildWithAngga" />
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmapCareer" class="feature-one">
+        <div class="container-fluid">
+          <div class="mb-4">
+            <header class="front-text-group">
+              <p class="text-support text-primary-green">Follow The Roadmap</p>
+              <h2 class="header-primary mb-0">
+                Alur Belajar BuildWithAngga <br class="desktop" />
+                Untuk Membangun Karir
+              </h2>
+            </header>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-5">
+            <div class="col position-relative stack-card-group">
+              <div class="roadmapCard">
+                <a href="" style="color: #34364a">
+                  <img src="images/thumbnail/thumbnail_roadmap-1.webp" class="thumbnail" alt="thumbnail" />
+                </a>
+                <a href="" style="color: #34364a">
+                  <h3 class="title">Berkarir Sebagai Freelancer UI/UX Website Designer</h3>
+                </a>
+                <p class="subtitle">20 courses • 77 hours</p>
+                <div class="roadmap-tools">
+                  <img src="images/logo/figma-logomark.svg" alt="tools" />
+                  <img src="images/logo/maze-logomark.svg" alt="tools" />
+                  <img src="images/logo/dribbble-logomark.svg" alt="tools" />
+                  <img src="images/logo/whimsical.svg" alt="tools" />
+                  <img src="images/logo/notion-2.svg" alt="tools" />
+                </div>
+              </div>
+              <div class="stack-card-ornament sco-1"></div>
+              <div class="stack-card-ornament sco-2"></div>
+            </div>
+            <div class="col position-relative stack-card-group">
+              <div class="roadmapCard">
+                <a href="" style="color: #34364a">
+                  <img src="images/thumbnail/thumbnail_roadmap-2.webp" class="thumbnail" alt="thumbnail" />
+                </a>
+                <a href="" style="color: #34364a">
+                  <h3 class="title">Berkarir Sebagai Full-Stack JavaScript Developer</h3>
+                </a>
+                <p class="subtitle">12 courses • 34 hours</p>
+                <div class="roadmap-tools">
+                  <img src="images/logo/javascript-logomark-rounded.svg" alt="tools" />
+                  <img src="images/logo/figma-logomark.svg" alt="tools" />
+                  <img src="images/logo/nodejs.svg" alt="tools" />
+                  <img src="images/logo/mongodb-icon-1.svg" alt="tools" />
+                </div>
+              </div>
+              <div class="stack-card-ornament sco-1"></div>
+              <div class="stack-card-ornament sco-2"></div>
+            </div>
+            <div class="col position-relative stack-card-group">
+              <div class="roadmapCard">
+                <a href="" style="color: #34364a">
+                  <img src="images/thumbnail/thumbnail_roadmap-3.webp" class="thumbnail" alt="thumbnail" />
+                </a>
+                <a href="" style="color: #34364a">
+                  <h3 class="title">Berkarir Sebagai Full-Stack Developer (Web/Mobile)</h3>
+                </a>
+                <p class="subtitle">13 courses • 65 hours</p>
+                <div class="roadmap-tools">
+                  <img src="images/logo/figma-logomark.svg" alt="tools" />
+                  <img src="images/logo/laravel.svg" alt="tools" />
+                  <img src="images/logo/flutter.svg" alt="tools" />
+                  <img src="images/logo/firebase.svg" alt="tools" />
+                  <img src="images/logo/mysql.svg" alt="tools" />
+                </div>
+              </div>
+              <div class="stack-card-ornament sco-1"></div>
+              <div class="stack-card-ornament sco-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="d-none d-md-block feature-one pt-50 pb-50">
+        <div class="container-fluid">
+          <div class="mb-4 row">
+            <div class="text-left col-lg-12 col-12">
+              <header class="front-text-group">
+                <p class="text-support text-primary-green">Start Learning Today</p>
+                <h2 class="header-primary mb-0">
+                  Kelas Online Design,<br class="desktop" />
+                  Development, dan Freelancer
+                </h2>
+              </header>
+            </div>
+          </div>
+          <div class="d-none d-sm-block">
+            <div class="row course-categories gy-4">
+              <div class="col-lg-3 col-sm-6 col-12">
+                <div class="item-category mb-3 mb-lg-0 position-relative h-100">
+                  <img src="images/ic_flag.svg" class="icon" alt="flag" />
+                  <div class="mt-5 footer d-flex justify-content-between align-items-center">
+                    <a href="" class="info col">
+                      <h3 class="title">PIlih Roadmap</h3>
+                      <p class="sub">Alur belajar terbaik</p>
+                    </a>
+                    <a href="" class="col-auto">
+                      <img src="images/ic_arrow_right.svg" alt="arrow right" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12">
+                <div class="item-category mb-3 mb-lg-0 position-relative h-100">
+                  <img src="images/ic_design.svg" class="icon" alt="design" />
+                  <div class="mt-5 footer d-flex justify-content-between align-items-center">
+                    <a href="" class="info col">
+                      <h3 class="title">Kelas Design</h3>
+                      <p class="sub">UI/UX & Graphic Design</p>
+                    </a>
+                    <a href="" class="col-auto">
+                      <img src="images/ic_arrow_right.svg" alt="arrow right" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12">
+                <div class="item-category mb-3 mb-lg-0 position-relative h-100">
+                  <img src="images/ic_appcode.svg" class="icon" alt="appcode" />
+                  <div class="mt-5 footer d-flex justify-content-between align-items-center">
+                    <a href="" class="info col">
+                      <h3 class="title">Kelas Koding</h3>
+                      <p class="sub">Bikin Website & Aplikasi</p>
+                    </a>
+                    <a href="" class="col-auto">
+                      <img src="images/ic_arrow_right.svg" alt="arrow right" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12">
+                <div class="item-category mb-3 mb-lg-0 position-relative h-100">
+                  <img src="images/ic_softskills.svg" class="icon" alt="softskills" />
+                  <div class="mt-5 footer d-flex justify-content-between align-items-center">
+                    <a href="" class="info col">
+                      <h3 class="title">Perdalam Soft Skills</h3>
+                      <p class="sub">Improve Your Business</p>
+                    </a>
+                    <a href="" class="col-auto">
+                      <img src="images/ic_arrow_right.svg" alt="arrow right" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pt-50 pb-50 container flex-wrap" id="__privileges-section">
+        <div class="thumbnail-section">
+          <img src="images/landing-page/privilege/keuntungan utama belajar ui ux coding di BuildWithAngga.png" alt="BuildWithAngga" />
+        </div>
+        <div>
+          <header class="front-text-group mb-20">
+            <p class="text-support text-primary-green">You Deserve Better Career</p>
+            <h2 class="header-primary mb-0">Privileges Dari BuildWithAngga <br />Karir Semakin Tumbuh</h2>
+          </header>
+          <ul class="mb-30">
+            <li>
+              <img src="images/ic_check.svg" alt="BuildWithAngga" />
+              <span class="text-medium"> Akses BuildWithAngga selamanya </span>
+            </li>
+            <li>
+              <img src="images/ic_check.svg" alt="BuildWithAngga" />
+              <span class="text-medium"> Free materi update kelas </span>
+            </li>
+            <li>
+              <img src="images/ic_check.svg" alt="BuildWithAngga" />
+              <span class="text-medium"> Real-world projects Freelancer </span>
+            </li>
+            <li>
+              <img src="images/ic_check.svg" alt="BuildWithAngga" />
+              <span class="text-medium"> Forum UI/UX design & Web Development </span>
+            </li>
+            <li>
+              <img src="images/ic_check.svg" alt="BuildWithAngga" />
+              <span class="text-medium"> Privileges kelas online lainnya </span>
+            </li>
+          </ul>
+          <a href="" class="btn btn-primary" style="width: 212px"> Join Now </a>
+        </div>
+      </section>
+      <section class="mastering-tools pt-50 pb-50">
+        <div class="container">
+          <header class="front-text-group text-center">
+            <p class="text-support text-primary-green">Mastering Freelancer Tools</p>
             <h2 class="header-primary mb-0">
-              Alasan Belajar <br class="desktop" />
-              di BuildWithAngga
+              Kelas Online BuildWithAngga. <br />
+              Materi Paling Update.
             </h2>
           </header>
-        </h1>
-      </div>
+        </div>
 
-      <section id="bwavsothers-table" class="container">
-        <table class="table table-borderless position-relative">
-          <thead class="position-relative">
-            <tr class="border-bottom">
-              <th class="col-4 p-0">
-                <div class="title-div d-flex flex-column bg-white tl-rounded border-end">
-                  <h2>Benefits Utama</h2>
-                  <span>Membangun karir lebih terarah bersama mentor berpengalaman</span>
-                </div>
-              </th>
-              <th class="col-3 align-middle bg-white tl-rounded">
-                <div class="d-flex tl-rounded logo-div">
-                  <img class="m-auto" src="images/logo_bwa_new.svg" alt="logo" width="100" />
-                </div>
-              </th>
-              <th class="col-2 p-0 align-middle bg-white">
-                <div class="d-flex justify-content-center">
-                  <p class="vs">VS.</p>
-                </div>
-              </th>
-              <th class="col-3 align-middle bg-white tr-rounded">
-                <div class="d-flex justify-content-center tr-rounded">
-                  <p class="platforms">Other<br />Platforms</p>
-                </div>
-              </th>
-            </tr>
-          </thead>
+        <div class="tools-slideshow toRight mt-50">
+          <div id="toolsRow1">
+            <!-- {{-- Figma --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/figma-logomark.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Figma</h5>
+                  <p class="subtitle">UI/UX Design</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Vue JS --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/vue-logomark.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Vue</h5>
+                  <p class="subtitle">Front-End Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Flutter --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/flutter.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Flutter</h5>
+                  <p class="subtitle">Mobile Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Python --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/python-logomark.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Python</h5>
+                  <p class="subtitle">Data Science</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Laravel --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/laravel.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Laravel</h5>
+                  <p class="subtitle">Back-End Development</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="toolsRow1">
+            <!-- {{-- Figma --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/figma-logomark.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Figma</h5>
+                  <p class="subtitle">UI/UX Design</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Vue JS --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/vue-logomark.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Vue</h5>
+                  <p class="subtitle">Front-End Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Flutter --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/flutter.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Flutter</h5>
+                  <p class="subtitle">Mobile Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Python --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/python-logomark.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Python</h5>
+                  <p class="subtitle">Data Science</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Laravel --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/laravel.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Laravel</h5>
+                  <p class="subtitle">Back-End Development</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <tbody class="align-middle position-relative">
-            <tr class="show-sticky">
-              <th class=""></th>
-              <th class="sticky-top col-3 align-middle sticky-active">
-                <div class="d-flex logo-div bg-white">
-                  <img class="m-auto" src="images/logo_bwa_new.svg" alt="logo" />
-                </div>
-              </th>
-              <th class="sticky-top col-2 align-middle sticky-active">
-                <div class="d-flex justify-content-center bg-white">
-                  <p class="vs">VS.</p>
-                </div>
-              </th>
-              <th class="sticky-top col-3 align-middle sticky-active">
-                <div class="d-flex justify-content-center bg-white">
-                  <p class="platforms">Other<br />Platforms</p>
-                </div>
-              </th>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Lifetime Access</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Certificate</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Source Code</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Design Project</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Forum diskusi (private)</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Materi belajar offline</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Premium template HTML & CSS</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Premium template UI/UX</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Skills graph panduan karir</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Career roadmap</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Career handbook</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Exclusive courses</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Exclusive ebooks</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Challenge berhadiah</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-            <tr>
-              <th class="border-end border-top">
-                <img class="icon-th" src="images/svgs/ic_th_comparison.svg" alt="comparison" width="46px" />
-                <p>Kesempatan magang & kerja</p>
-              </th>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_check.svg" alt="check" width="24px" /></span> Yes
-              </td>
-              <td class="text-center border-top"></td>
-              <td class="text-center border-top">
-                <span class="me-1"><img src="images/ic_deadline.svg" alt="deadline" width="24px" /></span> No
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="tools-slideshow mt-30">
+          <div id="toolsRow2">
+            <!-- {{-- Kotlin --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/kotlin.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Kotlin</h5>
+                  <p class="subtitle">Android Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Golang --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/golang.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Golang</h5>
+                  <p class="subtitle">Back-End Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Blender --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/blender.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Blender</h5>
+                  <p class="subtitle">3D UI Design</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Excel --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/excel.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Excel</h5>
+                  <p class="subtitle">Data Analysis</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- React Js --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/react.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">React JS</h5>
+                  <p class="subtitle">Front-End Development</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="toolsRow2">
+            <!-- {{-- Kotlin --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/kotlin.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Kotlin</h5>
+                  <p class="subtitle">Android Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Golang --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/golang.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Golang</h5>
+                  <p class="subtitle">Back-End Development</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Blender --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/blender.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Blender</h5>
+                  <p class="subtitle">3D UI Design</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- Excel --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/excel.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">Excel</h5>
+                  <p class="subtitle">Data Analysis</p>
+                </a>
+              </div>
+            </div>
+            <!-- {{-- React Js --}} -->
+            <div class="cardSlim">
+              <a href="" style="width: 28.3%">
+                <img src="images/logo/react.svg" alt="tools" />
+              </a>
+              <div>
+                <a href="">
+                  <h5 class="title">React JS</h5>
+                  <p class="subtitle">Front-End Development</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-    </section>
+    </div>
   </body>
 </html>
