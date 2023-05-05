@@ -10091,12 +10091,12 @@ body.set-height {
 #faq-section-v3 .accordion-button::after {
   width: 24px;
   height: 24px;
-  background-image: url(../images/ic_plus.svg);
+  background-image: url(/images/ic_plus.svg?60e7ddbdd6757fb1514d3732157c2997);
   background-size: cover;
 }
 
 #faq-section-v3 .accordion-button:not(.collapsed)::after {
-  background-image: url(../images/ic_minus.svg);
+  background-image: url(/images/ic_minus.svg?79097eb3c7fdde3cab6b96b8e483908a);
 }
 
 #faq-section-v3 .accordion-body {

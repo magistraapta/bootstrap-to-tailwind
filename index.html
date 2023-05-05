@@ -46,11 +46,552 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="scripts/hero-aos-animation.js" type="text/javascript"></script>
 
+    <!-- Swiper JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     <script type="text/javascript" src="scripts/desktop-navbar.js"></script>
+    <script src="scripts/mobile-navbar.js"></script>
+    <script src="scripts/mobile-swiper-config.js"></script>
+
+    <script src="scripts/keypress/keypress-2.1.5.min.js"></script>
+    <script type="text/javascript" src="scripts/quickSearchModal.js"></script>
+    <!-- {{-- Quick Search & Search Canvas Load More --}} -->
+    <script type="text/javascript" src="scripts/loadMoreSearchResult.js"></script>
   </head>
   <body>
-    <!-- navbar -->
-    <div class="d-none d-sm-block">
+    <!-- mobile content -->
+    <section class="--bwa-mobile-version d-sm-none d-block">
+      <div class="offcanvas offcanvas-bottom overflow-hidden mobile-navbar-offcanvas" tabindex="-1" id="navbarMobileGuest" aria-labelledby="navbarMobileGuestLabel">
+        <div class="offcanvas-body small mobile-menu extended">
+          <div class="row mb-30">
+            <div class="col-12 d-flex justify-content-end align-items-start">
+              <button onclick="checkScroll(false)" class="position-relative mobile-menu-close btn-plain bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="images/mobile/icon/ic_times.svg" alt="times" />
+              </button>
+            </div>
+          </div>
+
+          <div class="content-menu">
+            <div>
+              <div class="mobile-menu-title menubar">Daily</div>
+              <div id="mobile-menu-swiper-1" class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="">
+                      <img src="images/ic_sekali_bayar.svg" alt="ic bayar" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="" class="mobile-menu-name min-w-max-content">Flash Sale</a>
+                  </div>
+
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="">
+                      <img src="images/ic_all_course.svg" alt="course" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="" class="mobile-menu-name min-w-max-content">Kelas Online</a>
+                  </div>
+
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="">
+                      <img src="images/ic_video.svg" alt=" video" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="" class="mobile-menu-name min-w-max-content">Bootcamp</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="mobile-menu-title menubar">Resources</div>
+              <div id="mobile-menu-swiper-1" class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="">
+                      <img src="images/ic_roadmap.svg" alt="roadmap" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="" class="mobile-menu-name min-w-max-content">Alur Belajar</a>
+                  </div>
+
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="">
+                      <img src="images/ic_project.svg" alt="project" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="" class="mobile-menu-name min-w-max-content">HandBook</a>
+                  </div>
+
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="">
+                      <img src="images/ic_profile.svg" alt="profile" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="" class="mobile-menu-name min-w-max-content">Tips</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="mobile-menu-title menubar">For Corporate</div>
+              <div id="mobile-menu-swiper-1" class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="https://joinbwa.com/openjob">
+                      <img src="images/ic_project.svg" alt="project" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="https://joinbwa.com/openjob" class="mobile-menu-name min-w-max-content">Open Job</a>
+                  </div>
+
+                  <div class="swiper-slide mobile-menu-item d-flex flex-column justify-content-center align-items-center link-basic">
+                    <a href="">
+                      <img src="images/ic_showcase.svg" alt="showcase" class="img-fluid rounded-circle mobile-menu-thumbnail" />
+                    </a>
+                    <a href="" class="mobile-menu-name min-w-max-content">Showcase</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="d-flex d-md-none justify-content-between align-items-center position-relative" id="navbar-mobile">
+        <div class="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+          <a href="" class="link-basic">
+            <img src="images/logo_bwa_new.svg" alt="logo" width="50" height="50" class="navbar-logo" />
+          </a>
+        </div>
+
+        <div class="d-flex justify-content-start align-items-center">
+          <button
+            onclick="checkScroll(true)"
+            class="btn-plain navbar-burger-btn d-flex justify-content-center align-items-center"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarMobileGuest"
+            aria-controls="navbarMobileGuest"
+          >
+            <img src="images/mobile/icon/hamburger.svg" alt="hamburger" />
+          </button>
+
+          <!-- @guest
+                  @if (!request()->is('/') && !request()->is('ab-lp-1') && !request()->is('kelas')) -->
+          <!-- {{-- Icon Search is in mobile-navbar.js --}} -->
+          <button
+            class="btn-plain navbar-search-btn d-flex justify-content-center align-items-center rounded-circle"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasSearchCourse"
+            aria-controls="offcanvasSearchCourse"
+          ></button>
+          <!-- @endif
+              @endguest -->
+        </div>
+
+        <!-- @auth
+              @include('front.mobile.pieces.mobile_auth_navbar')
+              <div class="d-flex justify-content-center align-items-center">
+      
+                  @if (!request()->is('/') && !request()->is('ab-lp-1') && !request()->is('kelas'))
+                      {{-- Icon Search is in mobile-navbar.js --}}
+                      <button class="btn-plain navbar-search-btn d-flex justify-content-center align-items-center rounded-circle"
+                          type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearchCourse"
+                          aria-controls="offcanvasSearchCourse">
+                      </button>
+                  @endif
+      
+                  <button onclick="checkScroll(true)" data-bs-toggle="offcanvas" data-bs-target="#authMobileNavbar"
+                      aria-controls="authMobileNavbar" class="bg-transparent btn-plain navbar-thumbnail rounded-circle p-0">
+                      <img class="rounded-circle"
+                          src="{{ Auth::user()->avatar == '' ? asset('themes/front/images/default-avatar.svg') : url(Auth::user()->avatar) }}"
+                          alt="{{ Str::words(Auth::user()->name, 1, '" />
+                      {{-- <img src="images/mobile/navbar/profile.png" alt=""> --}}
+                  </button>
+              </div>
+          @endauth -->
+
+        <!-- @guest
+              @if (request()->path() == 'login')
+                  <a href="{{ route('front.start.signup?main_leads=gate" class="navbar-auth btn-plain">Daftar</a>
+              @else
+                  @if (Route::currentRouteName() == 'welcome')
+                      <a href="{{ route('login" class="navbar-auth btn-plain">Masuk</a>
+                  @else
+                      <a href="{{ route('new-login-flow?redirect={{ URL::current() }}"
+                          class="navbar-auth btn-plain">Masuk</a>
+                  @endif
+              @endif
+          @endguest -->
+      </nav>
+
+      <!-- @if (isPhone())
+          @include('front.mobile.pieces.search-canvas')
+      @endif -->
+      <!-- {-- Mobile Versions - Start --}} -->
+      <!-- {{-- Hero --}} -->
+
+      <section class="d-block d-md-none mb-30" id="hero-mobile">
+        <img alt="kelas online gratis belajar figma dan flutter buildwith angga" src="images/mobile/hero/kelas_figma_flutter_online_gratis_buildwithangga.webp" class="hero-image" />
+
+        <div class="container">
+          <div class="headline_page">
+            <!-- <h4 class="primary-label">{{ $label }}</h4> -->
+
+            <h3 class="primary-title">
+              <span class="text-primary-blue">Your Dream Career</span> <br />
+              Starts With Us
+            </h3>
+
+            <!-- <p class="tagline">
+                    {{ $tagline }}
+                </p> -->
+          </div>
+
+          <p class="mobile-description">
+            BuildWithAngga menyediakan roadmap kelas <br />
+            UI/UX design & Web development terbaik
+          </p>
+
+          <div class="w-100">
+            <input
+              type="text"
+              placeholder="Mau belajar apa hari ini?"
+              class="search-input-home form-control"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasSearchCourse"
+              aria-controls="offcanvasSearchCourse"
+              style="background: url('images/ic_search.svg')"
+              readonly
+              onclick="checkScroll(true)"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- {{-- Roadmap --}} -->
+      <section class="d-block d-md-none" id="mobileRoadmapCareer">
+        <div class="container">
+          <div class="headline_page">
+            <h4 class="primary-label">Follow The Roadmap</h4>
+
+            <h3 class="primary-title">
+              Alur Belajar Rekomendasi <br />
+              Dari Para Expert Kami
+            </h3>
+          </div>
+        </div>
+
+        <div id="roadmap-swiper" class="overflow-x-auto d-flex flex-nowrap overflow-hidden swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="position-relative stack-card-group">
+                <div class="roadmapCard">
+                  <a href="" style="color: #34364a">
+                    <img src="images/thumbnail/thumbnail_roadmap-1.webp" class="thumbnail" alt="thumbnail" />
+                  </a>
+                  <a href="" style="color: #34364a">
+                    <h3 class="title">Berkarir Sebagai Freelancer UI/UX Website Designer</h3>
+                  </a>
+                  <p class="subtitle">20 courses • 77 hours</p>
+                  <div class="roadmap-tools">
+                    <img src="images/logo/figma-logomark.svg" alt="tools" />
+                    <img src="images/logo/maze-logomark.svg" alt="tools" />
+                    <img src="images/logo/dribbble-logomark.svg" alt="tools" />
+                    <img src="images/logo/whimsical.svg" alt="tools" />
+                    <img src="images/logo/notion-2.svg" alt="tools" />
+                  </div>
+                </div>
+                <div class="stack-card-ornament sco-1"></div>
+                <div class="stack-card-ornament sco-2"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="position-relative stack-card-group">
+                <div class="roadmapCard">
+                  <a href="" style="color: #34364a">
+                    <img src="images/thumbnail/thumbnail_roadmap-2.webp" class="thumbnail" alt="thumbnail" />
+                  </a>
+                  <a href="" style="color: #34364a">
+                    <h3 class="title">Berkarir Sebagai Full-Stack JavaScript Developer</h3>
+                  </a>
+                  <p class="subtitle">12 courses • 34 hours</p>
+                  <div class="roadmap-tools">
+                    <img src="images/logo/javascript-logomark-rounded.svg" alt="tools" />
+                    <img src="images/logo/figma-logomark.svg" alt="tools" />
+                    <img src="images/logo/nodejs.svg" alt="tools" />
+                    <img src="images/logo/mongodb-icon-1.svg" alt="tools" />
+                  </div>
+                </div>
+                <div class="stack-card-ornament sco-1"></div>
+                <div class="stack-card-ornament sco-2"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="position-relative stack-card-group">
+                <div class="roadmapCard">
+                  <a href="" style="color: #34364a">
+                    <img src="images/thumbnail/thumbnail_roadmap-3.webp" class="thumbnail" alt="thumbnail" />
+                  </a>
+                  <a href="" style="color: #34364a">
+                    <h3 class="title">Berkarir Sebagai Full-Stack Developer (Web/Mobile)</h3>
+                  </a>
+                  <p class="subtitle">13 courses • 65 hours</p>
+                  <div class="roadmap-tools">
+                    <img src="images/logo/figma-logomark.svg" alt="tools" />
+                    <img src="images/logo/laravel.svg" alt="tools" />
+                    <img src="images/logo/flutter.svg" alt="tools" />
+                    <img src="images/logo/firebase.svg" alt="tools" />
+                    <img src="images/logo/mysql.svg" alt="tools" />
+                  </div>
+                </div>
+                <div class="stack-card-ornament sco-1"></div>
+                <div class="stack-card-ornament sco-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- {{-- Categories --}} -->
+      <section class="mb-30 container course-categories">
+        <div class="headline_page">
+          <h4 class="primary-label">Explore More Skills</h4>
+
+          <h3 class="primary-title">Kategori Pilihan</h3>
+        </div>
+
+        <div class="row d-flex justify-content-between align-items-start">
+          <div class="col-6 item-category mobile position-relative">
+            <a href="">
+              <img src="images/ic_roadmap.svg" class="icon" alt="roadmap" />
+            </a>
+            <div class="footer d-flex justify-content-between align-items-center">
+              <a href="" class="info">
+                <h3 class="title">Roadmap</h3>
+                <p class="sub">Alur belajar terbaik</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-6 item-category mobile position-relative">
+            <a href="">
+              <img src="images/ic_design.svg" class="icon" alt="design" />
+            </a>
+            <div class="footer d-flex justify-content-between align-items-center">
+              <a href="" class="info">
+                <h3 class="title">Design</h3>
+                <p class="sub">UI/UX Design</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-6 item-category mobile position-relative">
+            <a href="">
+              <img src="images/ic_appcode.svg" class="icon" alt="appcode" />
+            </a>
+            <div class="footer d-flex justify-content-between align-items-center">
+              <a href="" class="info">
+                <h3 class="title">Coding</h3>
+                <p class="sub">Website/Aplikasi</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-6 item-category mobile position-relative">
+            <a href="">
+              <img src="images/ic_softskills.svg" class="icon" alt="softskills" />
+            </a>
+            <div class="footer d-flex justify-content-between align-items-center">
+              <a href="" class="info">
+                <h3 class="title">Big Data</h3>
+                <p class="sub">Data Analysis</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="d-block d-md-none container mb-30" id="advice-mobile">
+        <div class="overflow-hidden">
+          <div class="advice-card-border"></div>
+          <div class="advice-card d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-start align-items-center">
+              <img src="images/ic_konsultasi.svg" alt="konsultasi" class="img-fluid thumbnail" />
+              <div class="d-flex flex-column justify-content-start align-items-start">
+                <div class="title">Need Advice?</div>
+                <div class="sub">Konsultasi dulu yuk</div>
+              </div>
+            </div>
+
+            <a href="https://instagram.com/buildwithangga" target="_blank" class="link d-flex justify-content-center align-items-center">Chat</a>
+          </div>
+          <div class="advice-card-border"></div>
+        </div>
+      </section>
+
+      <!-- {{-- Top Featured course --}} -->
+      <section class="mb-30 d-block d-md-none">
+        <div class="container">
+          <div class="headline_page">
+            <h4 class="primary-label">Most Up to Date</h4>
+
+            <h3 class="primary-title">Terbaru Dirilis & Trending</h3>
+          </div>
+        </div>
+
+        <div id="--course-card">
+          <!-- @push('scripts') -->
+          <script type="text/javascript">
+            $("#--course-card").flickity({
+              // options
+              cellAlign: "left",
+              contain: true,
+              groupCells: false,
+              wrapAround: false,
+              pageDots: false,
+              prevNextButtons: false,
+              draggable: ">1",
+            });
+
+            $(".flickity-viewport").css("overflow", "visible");
+          </script>
+          <!-- @endpush -->
+          <!-- {{-- blade-formatter-disable --}} -->
+          <!-- @forelse($kelas as $data)
+            @once
+                @push('styles') -->
+          <!-- {{-- Tippy CSS --}} -->
+          <link rel="stylesheet" href="tippy/css/tippy.css" />
+          <link rel="stylesheet" href="tippy/css/shift-away.css" />
+          <!-- @endpush -->
+
+          <!-- @push('scripts') -->
+          <!-- {{-- Wishlist --}} -->
+          <script src="scripts/wishlist-course.js"></script>
+
+          <!-- {{-- Tippy JS --}} -->
+          <script src="tippy/js/popper.min.js"></script>
+          <script src="tippy/js/tippy.umd.min.js"></script>
+
+          <script src="scripts/course-card.js" type="text/javascript"></script>
+          <!-- @endpush
+            @endonce -->
+          <div class="course-card mobile-version">
+            <div class="d-flex align-items-start flex-row flex-column">
+              <!-- {{-- Course Thumbnail and Course Trailer --}} -->
+              <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" onclick="trailerSet(this)" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="" data-course-name="">
+                <img src="images/play_btn_blue.svg" alt="trailer - " class="_btn-play" />
+                <img src="images/thumbnail/thumbnail_roadmap-2.webp" class="thumbnail-course" alt="Kelas di BuildWith Angga" />
+              </a>
+
+              <div class="course-detail">
+                <!-- <a @if ($data->is_upcoming == 1) href="javascript:void(0);"
+                        onclick="getPopupIncoming(this);" data-id="{{ $data->id }}"
+                        @else
+                        @if (!isset($isLink)) href="{{ route('front.courses.play', ['slug_kelas' => $data->slug_kelas]) }}?{{ isset($thumbnailURL) ? 'thumbnail=' . $thumbnailURL . '.' . $data->thumbnails[0]->id : null }}{{ isset($main_leads) ? '&main_leads=' . $main_leads : '' }}" @endif
+                            @endif class="course-name line-clamp link-course-title">
+                            {{ $data->nama_kelas }}
+                        </a> -->
+                <a href="javascript:void(0);" class="course-name line-clamp link-course-title"> Nama kelas </a>
+                <!-- @unless (Auth::check() && Auth::user()->hasCertainCourse($data->id)) -->
+                <!-- {{-- Price Info --}} -->
+                <!-- <div class="d-flex align-items-center course_pricing gap-2">
+                                @if ($data->is_active === 1)
+                                    @if ($data->tipe_kelas != 'Premium')
+                                        Rp 0
+                                    @else
+                                        @if ($data->is_promo == 1)
+                                            <span class="disc-price blink_me">Rp
+                                                {{ number_format($data->origin_price) }}
+                                            </span>
+                                            @if ($data->is_share_cost > 0)
+                                                <span class="origin-price">Rp
+                                                    {{ number_format($data->harga_kelas / $data->is_share_cost) }}
+                                                </span>
+                                                @component('front.pieces.icon_info_patungan')
+                                                    @slot('share_cost_quota', $data->is_share_cost)
+                                                    @slot('course_price', $data->harga_kelas)
+                                                @endcomponent
+                                            @else
+                                                <span class="origin-price">Rp
+                                                    {{ number_format($data->harga_kelas) }}
+                                                </span>
+                                            @endif
+                                        @else
+                                            <span class="">Rp
+                                                {{ number_format($data->origin_price) }}</span>
+                                        @endif
+                                    @endif
+                                @else
+                                    <span class="origin-price text-medium ms-0">
+                                        Pendaftaran Ditutup
+                                    </span>
+                                @endif
+                            </div> -->
+                <!-- @endunless -->
+              </div>
+            </div>
+
+            <!-- @if (Auth::check() && Auth::user()->hasCertainCourse($data->id)) -->
+            <!-- {{-- Label Joined course --}} -->
+            <!-- <div class="labelJoinedCourse ms-0 mb-0 mt-auto">
+                    <img src="images/ic_check_fill.svg" alt="check">
+                    <p class="__text">
+                        JOINED
+                    </p>
+                </div>
+                @else -->
+            <div class="course-footer mt-auto">
+              <div class="star-rating w-100">
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <span> 1.234 </span>
+              </div>
+
+              <!-- {{-- Icon Level Tooltip --}} -->
+              <div class="d-block">
+                <!-- @if ($data->tipe_kelas == 'Premium') -->
+                <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" title="All Levels" src="images/ic_lv_hard.svg" class="icon-level" alt="level" />
+                <!-- @elseif($data->tipe_kelas == 'Freemium') -->
+                <!-- <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins"
+                                data-bs-placement="bottom" title="Intermediate"
+                                src="images/ic_lv_med.svg"
+                                class="icon-level" alt="level"> -->
+                <!-- @else -->
+                <!-- <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins"
+                                data-bs-placement="bottom" title="Beginner"
+                                src="images/ic_lv_ez.svg"
+                                class="icon-level" alt="level"> -->
+                <!-- @endif -->
+              </div>
+            </div>
+            <!-- @endif -->
+          </div>
+          <!-- @empty
+        @endforelse -->
+          <!-- {{-- blade-formatter-enable --}} -->
+        </div>
+      </section>
+
+      <section class="d-block d-md-none container" id="unlock_better_version">
+        <img src="images/ic_project.svg" class="img-fluid logo" alt="belajar design dan code di buildwith angga" />
+        <div class="headline_page">
+          <h4 class="primary-label">Unlock Better Version</h4>
+
+          <h3 class="primary-title">
+            Mulai Membangun Karir <br />
+            Impianmu Bersama Kami
+          </h3>
+        </div>
+
+        <div class="start-building-col w-100">
+          <a href="" class="btn btn-primary min-w-max-content">Katalog Kelas</a>
+          <a href="" class="btn btn-secondary min-w-max-content">Alur Belajar</a>
+        </div>
+      </section>
+      <!-- {{-- Mobile Versions - End --}} -->
+    </section>
+    <!-- desktop content -->
+    <div class="d-none d-md-block">
       <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
         <div class="container-fluid">
           <!-- {{-- Logo --}} -->
@@ -315,9 +856,7 @@
           </div>
         </div>
       </nav>
-    </div>
-
-    <div class="d-none d-sm-block">
+      <!-- hero -->
       <section class="d-none d-md-block hero-banner-one pb-50" id="hero-section">
         <div class="container">
           <div class="row d-flex justify-content-start align-items-center gx-5">
@@ -400,6 +939,7 @@
           </div>
         </div>
       </section>
+      <!-- roadmap -->
       <section id="roadmapCareer" class="feature-one">
         <div class="container-fluid">
           <div class="mb-4">
@@ -475,6 +1015,7 @@
           </div>
         </div>
       </section>
+      <!-- start learning today -->
       <section class="d-none d-md-block feature-one pt-50 pb-50">
         <div class="container-fluid">
           <div class="mb-4 row">
@@ -550,6 +1091,7 @@
           </div>
         </div>
       </section>
+      <!-- You Deserve Better Career -->
       <section class="pt-50 pb-50 container flex-wrap" id="__privileges-section">
         <div class="thumbnail-section">
           <img src="images/landing-page/privilege/keuntungan utama belajar ui ux coding di BuildWithAngga.png" alt="BuildWithAngga" />
@@ -584,6 +1126,7 @@
           <a href="" class="btn btn-primary" style="width: 212px"> Join Now </a>
         </div>
       </section>
+      <!-- Mastering Freelancer Tools -->
       <section class="mastering-tools pt-50 pb-50">
         <div class="container">
           <header class="front-text-group text-center">
@@ -849,6 +1392,7 @@
           </div>
         </div>
       </section>
+      <!-- Become Freelancer -->
       <section class="d-none d-md-block top-featured pt-50 pb-50">
         <div class="container-fluid">
           <div class="mb-4 row">
@@ -1121,6 +1665,7 @@
           </div>
         </div>
       </section>
+      <!-- Trusted By 900K+ Students -->
       <section class="pt-50 pb-50 d-flex justify-content-start align-items-center" id="testimonial-section-v3">
         <div class="container">
           <div class="row d-flex justify-content-start align-items-center gx-0">
@@ -1242,6 +1787,7 @@
           </div>
         </div>
       </section>
+      <!-- Tanya BuildWithAngga -->
       <section class="pb-100 d-flex justify-content-start align-items-center" id="faq-section-v3">
         <div class="container">
           <div class="row d-flex justify-content-start align-items-start">
@@ -1370,7 +1916,7 @@
           </div>
         </div>
       </section>
-      <!-- {{-- Join/Register BWA --}} -->
+      <!-- register -->
       <section class="d-none d-md-block basic-getting-started-card pt-50 pb-100">
         <div class="container-fluid">
           <div class="row justify-content-center">
@@ -1390,119 +1936,141 @@
           </div>
         </div>
       </section>
-      <section class="footer-nd">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="item-footer col-lg-3 col-10">
-              <img src="images/logo_bwa_new.svg" width="50" height="50" alt="logo buildwithangga" />
-              <p class="mt-4 tagline" style="margin-bottom: 10px">PT. Angga Membangun Indonesia</p>
-              <p class="tagline" style="margin-bottom: 10px">Jl. KH. Wahid Hasyim Kel No.10D</p>
-              <p class="tagline" style="margin-bottom: 10px">Jakarta, Indonesia</p>
-              <p class="tagline" style="margin-bottom: 10px">(021) 50858650</p>
-              <p class="tagline" style="margin-bottom: 10px">
-                <a href="mailto:team@buildwithangga.com">team@buildwithangga.com</a>
-              </p>
-              <p class="tagline">© 2019-2023 BuildWith Angga</p>
+      <!-- modal trailer -->
+      <div class="modal fade" id="modalTrailerCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header text-black d-flex align-items-center gap-3">
+              <h6 class="modal-title" id="staticBackdropLabel"></h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="item-footer col-lg-1 col-12"></div>
-            <div class="col-lg-8 col-12">
-              <div class="row justify-content-between">
-                <!-- {{-- Start Popular career --}} -->
-                <div class="item-footer col-lg-3 col-12">
-                  <p class="header-category">Start Popular Career</p>
-                  <ul>
-                    <li>
-                      <a href=""> <!-- UI Designer -->UI/UX Designer </a>
-                    </li>
-                    <li>
-                      <a href=""> <!-- UX Designer -->Web Developer </a>
-                    </li>
-                    <li>
-                      <a href=""> <!-- Website Developer -->Mobile Developer </a>
-                    </li>
-                    <li>
-                      <a href="}"> <!-- React JS Developer -->Data Scientist </a>
-                    </li>
-                    <li>
-                      <a href=""> <!-- Flutter Developer -->Digital Marketer </a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- {{-- Mastering Hot tools --}} -->
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Mastering Hot Tools</p>
-                  <ul>
-                    <li><a href="">Figma</a></li>
-                    <li><a href="">Flutter</a></li>
-                    <li><a href="">React JS</a></li>
-                    <li><a href="">Laravel</a></li>
-                    <li><a href="">Vue JS</a></li>
-                  </ul>
-                </div>
-                <!-- {{-- Learn language --}} -->
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Learn Language</p>
-                  <ul>
-                    <li><a href="">PHP</a></li>
-                    <li><a href=""> JavaScript</a></li>
-                    <li><a href="">Dart</a></li>
-                    <li><a href="">HTML & CSS</a></li>
-                    <li><a href="">Kotlin</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="row">
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Resources</p>
-                  <ul>
-                    <li>
-                      <a href="">Karir HandBook</a>
-                    </li>
-                    <li>
-                      <a href="">Student Rewards</a>
-                    </li>
-                    <li>
-                      <a href="">Free Ebooks</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Community</p>
-                  <ul>
-                    <li><a href="">Showcase</a></li>
-                    <li><a href="">Testimonials</a></li>
-                    <li><a href="">Mentor</a></li>
-                    <li><a href="">Webinar</a></li>
-                  </ul>
-                </div>
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Company</p>
-                  <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a target="_blank" href="https://www.youtube.com/@BuildWithAngga">Youtube</a></li>
-                    <li><a target="_blank" href="https://www.instagram.com/buildwithangga/">Instagram</a></li>
-                    <li><a target="_blank" href="https://www.tiktok.com/@buildwithangga">TikTok</a></li>
-                  </ul>
-                </div>
-                <div class="item-footer col-lg-3 col-md-6 col-12">
-                  <p class="header-category">Useful Links</p>
-                  <ul>
-                    <li><a href="">Privacy & Policy</a></li>
-                    <li><a href="">Terms & Conditions</a></li>
-                    <li><a target="_blank" href="https://www.notion.so/galpratama/Jam-Operasional-b806c2c999274568960be51b0de5afda"> Jam Operasional</a></li>
-                    <li><a href="">Cari Kelas</a></li>
-                    <li><a href="">Roadmap Belajar</a></li>
-                    <li><a href="">All Courses</a></li>
-                    <li><a href="">Cek Sertifikat</a></li>
-                  </ul>
+            <div class="modal-body p-0">
+              <div class="embed-responsive embed-responsive-16by9 video-iframe">
+                <div class="plyr__video-embed" id="player">
+                  <iframe allowfullscreen allowtransparency allow="autoplay" frameborder="0" src="https://www.youtube.com/embed/XWwzyWKZlGA"></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <!-- <script src="scripts/modal-course-trailer.js" type="text/javascript"></script> -->
     </div>
+
+    <!-- footer -->
+    <section class="footer-nd">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="item-footer col-lg-3 col-10">
+            <img src="images/logo_bwa_new.svg" width="50" height="50" alt="logo buildwithangga" />
+            <p class="mt-4 tagline" style="margin-bottom: 10px">PT. Angga Membangun Indonesia</p>
+            <p class="tagline" style="margin-bottom: 10px">Jl. KH. Wahid Hasyim Kel No.10D</p>
+            <p class="tagline" style="margin-bottom: 10px">Jakarta, Indonesia</p>
+            <p class="tagline" style="margin-bottom: 10px">(021) 50858650</p>
+            <p class="tagline" style="margin-bottom: 10px">
+              <a href="mailto:team@buildwithangga.com">team@buildwithangga.com</a>
+            </p>
+            <p class="tagline">© 2019-2023 BuildWith Angga</p>
+          </div>
+          <div class="item-footer col-lg-1 col-12"></div>
+          <div class="col-lg-8 col-12">
+            <div class="row justify-content-between">
+              <!-- {{-- Start Popular career --}} -->
+              <div class="item-footer col-lg-3 col-12">
+                <p class="header-category">Start Popular Career</p>
+                <ul>
+                  <li>
+                    <a href=""> <!-- UI Designer -->UI/UX Designer </a>
+                  </li>
+                  <li>
+                    <a href=""> <!-- UX Designer -->Web Developer </a>
+                  </li>
+                  <li>
+                    <a href=""> <!-- Website Developer -->Mobile Developer </a>
+                  </li>
+                  <li>
+                    <a href="}"> <!-- React JS Developer -->Data Scientist </a>
+                  </li>
+                  <li>
+                    <a href=""> <!-- Flutter Developer -->Digital Marketer </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- {{-- Mastering Hot tools --}} -->
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Mastering Hot Tools</p>
+                <ul>
+                  <li><a href="">Figma</a></li>
+                  <li><a href="">Flutter</a></li>
+                  <li><a href="">React JS</a></li>
+                  <li><a href="">Laravel</a></li>
+                  <li><a href="">Vue JS</a></li>
+                </ul>
+              </div>
+              <!-- {{-- Learn language --}} -->
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Learn Language</p>
+                <ul>
+                  <li><a href="">PHP</a></li>
+                  <li><a href=""> JavaScript</a></li>
+                  <li><a href="">Dart</a></li>
+                  <li><a href="">HTML & CSS</a></li>
+                  <li><a href="">Kotlin</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Resources</p>
+                <ul>
+                  <li>
+                    <a href="">Karir HandBook</a>
+                  </li>
+                  <li>
+                    <a href="">Student Rewards</a>
+                  </li>
+                  <li>
+                    <a href="">Free Ebooks</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Community</p>
+                <ul>
+                  <li><a href="">Showcase</a></li>
+                  <li><a href="">Testimonials</a></li>
+                  <li><a href="">Mentor</a></li>
+                  <li><a href="">Webinar</a></li>
+                </ul>
+              </div>
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Company</p>
+                <ul>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Contact</a></li>
+                  <li><a href="">Careers</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/@BuildWithAngga">Youtube</a></li>
+                  <li><a target="_blank" href="https://www.instagram.com/buildwithangga/">Instagram</a></li>
+                  <li><a target="_blank" href="https://www.tiktok.com/@buildwithangga">TikTok</a></li>
+                </ul>
+              </div>
+              <div class="item-footer col-lg-3 col-md-6 col-12">
+                <p class="header-category">Useful Links</p>
+                <ul>
+                  <li><a href="">Privacy & Policy</a></li>
+                  <li><a href="">Terms & Conditions</a></li>
+                  <li><a target="_blank" href="https://www.notion.so/galpratama/Jam-Operasional-b806c2c999274568960be51b0de5afda"> Jam Operasional</a></li>
+                  <li><a href="">Cari Kelas</a></li>
+                  <li><a href="">Roadmap Belajar</a></li>
+                  <li><a href="">All Courses</a></li>
+                  <li><a href="">Cek Sertifikat</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
