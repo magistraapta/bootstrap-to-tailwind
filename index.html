@@ -40,7 +40,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-    <script src="scripts/notification-icon.js"></script>
+    <!-- <script src="scripts/notification-icon.js"></script> -->
 
     <!-- {{-- Flickty slider library --}} -->
     <link rel="stylesheet" href="vendor/flickity/flickity.css" />
@@ -73,7 +73,7 @@
 
     <script src="scripts/course-card.js" type="text/javascript"></script>
 
-    <script src="scripts/revealPassword.js"></script>
+    <script type="text/javascript" src="scripts/revealPassword.js"></script>
     <script src="scripts/login-popup-desktop.js" type="text/javascript"></script>
   </head>
   <body>
@@ -1914,7 +1914,7 @@
                       <p class="mb-0">
                         Anda tentu dapat melakukan refund pada setiap pembelian kelas Premium di BuildWith Angga apabila tidak sesuai dengan apa yang telah BuildWithAngga janjikan. Beberapa Bootcamp yang BuildWithAngga miliki juga
                         menyediakan program jaminan kerja. Silakan pelajari
-                        <a href="https://galpratama.notion.site/Jaminan-Uang-Kembali-47191bc8190a4004bda7a5b07367d390" target="_blank" class="text-underline"><ins>di sini</ins></a> ketentuan jaminan uang kembali ketika belajar di BuildWith
+                        <a href="https://galpratama.notion.site/Jaminan-Uang-Kembali-47191bc8190a4004bda7a5b07367d390" target="_blank" class="text-underline"><a href="https://joinbwa.com/refund">di sini</a></a> ketentuan jaminan uang kembali ketika belajar di BuildWith
                         Angga.
                       </p>
                     </div>
@@ -2185,11 +2185,11 @@
                   <div class="revealPassword">
                     <input name="password" type="password" class="form-control" id="password" />
                     <div>
-                      <img src="images/svgs/ic_eye.svg" alt="eye" />
+                      <img src="images/svgs/ic_eye.svg" alt="eye"/>
                     </div>
                   </div>
                 </div>
-                <div class="mb-2{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                <div class="mb-2">
                   <!-- {!! RecaptchaV3::initJs() !!}
                               {{-- {!! RecaptchaV3::field('ajaxLogin') !!} --}} -->
                   <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
