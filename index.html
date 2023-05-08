@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@buildwithangga" />
     <meta name="description" content="BuildWithAngga menyediakan kelas online terpercaya untuk belajar UI/UX Design, Web/Mobile Development, Data Science, dan Freelancer dari tingkat pemula ke mahir." />
@@ -33,13 +38,13 @@
     <!-- {{-- Swiper --}} -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <script src="scripts/notification-icon.js"></script>
 
     <!-- {{-- Flickty slider library --}} -->
     <link rel="stylesheet" href="vendor/flickity/flickity.css" />
     <script src="vendor/flickity/flickity.pkgd.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -57,6 +62,19 @@
     <script type="text/javascript" src="scripts/quickSearchModal.js"></script>
     <!-- {{-- Quick Search & Search Canvas Load More --}} -->
     <script type="text/javascript" src="scripts/loadMoreSearchResult.js"></script>
+
+    <link rel="stylesheet" href="tippy/css/tippy.css" />
+    <link rel="stylesheet" href="tippy/css/shift-away.css" />
+
+    <script src="scripts/wishlist-course.js"></script>
+
+    <script src="tippy/js/popper.min.js"></script>
+    <script src="tippy/js/tippy.umd.min.js"></script>
+
+    <script src="scripts/course-card.js" type="text/javascript"></script>
+
+    <script src="scripts/revealPassword.js"></script>
+    <script src="scripts/login-popup-desktop.js" type="text/javascript"></script>
   </head>
   <body>
     <!-- mobile content -->
@@ -174,13 +192,13 @@
           <!-- @guest
                   @if (!request()->is('/') && !request()->is('ab-lp-1') && !request()->is('kelas')) -->
           <!-- {{-- Icon Search is in mobile-navbar.js --}} -->
-          <button
+          <!-- <button
             class="btn-plain navbar-search-btn d-flex justify-content-center align-items-center rounded-circle"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasSearchCourse"
             aria-controls="offcanvasSearchCourse"
-          ></button>
+          ></button> -->
           <!-- @endif
               @endguest -->
         </div>
@@ -211,21 +229,15 @@
               @if (request()->path() == 'login')
                   <a href="{{ route('front.start.signup?main_leads=gate" class="navbar-auth btn-plain">Daftar</a>
               @else
-                  @if (Route::currentRouteName() == 'welcome')
-                      <a href="{{ route('login" class="navbar-auth btn-plain">Masuk</a>
-                  @else
+                  @if (Route::currentRouteName() == 'welcome') -->
+        <a href="" class="navbar-auth btn-plain">Masuk</a>
+        <!-- @else
                       <a href="{{ route('new-login-flow?redirect={{ URL::current() }}"
                           class="navbar-auth btn-plain">Masuk</a>
                   @endif
               @endif
           @endguest -->
       </nav>
-
-      <!-- @if (isPhone())
-          @include('front.mobile.pieces.search-canvas')
-      @endif -->
-      <!-- {-- Mobile Versions - Start --}} -->
-      <!-- {{-- Hero --}} -->
 
       <section class="d-block d-md-none mb-30" id="hero-mobile">
         <img alt="kelas online gratis belajar figma dan flutter buildwith angga" src="images/mobile/hero/kelas_figma_flutter_online_gratis_buildwithangga.webp" class="hero-image" />
@@ -436,42 +448,6 @@
         </div>
 
         <div id="--course-card">
-          <!-- @push('scripts') -->
-          <script type="text/javascript">
-            $("#--course-card").flickity({
-              // options
-              cellAlign: "left",
-              contain: true,
-              groupCells: false,
-              wrapAround: false,
-              pageDots: false,
-              prevNextButtons: false,
-              draggable: ">1",
-            });
-
-            $(".flickity-viewport").css("overflow", "visible");
-          </script>
-          <!-- @endpush -->
-          <!-- {{-- blade-formatter-disable --}} -->
-          <!-- @forelse($kelas as $data)
-            @once
-                @push('styles') -->
-          <!-- {{-- Tippy CSS --}} -->
-          <link rel="stylesheet" href="tippy/css/tippy.css" />
-          <link rel="stylesheet" href="tippy/css/shift-away.css" />
-          <!-- @endpush -->
-
-          <!-- @push('scripts') -->
-          <!-- {{-- Wishlist --}} -->
-          <script src="scripts/wishlist-course.js"></script>
-
-          <!-- {{-- Tippy JS --}} -->
-          <script src="tippy/js/popper.min.js"></script>
-          <script src="tippy/js/tippy.umd.min.js"></script>
-
-          <script src="scripts/course-card.js" type="text/javascript"></script>
-          <!-- @endpush
-            @endonce -->
           <div class="course-card mobile-version">
             <div class="d-flex align-items-start flex-row flex-column">
               <!-- {{-- Course Thumbnail and Course Trailer --}} -->
@@ -481,50 +457,7 @@
               </a>
 
               <div class="course-detail">
-                <!-- <a @if ($data->is_upcoming == 1) href="javascript:void(0);"
-                        onclick="getPopupIncoming(this);" data-id="{{ $data->id }}"
-                        @else
-                        @if (!isset($isLink)) href="{{ route('front.courses.play', ['slug_kelas' => $data->slug_kelas]) }}?{{ isset($thumbnailURL) ? 'thumbnail=' . $thumbnailURL . '.' . $data->thumbnails[0]->id : null }}{{ isset($main_leads) ? '&main_leads=' . $main_leads : '' }}" @endif
-                            @endif class="course-name line-clamp link-course-title">
-                            {{ $data->nama_kelas }}
-                        </a> -->
                 <a href="javascript:void(0);" class="course-name line-clamp link-course-title"> Nama kelas </a>
-                <!-- @unless (Auth::check() && Auth::user()->hasCertainCourse($data->id)) -->
-                <!-- {{-- Price Info --}} -->
-                <!-- <div class="d-flex align-items-center course_pricing gap-2">
-                                @if ($data->is_active === 1)
-                                    @if ($data->tipe_kelas != 'Premium')
-                                        Rp 0
-                                    @else
-                                        @if ($data->is_promo == 1)
-                                            <span class="disc-price blink_me">Rp
-                                                {{ number_format($data->origin_price) }}
-                                            </span>
-                                            @if ($data->is_share_cost > 0)
-                                                <span class="origin-price">Rp
-                                                    {{ number_format($data->harga_kelas / $data->is_share_cost) }}
-                                                </span>
-                                                @component('front.pieces.icon_info_patungan')
-                                                    @slot('share_cost_quota', $data->is_share_cost)
-                                                    @slot('course_price', $data->harga_kelas)
-                                                @endcomponent
-                                            @else
-                                                <span class="origin-price">Rp
-                                                    {{ number_format($data->harga_kelas) }}
-                                                </span>
-                                            @endif
-                                        @else
-                                            <span class="">Rp
-                                                {{ number_format($data->origin_price) }}</span>
-                                        @endif
-                                    @endif
-                                @else
-                                    <span class="origin-price text-medium ms-0">
-                                        Pendaftaran Ditutup
-                                    </span>
-                                @endif
-                            </div> -->
-                <!-- @endunless -->
               </div>
             </div>
 
@@ -549,26 +482,48 @@
 
               <!-- {{-- Icon Level Tooltip --}} -->
               <div class="d-block">
-                <!-- @if ($data->tipe_kelas == 'Premium') -->
                 <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" title="All Levels" src="images/ic_lv_hard.svg" class="icon-level" alt="level" />
-                <!-- @elseif($data->tipe_kelas == 'Freemium') -->
-                <!-- <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins"
-                                data-bs-placement="bottom" title="Intermediate"
-                                src="images/ic_lv_med.svg"
-                                class="icon-level" alt="level"> -->
-                <!-- @else -->
-                <!-- <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins"
-                                data-bs-placement="bottom" title="Beginner"
-                                src="images/ic_lv_ez.svg"
-                                class="icon-level" alt="level"> -->
-                <!-- @endif -->
               </div>
             </div>
-            <!-- @endif -->
           </div>
-          <!-- @empty
-        @endforelse -->
-          <!-- {{-- blade-formatter-enable --}} -->
+          <div class="course-card mobile-version">
+            <div class="d-flex align-items-start flex-row flex-column">
+              <!-- {{-- Course Thumbnail and Course Trailer --}} -->
+              <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" onclick="trailerSet(this)" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="" data-course-name="">
+                <img src="images/play_btn_blue.svg" alt="trailer - " class="_btn-play" />
+                <img src="images/thumbnail/thumbnail_roadmap-2.webp" class="thumbnail-course" alt="Kelas di BuildWith Angga" />
+              </a>
+
+              <div class="course-detail">
+                <a href="javascript:void(0);" class="course-name line-clamp link-course-title"> Nama kelas </a>
+              </div>
+            </div>
+
+            <!-- @if (Auth::check() && Auth::user()->hasCertainCourse($data->id)) -->
+            <!-- {{-- Label Joined course --}} -->
+            <!-- <div class="labelJoinedCourse ms-0 mb-0 mt-auto">
+                    <img src="images/ic_check_fill.svg" alt="check">
+                    <p class="__text">
+                        JOINED
+                    </p>
+                </div>
+                @else -->
+            <div class="course-footer mt-auto">
+              <div class="star-rating w-100">
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <img src="images/ic_star.svg" alt="star" />
+                <span> 1.234 </span>
+              </div>
+
+              <!-- {{-- Icon Level Tooltip --}} -->
+              <div class="d-block">
+                <img data-bs-toggle="tooltip" data-bs-custom-class="font-poppins" data-bs-placement="bottom" title="All Levels" src="images/ic_lv_hard.svg" class="icon-level" alt="level" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -588,10 +543,100 @@
           <a href="" class="btn btn-secondary min-w-max-content">Alur Belajar</a>
         </div>
       </section>
+
+      <!-- footer mobile -->
+    
+      <footer class="d-block d-md-none bg-white" id="footer-mobile">
+        <div class="container">
+            <div class="d-flex justify-content-start align-items-center">
+                <img src="images/logo_bwa_new.svg" width="50" height="50"
+                    alt="logo buildwithangga" class="me-3">
+                <div class="d-flex flex-column justify-content-center align-items-start">
+                    <div class="mobile-footer-brand">BuildWith Angga</div>
+                    <div class="mobile-footer-copyright">© 2019-2022 BuildWith Angga</div>
+                </div>
+            </div>
+            <p class="mobile-footer-description">Website untuk belajar design dan code dari <br>
+                mentor yang sangat berpengalaman<br>
+                di bidangnya masing-masing.</p>
+    
+            <div class="row gy-3">
+                <div class="col-6">
+                    <div class="mobile-footer-sub">Dream Career</div>
+                    <div class="d-flex flex-column gap-2">
+                        <a href=""
+                            class="mobile-footer-item d-block">UI Designer</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">UX Designer</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">Website Developer</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">ReactJS Developer</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">Flutter Developer</a>
+                    </div>
+                </div>
+    
+                <div class="col-6">
+                    <div class="mobile-footer-sub">Language</div>
+                    <div class="d-flex flex-column gap-2">
+                        <a href=""
+                            class="mobile-footer-item d-block">PHP</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">JavaScript</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">Python</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">Kotlin</a>
+                        <a href=""
+                            class="mobile-footer-item d-block">Golang</a>
+                    </div>
+                </div>
+    
+                <div class="col-6">
+                    <div class="mobile-footer-sub">Community</div>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="" class="mobile-footer-item d-block">Showcase</a>
+                        <a href="" class="mobile-footer-item d-block">Mentor</a>
+                        <a href="" class="mobile-footer-item d-block">Testimonials</a>
+                        <a href="" class="mobile-footer-item d-block">Webinar</a>
+                    </div>
+                </div>
+    
+                <div class="col-6">
+                    <div class="mobile-footer-sub">Company</div>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="" class="mobile-footer-item d-block">About Us</a>
+                        <a target="_blank" href="https://www.instagram.com/buildwithangga"
+                            class="mobile-footer-item d-block">Instagram</a>
+                        <a target="_blank" href="https://www.tiktok.com/@buildwithangga"
+                            class="mobile-footer-item d-block">TikTok</a>
+                        <a href="" class="mobile-footer-item d-block">Careers</a>
+                    </div>
+                </div>
+    
+                <div class="col-12">
+                    <div class="mobile-footer-sub">Office</div>
+                    <div class="d-flex flex-column gap-2">
+                        <div class="mobile-footer-item d-block">PT Angga Membangun Indonesia</div>
+                        <div class="mobile-footer-item d-block">Jl. KH. Wahid Hasyim Kel
+                            No.10D
+                            <div class="mobile-footer-item d-block">
+                                Jakarta,
+                                Indonesia</div>
+                        </div>
+                        <div class="mobile-footer-item d-block">(021) 50858650</div>
+                        <a href="mailto:team@buildwithangga.com"
+                            class="mobile-footer-item d-block">team@buildwithangga.com</a>
+                    </div>
+                </div>
+            </div>
+      </footer>
+    
       <!-- {{-- Mobile Versions - End --}} -->
     </section>
     <!-- desktop content -->
-    <div class="d-none d-md-block">
+    <div class="d-none d-sm-block">
       <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
         <div class="container-fluid">
           <!-- {{-- Logo --}} -->
@@ -1937,7 +1982,121 @@
         </div>
       </section>
 
-      <!-- <script src="scripts/modal-course-trailer.js" type="text/javascript"></script> -->
+      <!-- footer desktop -->
+    <section class="footer-nd">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="item-footer col-lg-3 col-10">
+            <img src="images/logo_bwa_new.svg" width="50" height="50" alt="logo buildwithangga" />
+            <p class="mt-4 tagline" style="margin-bottom: 10px">PT. Angga Membangun Indonesia</p>
+            <p class="tagline" style="margin-bottom: 10px">Jl. KH. Wahid Hasyim Kel No.10D</p>
+            <p class="tagline" style="margin-bottom: 10px">Jakarta, Indonesia</p>
+            <p class="tagline" style="margin-bottom: 10px">(021) 50858650</p>
+            <p class="tagline" style="margin-bottom: 10px">
+              <a href="mailto:team@buildwithangga.com">team@buildwithangga.com</a>
+            </p>
+            <p class="tagline">© 2019-2023 BuildWith Angga</p>
+          </div>
+          <div class="item-footer col-lg-1 col-12"></div>
+          <div class="col-lg-8 col-12">
+            <div class="row justify-content-between">
+              <!-- {{-- Start Popular career --}} -->
+              <div class="item-footer col-lg-3 col-12">
+                <p class="header-category">Start Popular Career</p>
+                <ul>
+                  <li>
+                    <a href=""> <!-- UI Designer -->UI/UX Designer </a>
+                  </li>
+                  <li>
+                    <a href=""> <!-- UX Designer -->Web Developer </a>
+                  </li>
+                  <li>
+                    <a href=""> <!-- Website Developer -->Mobile Developer </a>
+                  </li>
+                  <li>
+                    <a href=""> <!-- React JS Developer -->Data Scientist </a>
+                  </li>
+                  <li>
+                    <a href=""> <!-- Flutter Developer -->Digital Marketer </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- {{-- Mastering Hot tools --}} -->
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Mastering Hot Tools</p>
+                <ul>
+                  <li><a href="">Figma</a></li>
+                  <li><a href="">Flutter</a></li>
+                  <li><a href="">React JS</a></li>
+                  <li><a href="">Laravel</a></li>
+                  <li><a href="">Vue JS</a></li>
+                </ul>
+              </div>
+              <!-- {{-- Learn language --}} -->
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Learn Language</p>
+                <ul>
+                  <li><a href="">PHP</a></li>
+                  <li><a href=""> JavaScript</a></li>
+                  <li><a href="">Dart</a></li>
+                  <li><a href="">HTML & CSS</a></li>
+                  <li><a href="">Kotlin</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Resources</p>
+                <ul>
+                  <li>
+                    <a href="">Karir HandBook</a>
+                  </li>
+                  <li>
+                    <a href="">Student Rewards</a>
+                  </li>
+                  <li>
+                    <a href="">Free Ebooks</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Community</p>
+                <ul>
+                  <li><a href="">Showcase</a></li>
+                  <li><a href="">Testimonials</a></li>
+                  <li><a href="">Mentor</a></li>
+                  <li><a href="">Webinar</a></li>
+                </ul>
+              </div>
+              <div class="item-footer col-lg-3 col-6">
+                <p class="header-category">Company</p>
+                <ul>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Contact</a></li>
+                  <li><a href="">Careers</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/@BuildWithAngga">Youtube</a></li>
+                  <li><a target="_blank" href="https://www.instagram.com/buildwithangga/">Instagram</a></li>
+                  <li><a target="_blank" href="https://www.tiktok.com/@buildwithangga">TikTok</a></li>
+                </ul>
+              </div>
+              <div class="item-footer col-lg-3 col-md-6 col-12">
+                <p class="header-category">Useful Links</p>
+                <ul>
+                  <li><a href="">Privacy & Policy</a></li>
+                  <li><a href="">Terms & Conditions</a></li>
+                  <li><a target="_blank" href="https://www.notion.so/galpratama/Jam-Operasional-b806c2c999274568960be51b0de5afda"> Jam Operasional</a></li>
+                  <li><a href="">Cari Kelas</a></li>
+                  <li><a href="">Roadmap Belajar</a></li>
+                  <li><a href="">All Courses</a></li>
+                  <li><a href="">Cek Sertifikat</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     </div>
     <!-- modal trailer -->
     <div class="modal fade" id="modalTrailerCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -2062,122 +2221,21 @@
       </div>
     </section>
 
-    <script src="scripts/revealPassword.js"></script>
-    <script src="scripts/login-popup-desktop.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        jQuery("#--course-card").flickity({
+          // options
+          cellAlign: "left",
+          contain: true,
+          groupCells: false,
+          wrapAround: false,
+          pageDots: false,
+          prevNextButtons: false,
+          draggable: ">1",
+        });
 
-    <!-- footer -->
-    <section class="footer-nd">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="item-footer col-lg-3 col-10">
-            <img src="images/logo_bwa_new.svg" width="50" height="50" alt="logo buildwithangga" />
-            <p class="mt-4 tagline" style="margin-bottom: 10px">PT. Angga Membangun Indonesia</p>
-            <p class="tagline" style="margin-bottom: 10px">Jl. KH. Wahid Hasyim Kel No.10D</p>
-            <p class="tagline" style="margin-bottom: 10px">Jakarta, Indonesia</p>
-            <p class="tagline" style="margin-bottom: 10px">(021) 50858650</p>
-            <p class="tagline" style="margin-bottom: 10px">
-              <a href="mailto:team@buildwithangga.com">team@buildwithangga.com</a>
-            </p>
-            <p class="tagline">© 2019-2023 BuildWith Angga</p>
-          </div>
-          <div class="item-footer col-lg-1 col-12"></div>
-          <div class="col-lg-8 col-12">
-            <div class="row justify-content-between">
-              <!-- {{-- Start Popular career --}} -->
-              <div class="item-footer col-lg-3 col-12">
-                <p class="header-category">Start Popular Career</p>
-                <ul>
-                  <li>
-                    <a href=""> <!-- UI Designer -->UI/UX Designer </a>
-                  </li>
-                  <li>
-                    <a href=""> <!-- UX Designer -->Web Developer </a>
-                  </li>
-                  <li>
-                    <a href=""> <!-- Website Developer -->Mobile Developer </a>
-                  </li>
-                  <li>
-                    <a href="}"> <!-- React JS Developer -->Data Scientist </a>
-                  </li>
-                  <li>
-                    <a href=""> <!-- Flutter Developer -->Digital Marketer </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- {{-- Mastering Hot tools --}} -->
-              <div class="item-footer col-lg-3 col-6">
-                <p class="header-category">Mastering Hot Tools</p>
-                <ul>
-                  <li><a href="">Figma</a></li>
-                  <li><a href="">Flutter</a></li>
-                  <li><a href="">React JS</a></li>
-                  <li><a href="">Laravel</a></li>
-                  <li><a href="">Vue JS</a></li>
-                </ul>
-              </div>
-              <!-- {{-- Learn language --}} -->
-              <div class="item-footer col-lg-3 col-6">
-                <p class="header-category">Learn Language</p>
-                <ul>
-                  <li><a href="">PHP</a></li>
-                  <li><a href=""> JavaScript</a></li>
-                  <li><a href="">Dart</a></li>
-                  <li><a href="">HTML & CSS</a></li>
-                  <li><a href="">Kotlin</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="item-footer col-lg-3 col-6">
-                <p class="header-category">Resources</p>
-                <ul>
-                  <li>
-                    <a href="">Karir HandBook</a>
-                  </li>
-                  <li>
-                    <a href="">Student Rewards</a>
-                  </li>
-                  <li>
-                    <a href="">Free Ebooks</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="item-footer col-lg-3 col-6">
-                <p class="header-category">Community</p>
-                <ul>
-                  <li><a href="">Showcase</a></li>
-                  <li><a href="">Testimonials</a></li>
-                  <li><a href="">Mentor</a></li>
-                  <li><a href="">Webinar</a></li>
-                </ul>
-              </div>
-              <div class="item-footer col-lg-3 col-6">
-                <p class="header-category">Company</p>
-                <ul>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Contact</a></li>
-                  <li><a href="">Careers</a></li>
-                  <li><a target="_blank" href="https://www.youtube.com/@BuildWithAngga">Youtube</a></li>
-                  <li><a target="_blank" href="https://www.instagram.com/buildwithangga/">Instagram</a></li>
-                  <li><a target="_blank" href="https://www.tiktok.com/@buildwithangga">TikTok</a></li>
-                </ul>
-              </div>
-              <div class="item-footer col-lg-3 col-md-6 col-12">
-                <p class="header-category">Useful Links</p>
-                <ul>
-                  <li><a href="">Privacy & Policy</a></li>
-                  <li><a href="">Terms & Conditions</a></li>
-                  <li><a target="_blank" href="https://www.notion.so/galpratama/Jam-Operasional-b806c2c999274568960be51b0de5afda"> Jam Operasional</a></li>
-                  <li><a href="">Cari Kelas</a></li>
-                  <li><a href="">Roadmap Belajar</a></li>
-                  <li><a href="">All Courses</a></li>
-                  <li><a href="">Cek Sertifikat</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        $(".flickity-viewport").css("overflow", "visible");
+      });
+    </script>
   </body>
 </html>
