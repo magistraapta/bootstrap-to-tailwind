@@ -10091,12 +10091,12 @@ body.set-height {
 #faq-section-v3 .accordion-button::after {
   width: 24px;
   height: 24px;
-  background-image: url(/images/ic_plus.svg);
+  background-image: url(../images/ic_plus.svg);
   background-size: cover;
 }
 
 #faq-section-v3 .accordion-button:not(.collapsed)::after {
-  background-image: url(/images/ic_minus.svg);
+  background-image: url(../images/ic_minus.svg);
 }
 
 #faq-section-v3 .accordion-body {
