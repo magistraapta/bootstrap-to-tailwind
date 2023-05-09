@@ -21,37 +21,29 @@
     <meta property="og:url" content="https://buildwithangga.com/" />
     <meta property="og:description" content="BuildWithAngga menyediakan kelas online terpercaya untuk belajar UI/UX Design, Web/Mobile Development, Data Science, dan Freelancer dari tingkat pemula ke mahir." />
 
-    <!-- {{-- main theme --}} -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
-    <!-- {{-- Bootsrap 5 cdn --}} -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/nd.css" />
 
-    <!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon.ico" />
     <link rel="apple-touch-icon" href="images/favicon.ico" />
 
-    <!-- {{-- Swiper --}} -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <!-- <script src="scripts/notification-icon.js"></script> -->
-
-    <!-- {{-- Flickty slider library --}} -->
     <link rel="stylesheet" href="vendor/flickity/flickity.css" />
     <script src="vendor/flickity/flickity.pkgd.js"></script>
 
-    <!-- AOS -->
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="scripts/hero-aos-animation.js" type="text/javascript"></script>
 
-    <!-- Swiper JS  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script type="text/javascript" src="scripts/desktop-navbar.js"></script>
@@ -60,7 +52,7 @@
 
     <script src="scripts/keypress/keypress-2.1.5.min.js"></script>
     <script type="text/javascript" src="scripts/quickSearchModal.js"></script>
-    <!-- {{-- Quick Search & Search Canvas Load More --}} -->
+
     <script type="text/javascript" src="scripts/loadMoreSearchResult.js"></script>
 
     <link rel="stylesheet" href="tippy/css/tippy.css" />
@@ -75,6 +67,8 @@
 
     <script type="text/javascript" src="scripts/revealPassword.js"></script>
     <script src="scripts/login-popup-desktop.js" type="text/javascript"></script>
+
+    <script src="scripts/modal-course-trailer.js" type="text/javascript"></script>
   </head>
   <body>
     <!-- mobile content -->
@@ -188,55 +182,8 @@
           >
             <img src="images/mobile/icon/hamburger.svg" alt="hamburger" />
           </button>
-
-          <!-- @guest
-                  @if (!request()->is('/') && !request()->is('ab-lp-1') && !request()->is('kelas')) -->
-          <!-- {{-- Icon Search is in mobile-navbar.js --}} -->
-          <!-- <button
-            class="btn-plain navbar-search-btn d-flex justify-content-center align-items-center rounded-circle"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasSearchCourse"
-            aria-controls="offcanvasSearchCourse"
-          ></button> -->
-          <!-- @endif
-              @endguest -->
         </div>
-
-        <!-- @auth
-              @include('front.mobile.pieces.mobile_auth_navbar')
-              <div class="d-flex justify-content-center align-items-center">
-      
-                  @if (!request()->is('/') && !request()->is('ab-lp-1') && !request()->is('kelas'))
-                      {{-- Icon Search is in mobile-navbar.js --}}
-                      <button class="btn-plain navbar-search-btn d-flex justify-content-center align-items-center rounded-circle"
-                          type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearchCourse"
-                          aria-controls="offcanvasSearchCourse">
-                      </button>
-                  @endif
-      
-                  <button onclick="checkScroll(true)" data-bs-toggle="offcanvas" data-bs-target="#authMobileNavbar"
-                      aria-controls="authMobileNavbar" class="bg-transparent btn-plain navbar-thumbnail rounded-circle p-0">
-                      <img class="rounded-circle"
-                          src="{{ Auth::user()->avatar == '' ? asset('themes/front/images/default-avatar.svg') : url(Auth::user()->avatar) }}"
-                          alt="{{ Str::words(Auth::user()->name, 1, '" />
-                      {{-- <img src="images/mobile/navbar/profile.png" alt=""> --}}
-                  </button>
-              </div>
-          @endauth -->
-
-        <!-- @guest
-              @if (request()->path() == 'login')
-                  <a href="{{ route('front.start.signup?main_leads=gate" class="navbar-auth btn-plain">Daftar</a>
-              @else
-                  @if (Route::currentRouteName() == 'welcome') -->
         <a href="" class="navbar-auth btn-plain">Masuk</a>
-        <!-- @else
-                      <a href="{{ route('new-login-flow?redirect={{ URL::current() }}"
-                          class="navbar-auth btn-plain">Masuk</a>
-                  @endif
-              @endif
-          @endguest -->
       </nav>
 
       <section class="d-block d-md-none mb-30" id="hero-mobile">
@@ -461,15 +408,7 @@
               </div>
             </div>
 
-            <!-- @if (Auth::check() && Auth::user()->hasCertainCourse($data->id)) -->
-            <!-- {{-- Label Joined course --}} -->
-            <!-- <div class="labelJoinedCourse ms-0 mb-0 mt-auto">
-                    <img src="images/ic_check_fill.svg" alt="check">
-                    <p class="__text">
-                        JOINED
-                    </p>
-                </div>
-                @else -->
+           
             <div class="course-footer mt-auto">
               <div class="star-rating w-100">
                 <img src="images/ic_star.svg" alt="star" />
@@ -499,15 +438,6 @@
               </div>
             </div>
 
-            <!-- @if (Auth::check() && Auth::user()->hasCertainCourse($data->id)) -->
-            <!-- {{-- Label Joined course --}} -->
-            <!-- <div class="labelJoinedCourse ms-0 mb-0 mt-auto">
-                    <img src="images/ic_check_fill.svg" alt="check">
-                    <p class="__text">
-                        JOINED
-                    </p>
-                </div>
-                @else -->
             <div class="course-footer mt-auto">
               <div class="star-rating w-100">
                 <img src="images/ic_star.svg" alt="star" />
@@ -635,30 +565,21 @@
     
       <!-- {{-- Mobile Versions - End --}} -->
     </section>
-    <!-- desktop content -->
     <div class="d-none d-sm-block">
       <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
         <div class="container-fluid">
-          <!-- {{-- Logo --}} -->
           <a class="navbar-brand" href="">
             <img src="images/logo_bwa_new.svg" width="50" height="50" class="d-inline-block align-top" alt="logo buildwithangga" />
           </a>
-          <!-- {{-- MOBILE Toggler Button --}} -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <!-- {{-- Menus --}} -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- {{-- LEFT Menu --}} -->
             <ul class="basic-menus navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- @if (\App\Models\Kelas::where('is_promo', 1)->count() > 1) -->
               <li class="nav-item">
                 <a class="nav-link" href="sale.html"> Flash Sale </a>
               </li>
-              <!-- @endif -->
-
-              <!-- {{-- Kelas --}} -->
               <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="listKelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Kelas </a>
                 <ul class="dropdown-menu __2022" aria-labelledby="listKelasDropdown">
@@ -819,84 +740,10 @@
                   </button>
                 </span>
               </li>
-
-              <!-- @if (Auth::check()) -->
-              <!-- New Notification Icon -->
-              <!-- <div id="app">
-                <li class="nav-item d-flex align-items-center">
-                  <button type="button" class="nav-icon position-relative">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M12.0186 2.91016C8.70862 2.91016 6.01862 5.60016 6.01862 8.91016V11.8002C6.01862 12.4102 5.75862 13.3402 5.44862 13.8602L4.29862 15.7702C3.58862 16.9502 4.07862 18.2602 5.37862 18.7002C9.68862 20.1402 14.3386 20.1402 18.6486 18.7002C19.8586 18.3002 20.3886 16.8702 19.7286 15.7702L18.5786 13.8602C18.2786 13.3402 18.0186 12.4102 18.0186 11.8002V8.91016C18.0186 5.61016 15.3186 2.91016 12.0186 2.91016Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-miterlimit="10"
-                        stroke-linecap="round"
-                      />
-                      <path
-                        d="M13.8719 3.19945C12.6626 2.85504 11.3812 2.85504 10.1719 3.19945C10.4619 2.45945 11.1819 1.93945 12.0219 1.93945C12.8619 1.93945 13.5819 2.45945 13.8719 3.19945V3.19945Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-miterlimit="10"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.33769 20.6179 9.02132 19.8557 9.01953 19.0605"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-miterlimit="10"
-                      />
-                    </svg>
-
-                    <img class="position-absolute" src="images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
-                  </button>
-                </li>
-              </div> -->
-
-              <!-- {{-- User Avatar --}} -->
-              <!-- {{-- <li class="nav-item d-none d-sm-block d-lg-flex dropdown"> --}} -->
-              <!-- <li class="nav-item d-none d-sm-flex flex-column justify-content-start align-items-start dropdown">
-                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="user-name">
-                    Halo, UserName -->
-              <!-- @if (Auth::user()->hasRole('author'))
-                                      <span class="badge-blue" style="margin-left:6px;padding: 5px 10px;font-weight: 700;font-size: 12px;line-height: 18px;">Mentor</span>
-                                  @endif -->
-              <!-- </span>
-                  <img class="user-photo" src="images/default-avatar.svg" alt="username" />
-                </a>
-                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left: auto; right: 0"> -->
-              <!-- @if (Auth::user()->hasRole('author'))
-                                  <li>
-                                      <a class="dropdown-item"
-                                          href="">
-                                          Dashboard Mentor
-                                      </a>
-                                  </li>
-                                  <li><a class="dropdown-item" href="">Settings</a></li>
-                                  <li><a class="dropdown-item" href="">Logout</a></li>
-                              @else -->
-              <!-- <li><a class="dropdown-item" href="">My Courses</a></li>
-                  <li><a class="dropdown-item" href=""> My Certificates </a></li>
-                  <li><a class="dropdown-item" href="">Progress Belajar</a></li>
-                  <li><a class="dropdown-item" href="">Settings</a></li>
-                  <li><a class="dropdown-item" href="">Logout</a></li> -->
-              <!-- @endif -->
-              <!-- </ul>
-              </li> -->
-              <!-- @else -->
               <li class="nav-item wrap-btn-daftar">
                 <a class="btn btn-secondary btn-auth btn-daftar d-xl-none" href="">Masuk</a>
                 <button class="btn btn-secondary btn-auth btn-daftar btn-auth d-none d-xl-flex justify-content-center align-items-center" style="width: 160px !important">Masuk/Daftar</button>
               </li>
-              <!-- @if (!Route::currentRouteNamed('welcome'))
-                          <li class="nav-item">
-                              <a class="btn btn-primary btn-masuk btn-auth {{ Route::currentRouteName() == 'front.start.index' ? 'd-none' : '' }}"
-                                  href="">Daftar</a>
-                          </li>
-                      @endif -->
-              <!-- @endif -->
             </ul>
           </div>
         </div>
@@ -1456,86 +1303,39 @@
             <div class="col-lg-3 col-12 col-md-6">
               <div class="course-card-responsive">
                 <div class="d-flex flex-row flex-md-column">
-                  <!-- Course Thumbnail and Course Trailer -->
-                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas">
+         
+                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas" onclick="trailerSet(this)">
                     <img src="images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
                     <img src="images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
                   </a>
                   <div class="course-detail">
-                    <!-- Course Title & Link -->
+                
                     <h3 class="course-name line-clamp-mobile">
-                      <!-- {{ course . nama_kelas }} -->
+                   
                       <a href="" style="color: #34364a">Complete Freelancer UI/UX & Illustration Designer: Brief, Wireframe, Visual Design, Portfolio</a>
                     </h3>
 
-                    <!-- Label Joined course -->
-                    <!-- <div class="labelJoinedCourse mx-0 mb-0 d-flex d-sm-none" >
-                                        <img src="images/ic_check_fill.svg" alt="check" />
-                                        <p class="__text">JOINED</p>
-                                    </div> -->
-                    <!-- Price Info -->
-                    <div class="d-flex mt-2 align-items-center gap-1">
-                      <!-- <div v-if="course.is_active === 1"> -->
-                      <div>
-                        <!-- <div v-if="course.tipe_kelas != 'Premium'">Rp 0</div> -->
-                        <div>
-                          <!-- <div v-if="isPromotion" class="d-flex gap-2 align-items-center">
-                            <span class="disc-price blink_me">690.000</span>
-                            <div v-if="isShareCost" class="d-flex gap-1 align-items-center">
-                              <span class="origin-price"> {{ shareCostPrice }} </span>
-                              <div
-                                v-tippy="tippyJsOptions"
-                                :content="`<div><p class='title'>Promo Patungan</p><p class='sub-title'>Kamu bisa mengajak ${
-                                                                                                        course.is_share_cost - 1
-                                                                                                    } teman secara opsional untuk mendapatkan special promo ${shareCostPriceNumK}</p>`"
-                                class="cursor-pointer z-10"
-                              >
-                                <img src="images/ic_info.svg" class="icon-info-patungan mx-1" alt="info" />
-                              </div>
-                            </div>
-                            <div v-else>
-                              <span class="origin-price"> {{ salePrice }} </span>
-                            </div>
-                          </div> -->
-                          <div>
-                            <span class="origin-price"> Rp 690.000 </span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div>
-                                            <span class="origin-price text-medium ms-0">
-                                                Pendaftaran Ditutup
-                                            </span>
-                                        </div> -->
-                    </div>
-                  </div>
-                </div>
-                <!-- Label Joined course -->
-                <!-- <div class="labelJoinedCourse d-none d-sm-flex" v-if="isJoined">
-                                <img src="images/ic_check_fill.svg" alt="check" />
-                                <p class="__text">JOINED</p>
-                            </div> -->
-                <div class="course-footer mt-auto">
-                  <!-- Star Rating and Joined Amount -->
-                  <div class="star-rating w-100">
-                    <img src="images/ic_star.svg" alt="star icon" />
-                    <img src="images/ic_star.svg" alt="star icon" />
-                    <img src="images/ic_star.svg" alt="star icon" />
-                    <img src="images/ic_star.svg" alt="star icon" />
-                    <img src="images/ic_star.svg" alt="star icon" />
-                    <span> (1,234) </span>
-                  </div>
-
-                  <!-- Icon Level Tooltip -->
-                  <div class="d-none d-md-block">
-                    <img data-bs-custom-class="font-poppins" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All Levels" src="images/ic_lv_hard.svg" class="icon-level" alt="level" />
-
-                    <!-- <img v-else-if="course.level_kelas == 'Intermediate'" data-bs-custom-class="font-poppins"
-                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Intermediate"
-                                        src="images/ic_lv_med.svg" class="icon-level" alt="level"/>
                     
-                                    <img v-else data-bs-custom-class="font-poppins" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                        title="Beginner" src="images/ic_lv_ez.svg" class="icon-level" alt="level"/> -->
+                    <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                      Rp <span class="">720,000</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="course-footer mt-auto">
+                  <!-- Star Rating and Joined Amount -->
+                  <div class="star-rating w-100">
+                    <img src="images/ic_star.svg" alt="star icon" />
+                    <img src="images/ic_star.svg" alt="star icon" />
+                    <img src="images/ic_star.svg" alt="star icon" />
+                    <img src="images/ic_star.svg" alt="star icon" />
+                    <img src="images/ic_star.svg" alt="star icon" />
+                    <span> (1,234) </span>
+                  </div>
+
+                  <!-- Icon Level Tooltip -->
+                  <div class="d-none d-md-block">
+                    <img data-bs-custom-class="font-poppins" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All Levels" src="images/ic_lv_hard.svg" class="icon-level" alt="level" />
                   </div>
 
                   <!-- Author Avatar -->
@@ -1549,7 +1349,7 @@
               <div class="course-card-responsive">
                 <div class="d-flex flex-row flex-md-column">
                   <!-- Course Thumbnail and Course Trailer -->
-                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas">
+                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas" onclick="trailerSet(this)">
                     <img src="images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
                     <img src="images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
                   </a>
@@ -1603,7 +1403,7 @@
               <div class="course-card-responsive">
                 <div class="d-flex flex-row flex-md-column">
                   <!-- Course Thumbnail and Course Trailer -->
-                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas">
+                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas" onclick="trailerSet(this)">
                     <img src="images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
                     <img src="images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
                   </a>
@@ -1657,7 +1457,7 @@
               <div class="course-card-responsive">
                 <div class="d-flex flex-row flex-md-column">
                   <!-- Course Thumbnail and Course Trailer -->
-                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas">
+                  <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas" onclick="trailerSet(this)">
                     <img src="images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
                     <img src="images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
                   </a>
@@ -2005,19 +1805,19 @@
                 <p class="header-category">Start Popular Career</p>
                 <ul>
                   <li>
-                    <a href=""> <!-- UI Designer -->UI/UX Designer </a>
+                    <a href=""> UI/UX Designer </a>
                   </li>
                   <li>
-                    <a href=""> <!-- UX Designer -->Web Developer </a>
+                    <a href=""> Web Developer </a>
                   </li>
                   <li>
-                    <a href=""> <!-- Website Developer -->Mobile Developer </a>
+                    <a href=""> Mobile Developer </a>
                   </li>
                   <li>
-                    <a href=""> <!-- React JS Developer -->Data Scientist </a>
+                    <a href=""> Data Scientist </a>
                   </li>
                   <li>
-                    <a href=""> <!-- Flutter Developer -->Digital Marketer </a>
+                    <a href=""> Digital Marketer </a>
                   </li>
                 </ul>
               </div>
@@ -2109,7 +1909,7 @@
           <div class="modal-body p-0">
             <div class="embed-responsive embed-responsive-16by9 video-iframe">
               <div class="plyr__video-embed" id="player">
-                <iframe allowfullscreen allowtransparency allow="autoplay" frameborder="0" src="https://www.youtube.com/embed/XWwzyWKZlGA"></iframe>
+                <iframe allowfullscreen allowtransparency allow="autoplay" frameborder="0" ></iframe>
               </div>
             </div>
           </div>
@@ -2147,7 +1947,6 @@
                   </svg>
                 </a>
               </div>
-              <!-- {!! $errors->first('keyword', '<div class="invalid-feedback mt-2 ">:message</div>') !!} -->
             </form>
           </div>
           <div class="modal-body">
@@ -2172,13 +1971,11 @@
             <h3 class="header-thirdty">Sign In</h3>
             <article class="form-group p-0 mt-30">
               <form action="">
-                <!-- @csrf -->
+                
                 <div class="mb-3">
                   <label for="email" class="form-label">Email address</label>
                   <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" />
-                  <!-- @error('email')
-                                  <small class="form-text text-muted text-red">{{ $message }}</small>
-                              @enderror -->
+                 
                 </div>
                 <div class="mb-2">
                   <label for="password" class="form-label">Password</label>
@@ -2190,28 +1987,17 @@
                   </div>
                 </div>
                 <div class="mb-2">
-                  <!-- {!! RecaptchaV3::initJs() !!}
-                              {{-- {!! RecaptchaV3::field('ajaxLogin') !!} --}} -->
+                 
                   <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
-                  <!-- @if ($errors->has('g-recaptcha-response'))
-                                  <small class="form-text text-muted text-red">
-                                      {{ $errors->first('g-recaptcha-response
-                                  </small>
-                              @endif -->
+                 
                 </div>
                 <p class="flr">
                   <a href="" class="text-link"> Lupa Password </a>
                 </p>
                 <button type="submit" class="mt-4 btn btn-primary btn-lg btn-login">Sign In</button>
-                <!-- @if (Route::currentRouteName() == 'front.courses.play')
-                              <button type="button" class="btn btn-secondary mt-3 w-100 show-signup">Create New
-                                  Account</button>
-                          @elseif (Route::currentRouteName() == 'front.event.challenge')
-                              <a class="btn btn-secondary mt-3 w-100"
-                                  href="{{ route('front.start.signup?main_leads=event">Create New Account</a>
-                          @else -->
+               
                 <a class="btn btn-secondary mt-3 w-100 btn-100" href="front.start.signup?main_leads=gate">Create New Account</a>
-                <!-- @endif -->
+                
               </form>
               <div class="divider my-4"></div>
               <a class="btn btn-dark btn-google" href=""> <img src="images/ic_google.svg" alt="BuildWith Angga" /> Masuk / Daftar </a>
