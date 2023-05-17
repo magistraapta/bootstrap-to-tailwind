@@ -97,7 +97,7 @@ $(".offcanvas-form-control.tt-input").keyup(function (event) {
 });
 
 $(".navbar-search-btn").css({
-  backgroundImage: `images/ic_search.svg`,
+  backgroundImage: "url('images/ic_search.svg')",
   backgroundSize: "20px",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
