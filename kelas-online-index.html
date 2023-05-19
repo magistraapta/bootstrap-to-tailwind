@@ -41,6 +41,7 @@
     <link rel="apple-touch-icon" href="images/favicon.ico" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="vendor/flickity/flickity.css" />
     <script src="vendor/flickity/flickity.pkgd.js"></script>
@@ -49,13 +50,34 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script type="text/javascript" src="scripts/desktop-navbar.js"></script>
-    <script defer type="text/javascript" src="scripts/mobile-navbar.js"></script>
+    <script src="scripts/mobile-navbar.js"></script>
+    <script defer type="text/javascript" src="scripts/mobile-swiper-config.js"></script>
 
+    <!-- <script src="scripts/keypress/keypress-2.1.5.min.js"></script> -->
     <script type="text/javascript" src="scripts/quickSearchModal.js"></script>
 
     <script type="text/javascript" src="scripts/loadMoreSearchResult.js"></script>
 
-    <script defer src="js/pages/kelas/browse-kelas.js"></script>
+    <link rel="stylesheet" href="tippy/css/tippy.css" />
+    <link rel="stylesheet" href="tippy/css/shift-away.css" />
+
+    <script src="scripts/wishlist-course.js"></script>
+
+    <script src="tippy/js/popper.min.js"></script>
+    <script src="tippy/js/tippy.umd.min.js"></script>
+
+    <script src="scripts/course-card.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="scripts/revealPassword.js"></script>
+    <script src="scripts/login-popup-desktop.js" type="text/javascript"></script>
+
+    <script src="scripts/modal-course-trailer.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="scripts/btnToTop.js"></script>
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
+
+    <!-- <script defer src="js/pages/kelas/browse-kelas.js"></script> -->
   </head>
   <body>
     <section class="--bwa-mobile-version d-sm-none d-block">
@@ -168,13 +190,6 @@
           >
             <img src="images/mobile/icon/hamburger.svg" alt="hamburger" />
           </button>
-          <button
-            class="btn-plain navbar-search-btn d-flex justify-content-center align-items-center rounded-circle"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasSearchCourse"
-            aria-controls="offcanvasSearchCourse"
-          ></button>
         </div>
         <a href="" class="navbar-auth btn-plain">Masuk</a>
       </nav>
@@ -207,7 +222,7 @@
                       Explore kelas gratis dan berbayar <br />
                       bersama mentor expert
                     </p>
-                    <a href="" class="btn btn-primary">All Courses</a>
+                    <a href="kelas-online-index.html" class="btn btn-primary">All Courses</a>
                     <img src="images/silhouette-project-bwa.png" alt="icon buildwith angga" />
                   </li>
                   <li class="dropdown-item">
@@ -369,9 +384,246 @@
     </div>
 
     <!-- {{-- Mobile --}} -->
-    <!-- <div class="--bwa-mobile-version d-block d-sm-none">
-        @include('front.mobile.kelas.index')
-    </div> -->
+    <div class="--bwa-mobile-version d-block d-sm-none">
+        <div class="container w-100 section-searchbar">
+            <input type="text" placeholder="Mau belajar apa hari ini?" class="search-input-home form-control"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearchCourse" aria-controls="offcanvasSearchCourse"
+                style="background: url('images/ic_search.svg')" readonly
+                onclick="checkScroll(true)" />
+        </div>
+        
+        <div>
+            <section class="mb-30 container course-categories">
+                <div class="headline_page">
+                    <h4 class="primary-label">Explore More Skills</h4>
+                    <h1 class="primary-title">
+                        Kategori Pilihan
+                    </h1>
+                </div>
+                <div class="row d-flex justify-content-between align-items-start">
+                    <div class="col-6 item-category mobile position-relative">
+                        <a href="" >
+                            <img src="images/ic_roadmap.svg" class="icon" alt="roadmap">
+                        </a>    
+                        <div class="footer d-flex justify-content-between align-items-center">
+                            <a href="" class="info">
+                                <h3 class="title">
+                                    Roadmap
+                                </h3>
+                                <p class="sub">
+                                    Alur belajar terbaik
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 item-category mobile position-relative">
+                        <a href="">
+                            <img src="images/ic_design.svg" class="icon" alt="design">
+                        </a>    
+                        <div class="footer d-flex justify-content-between align-items-center">
+                            <a href="" class="info">
+                                <h3 class="title">
+                                    Design
+                                </h3>
+                                <p class="sub">
+                                    UI/UX Design
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 item-category mobile position-relative">
+                        <a href="">
+                            <img src="images/ic_appcode.svg" class="icon" alt="appcode">
+                        </a>    
+                        <div class="footer d-flex justify-content-between align-items-center">
+                            <a href="" class="info">
+                                <h3 class="title">
+                                    Coding
+                                </h3>
+                                <p class="sub">
+                                    Website/Aplikasi
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 item-category mobile position-relative">
+                        <a href="">
+                            <img src="images/ic_softskills.svg" class="icon" alt="softskills">
+                        </a>    
+                        <div class="footer d-flex justify-content-between align-items-center">
+                            <a href="" class="info">
+                                <h3 class="title">
+                                    Big Data
+                                </h3>
+                                <p class="sub">
+                                    Data Analysis
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="mb-30">
+                <section class="container">
+                    <div class="mobile-section-label">Most Up to Date</div>
+                    <div class="mobile-section-title">Our Featured</div>
+                </section>
+                <div class="w-100 overflow-x-auto top-featured-section">
+                    <div class="__most-up-to-date">
+                        <div class="course-content">
+                            <img src="images/thumbnail kelas online dart pemula flutter buildwith angga.png" class="thumbnail" alt="{{ $title }}">
+                            <div class="course-info-wrapper">
+                                <a href="" style="color: #34364a;">
+                                    <h3 class="course-title">
+                                        Nama Kelas
+                                    </h3>
+                                </a>
+                                <div class="promo-price">
+                                    100.000
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <img src="images/thumbnail kelas online dart pemula flutter buildwith angga.png" class="thumbnail" alt="{{ $title }}">
+                            <div class="course-info-wrapper">
+                                <a href="" style="color: #34364a;">
+                                    <h3 class="course-title">
+                                        Nama Kelas
+                                    </h3>
+                                </a>
+                                <!-- {{-- Label Joined course --}} -->
+                                <div class="labelJoinedCourse mx-0 mb-0">
+                                    <img src="images/ic_check_fill.svg" alt="check">
+                                    <p class="__text">
+                                        JOINED
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <img src="images/thumbnail kelas online dart pemula flutter buildwith angga.png" class="thumbnail" alt="{{ $title }}">
+                            <div class="course-info-wrapper">
+                                <a href="" style="color: #34364a;">
+                                    <h3 class="course-title">
+                                        Nama Kelas
+                                    </h3>
+                                </a>
+                                <!-- {{-- Price Info --}} -->
+                                <div class="price d-flex justify-content-start align-items-center">
+                                    <div class="disc-price blink_me">
+                                        100.000
+                                    </div>
+                                    
+                                    <div class="promo-price">
+                                        60.000
+                                    </div>   
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="course-content">
+                            <img src="images/thumbnail kelas online dart pemula flutter buildwith angga.png" class="thumbnail" alt="{{ $title }}">
+                            <div class="course-info-wrapper">
+                                <a href="" style="color: #34364a;">
+                                    <h3 class="course-title">
+                                        Nama Kelas
+                                    </h3>
+                                </a>
+                                <!-- {{-- Price Info --}} -->
+                                <div class="price d-flex justify-content-start align-items-center">
+                                    <div class="disc-price blink_me">
+                                        100.000
+                                    </div>
+                                    
+                                    <div class="promo-price">
+                                        60.000
+                                    </div>   
+                                </div>
+                            </div>
+                        </div> 
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <section class="success_stories mb-30">
+            <div class="container">
+                <div class="headline_page">
+                    <h4 class="primary-label">Success Stories</h4>
+                    <h3 class="primary-title">
+                        Mengejar Karir Impian
+                    </h3>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-12">
+                    <div id="review-swiper" class="w-100 overflow-x-auto d-flex flex-nowrap swiper">
+                        <div class="swiper-wrapper">
+                            <div class="w-100 swiper-slide">
+                                <div class="card-review d-flex flex-column">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <a href="">
+                                            <img src="images/default-avatar.svg" class="user-avatar" alt="at BuildWithAngga">
+                                        </a>
+                                        <div>
+                                            <div class="username">
+                                                UserName
+                                            </div>
+                                            <p class="role">
+                                                Lifetime Learner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="review">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, soluta!
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="rating_component">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100 swiper-slide">
+                                <div class="card-review d-flex flex-column">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <a href="">
+                                            <img src="images/default-avatar.svg" class="user-avatar" alt="at BuildWithAngga">
+                                        </a>
+                                        <div>
+                                            <div class="username">
+                                                UserName
+                                            </div>
+                                            <p class="role">
+                                                Lifetime Learner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="review">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, soluta!
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="rating_component">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                            <img src="images/ic_star.svg" alt="star">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+                
+    </div>
     <!-- {{-- Tablet --}} -->
     <section class="py-5 roadmap d-none d-sm-block d-lg-none">
         <div class="container">
@@ -483,8 +735,8 @@
                     <div class="course-card mini">
                         <!-- {{-- Course Thumbnail and Course Trailer --}} -->
                         <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" 
-                            data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer=""
-                            data-course-name="">
+                            data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" onclick="trailerSet(this)" data-trailer=""
+                            data-course-name="" >
                             <img src="images/play_btn_blue.svg" alt="trailer - "
                                 class="_btn-play" />
                             <img src="images/thumbnail_bootcamp_1.png" class="thumbnail-course"
@@ -529,7 +781,7 @@
                     <div class="course-card mini">
                         <!-- {{-- Course Thumbnail and Course Trailer --}} -->
                         <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" 
-                            data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer=""
+                            data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" onclick="trailerSet(this)" data-trailer=""
                             data-course-name="">
                             <img src="images/play_btn_blue.svg" alt="trailer - "
                                 class="_btn-play" />
@@ -725,7 +977,7 @@
                         <div class="course-card mini">
                                 <!-- {{-- Course Thumbnail and Course Trailer --}} -->
                                 <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" 
-                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer=""
+                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" onclick="trailerSet(this)" data-trailer=""
                                     data-course-name="">
                                     <img src="images/play_btn_blue.svg" alt="trailer - "
                                         class="_btn-play" />
@@ -771,7 +1023,7 @@
                         <div class="course-card mini">
                                 <!-- {{-- Course Thumbnail and Course Trailer --}} -->
                                 <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" 
-                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer=""
+                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" onclick="trailerSet(this)" data-trailer=""
                                     data-course-name="">
                                     <img src="images/play_btn_blue.svg" alt="trailer - "
                                         class="_btn-play" />
@@ -812,7 +1064,7 @@
                         <div class="course-card mini">
                                 <!-- {{-- Course Thumbnail and Course Trailer --}} -->
                                 <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" 
-                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer=""
+                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" onclick="trailerSet(this)" data-trailer=""
                                     data-course-name="">
                                     <img src="images/play_btn_blue.svg" alt="trailer - "
                                         class="_btn-play" />
@@ -850,7 +1102,7 @@
                         <div class="course-card mini">
                                 <!-- {{-- Course Thumbnail and Course Trailer --}} -->
                                 <a href="javascript:void(0);" class="position-relative z-10 thumbnailContainer" 
-                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer=""
+                                    data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" onclick="trailerSet(this)" data-trailer=""
                                     data-course-name="">
                                     <img src="images/play_btn_blue.svg" alt="trailer - "
                                         class="_btn-play" />
@@ -1036,7 +1288,7 @@
                                         href="#"
                                         class="position-relative z-10 thumbnailContainer"
                                         data-bs-toggle="modal"
-                                        data-bs-target="#modalTrailerCourse"
+                                        data-bs-target="#modalTrailerCourse" onclick="trailerSet(this)"
                                         data-trailer="course.trailer_kelas"
                                         data-course-name="course.nama_kelas"
                                         
@@ -1116,7 +1368,12 @@
             </section>
         </div>
     </main>
-    <!-- @include('front.pieces.btn-to-top') -->
+    <!-- btn to top -->
+    <a href="#" class="btn-to-top">
+        <span class="material-icons">
+            arrow_upward
+        </span>
+    </a>
 
     <div class="d-none d-sm-block">
         <section class="footer-nd">
@@ -1223,7 +1480,7 @@
                         <li><a target="_blank" href="https://www.notion.so/galpratama/Jam-Operasional-b806c2c999274568960be51b0de5afda"> Jam Operasional</a></li>
                         <li><a href="">Cari Kelas</a></li>
                         <li><a href="">Roadmap Belajar</a></li>
-                        <li><a href="">All Courses</a></li>
+                        <li><a href="kelas-online-index.html">All Courses</a></li>
                         <li><a href="">Cek Sertifikat</a></li>
                       </ul>
                     </div>
@@ -1412,5 +1669,23 @@
         </div>
     </div>
     </section>
+    <!-- modal trailer -->
+    <div class="modal fade" id="modalTrailerCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header text-black d-flex align-items-center gap-3">
+              <h6 class="modal-title" id="staticBackdropLabel"></h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="embed-responsive embed-responsive-16by9 video-iframe">
+                <div class="plyr__video-embed" id="player">
+                  <iframe allowfullscreen allowtransparency allow="autoplay" frameborder="0" ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
   </body>
 </html>
