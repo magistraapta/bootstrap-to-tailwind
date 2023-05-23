@@ -73,6 +73,12 @@
 
     <script src="scripts/modal-course-trailer.js" type="text/javascript"></script>
 
+    <script defer src="scripts/pages/detail-kelas.js"></script>
+
+    <script type="text/javascript" src="scripts/btnToTop.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
     <style>
         .not-unfold {
             display: -webkit-box !important;
@@ -218,192 +224,192 @@
         </nav>
     </section>
     <div class="d-none d-sm-block">
-    <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="">
-            <img src="images/logo_bwa_new.svg" width="50" height="50" class="d-inline-block align-top" alt="logo buildwithangga" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="">
+                <img src="images/logo_bwa_new.svg" width="50" height="50" class="d-inline-block align-top" alt="logo buildwithangga" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="basic-menus navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="sale.html"> Flash Sale </a>
-            </li>
-            <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="listKelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Kelas </a>
-                <ul class="dropdown-menu __2022" aria-labelledby="listKelasDropdown">
-                <li class="sidecontent">
-                    <p>Trusted by 900K+ Students</p>
-                    <h5>
-                    Build Your <br />
-                    Future Career
-                    </h5>
-                    <p>
-                    Explore kelas gratis dan berbayar <br />
-                    bersama mentor expert
-                    </p>
-                    <a href="kelas-online-index.html" class="btn btn-primary">All Courses</a>
-                    <img src="images/silhouette-project-bwa.png" alt="icon buildwith angga" />
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="basic-menus navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="sale.html"> Flash Sale </a>
                 </li>
-                <li class="dropdown-item">
-                    <div class="row row-cols-lg-3 row-cols-2 dd-item-list">
-                    <div class="col">
-                        <a href="uiux-design">
-                        <p>UI/UX Design</p>
+                <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="listKelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Kelas </a>
+                    <ul class="dropdown-menu __2022" aria-labelledby="listKelasDropdown">
+                    <li class="sidecontent">
+                        <p>Trusted by 900K+ Students</p>
+                        <h5>
+                        Build Your <br />
+                        Future Career
+                        </h5>
+                        <p>
+                        Explore kelas gratis dan berbayar <br />
+                        bersama mentor expert
+                        </p>
+                        <a href="kelas-online-index.html" class="btn btn-primary">All Courses</a>
+                        <img src="images/silhouette-project-bwa.png" alt="icon buildwith angga" />
+                    </li>
+                    <li class="dropdown-item">
+                        <div class="row row-cols-lg-3 row-cols-2 dd-item-list">
+                        <div class="col">
+                            <a href="uiux-design">
+                            <p>UI/UX Design</p>
+                            </a>
+                            <a href="graphic-design">
+                            <p>Graphic Design</p>
+                            </a>
+                            <a href="web-development">
+                            <p>Web Development</p>
+                            </a>
+                            <a href="data-analysis">
+                            <p>Data Analysis</p>
+                            </a>
+                            <a href="android-development">
+                            <p>Android Development</p>
+                            </a>
+                            <a href="ios-development">
+                            <p>iOS Development</p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="html-css">
+                            <p>HTML & CSS</p>
+                            </a>
+                            <a href="javascript">
+                            <p>JavaScript</p>
+                            </a>
+                            <a href="php">
+                            <p>PHP</p>
+                            </a>
+                            <a href="python">
+                            <p>Python</p>
+                            </a>
+                            <a href="kotlin">
+                            <p>Kotlin</p>
+                            </a>
+                            <a href="java">
+                            <p>Java</p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="figma">
+                            <p>Figma</p>
+                            </a>
+                            <a href="laravel">
+                            <p>Laravel</p>
+                            </a>
+                            <a href="flutter">
+                            <p>Flutter</p>
+                            </a>
+                            <a href="react-native">
+                            <p>React Native</p>
+                            </a>
+                            <a href="vue-js">
+                            <p>Vue JS</p>
+                            </a>
+                            <a href="react-js">
+                            <p>React JS</p>
+                            </a>
+                        </div>
+                        </div>
+                    </li>
+                    </ul>
+                </li>
+
+                <!-- {{-- Alur Belajar --}} -->
+                <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="listAlurBelajarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Alur Belajar </a>
+                    <ul class="dropdown-menu __2022" aria-labelledby="listAlurBelajarDropdown">
+                    <li class="sidecontent">
+                        <p>Trusted by 900K+ Students</p>
+                        <h5>
+                        Follow Our <br />
+                        Best Roadmap
+                        </h5>
+                        <p>
+                        Panduan mentor expert untuk <br />
+                        belajar jadi lebih terarah
+                        </p>
+                        <a href="" class="btn btn-primary">All Roadmap</a>
+                        <img src="images/silhouette-roadmap-bwa.png" alt="roadmap" />
+                    </li>
+                    <div class="dd-item-list">
+                        <!-- {{-- Full-Stack Website Developer --}} -->
+                        <li class="dropdown-item">
+                        <a href="">
+                            <img src="images/ic_appcode.svg" class="icon" alt="bwa-icon" />
                         </a>
-                        <a href="graphic-design">
-                        <p>Graphic Design</p>
+                        <a href="">
+                            <h3 class="title">Full-Stack Website Developer</h3>
+                            <p class="subtitle">Rekomendasi oleh mentor expert</p>
                         </a>
-                        <a href="web-development">
-                        <p>Web Development</p>
+                        </li>
+                        <!-- {{-- UI/UX Designer --}} -->
+                        <li class="dropdown-item">
+                        <a href="">
+                            <img src="images/ic_design.svg" class="icon" alt="bwa-icon" />
                         </a>
-                        <a href="data-analysis">
-                        <p>Data Analysis</p>
+                        <a href="">
+                            <h3 class="title">UI/UX Designer</h3>
+                            <p class="subtitle">Rekomendasi oleh mentor expert</p>
                         </a>
-                        <a href="android-development">
-                        <p>Android Development</p>
+                        </li>
+                        <!-- {{-- Mobile App Developer --}} -->
+                        <li class="dropdown-item">
+                        <a href="">
+                            <img src="images/ic_flutter.svg" class="icon" alt="bwa-icon" />
                         </a>
-                        <a href="ios-development">
-                        <p>iOS Development</p>
+                        <a href="">
+                            <h3 class="title">Mobile App Developer</h3>
+                            <p class="subtitle">Rekomendasi oleh mentor expert</p>
                         </a>
+                        </li>
+                        <!-- {{-- Product Manager --}} -->
+                        <li class="dropdown-item">
+                        <a href="">
+                            <img src="images/ic_flag.svg" class="icon" alt="bwa-icon" />
+                        </a>
+                        <a href="">
+                            <h3 class="title">Product Manager</h3>
+                            <p class="subtitle">Rekomendasi oleh mentor expert</p>
+                        </a>
+                        </li>
                     </div>
-                    <div class="col">
-                        <a href="html-css">
-                        <p>HTML & CSS</p>
-                        </a>
-                        <a href="javascript">
-                        <p>JavaScript</p>
-                        </a>
-                        <a href="php">
-                        <p>PHP</p>
-                        </a>
-                        <a href="python">
-                        <p>Python</p>
-                        </a>
-                        <a href="kotlin">
-                        <p>Kotlin</p>
-                        </a>
-                        <a href="java">
-                        <p>Java</p>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="figma">
-                        <p>Figma</p>
-                        </a>
-                        <a href="laravel">
-                        <p>Laravel</p>
-                        </a>
-                        <a href="flutter">
-                        <p>Flutter</p>
-                        </a>
-                        <a href="react-native">
-                        <p>React Native</p>
-                        </a>
-                        <a href="vue-js">
-                        <p>Vue JS</p>
-                        </a>
-                        <a href="react-js">
-                        <p>React JS</p>
-                        </a>
-                    </div>
-                    </div>
+                    </ul>
+                </li>
+
+                <!-- {{-- Bootcamp --}} -->
+                <li class="nav-item">
+                    <a class="nav-link" href="views/bootcamp/bootcamp-katalog.html"> Bootcamp </a>
                 </li>
                 </ul>
-            </li>
 
-            <!-- {{-- Alur Belajar --}} -->
-            <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="listAlurBelajarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Alur Belajar </a>
-                <ul class="dropdown-menu __2022" aria-labelledby="listAlurBelajarDropdown">
-                <li class="sidecontent">
-                    <p>Trusted by 900K+ Students</p>
-                    <h5>
-                    Follow Our <br />
-                    Best Roadmap
-                    </h5>
-                    <p>
-                    Panduan mentor expert untuk <br />
-                    belajar jadi lebih terarah
-                    </p>
-                    <a href="" class="btn btn-primary">All Roadmap</a>
-                    <img src="images/silhouette-roadmap-bwa.png" alt="roadmap" />
+                <!-- {{-- RIGHT Menu --}} -->
+                <ul class="navbar-nav right-menu ms-auto">
+                <li class="nav-item d-flex align-items-center">
+                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="CTRL+P" data-bs-custom-class="font-poppins">
+                    <button type="button" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
+                        <img class="search" src="images/ic_search.svg" alt="search buildwith angga" />
+                    </button>
+                    </span>
                 </li>
-                <div class="dd-item-list">
-                    <!-- {{-- Full-Stack Website Developer --}} -->
-                    <li class="dropdown-item">
-                    <a href="">
-                        <img src="images/ic_appcode.svg" class="icon" alt="bwa-icon" />
-                    </a>
-                    <a href="">
-                        <h3 class="title">Full-Stack Website Developer</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                    </a>
-                    </li>
-                    <!-- {{-- UI/UX Designer --}} -->
-                    <li class="dropdown-item">
-                    <a href="">
-                        <img src="images/ic_design.svg" class="icon" alt="bwa-icon" />
-                    </a>
-                    <a href="">
-                        <h3 class="title">UI/UX Designer</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                    </a>
-                    </li>
-                    <!-- {{-- Mobile App Developer --}} -->
-                    <li class="dropdown-item">
-                    <a href="">
-                        <img src="images/ic_flutter.svg" class="icon" alt="bwa-icon" />
-                    </a>
-                    <a href="">
-                        <h3 class="title">Mobile App Developer</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                    </a>
-                    </li>
-                    <!-- {{-- Product Manager --}} -->
-                    <li class="dropdown-item">
-                    <a href="">
-                        <img src="images/ic_flag.svg" class="icon" alt="bwa-icon" />
-                    </a>
-                    <a href="">
-                        <h3 class="title">Product Manager</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                    </a>
-                    </li>
-                </div>
+
+                <li class="nav-item wrap-btn-daftar">
+                    <a class="btn btn-secondary btn-auth btn-daftar d-xl-none" href="">Masuk</a>
+                    <button class="btn btn-secondary btn-auth btn-daftar btn-auth d-none d-xl-flex justify-content-center align-items-center">Masuk</button>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary btn-masuk btn-auth" href="">Daftar</a>
+                </li>
                 </ul>
-            </li>
-
-            <!-- {{-- Bootcamp --}} -->
-            <li class="nav-item">
-                <a class="nav-link" href="views/bootcamp/bootcamp-katalog.html"> Bootcamp </a>
-            </li>
-            </ul>
-
-            <!-- {{-- RIGHT Menu --}} -->
-            <ul class="navbar-nav right-menu ms-auto">
-            <li class="nav-item d-flex align-items-center">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="CTRL+P" data-bs-custom-class="font-poppins">
-                <button type="button" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
-                    <img class="search" src="images/ic_search.svg" alt="search buildwith angga" />
-                </button>
-                </span>
-            </li>
-
-            <li class="nav-item wrap-btn-daftar">
-                <a class="btn btn-secondary btn-auth btn-daftar d-xl-none" href="">Masuk</a>
-                <button class="btn btn-secondary btn-auth btn-daftar btn-auth d-none d-xl-flex justify-content-center align-items-center">Masuk</button>
-            </li>
-            <li class="nav-item">
-                <a class="btn btn-primary btn-masuk btn-auth" href="">Daftar</a>
-            </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+            </div>
+            </div>
+        </nav>
     </div>
 
     <!-- content section -->
@@ -755,7 +761,7 @@
                                                             <h2 class="accordion-header header w-100 d-flex flex-nowrap justify-content-between align-items-center position-relative"
                                                                 id="headingOne">
                                                                 <button
-                                                                    class="position-absolute accordion-button bg-white p-0 d-flex justify-content-between align-items-center {{ $loop->first ? '' : 'collapsed' }}"
+                                                                    class="position-absolute accordion-button bg-white p-0 d-flex justify-content-between align-items-center"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#accordionCollapse_1"
                                                                     aria-expanded="true"
@@ -774,14 +780,14 @@
                                                                     </div>
                                                                 </button>
                                                             </h2>
-                                                            <div id="accordionCollapse_0"
+                                                            <div id="accordionCollapse_1"
                                                                 class="accordion-collapse show"
                                                                 aria-labelledby="headingOne"
-                                                                data-bs-parent="#accordionLesson_0">
+                                                                data-bs-parent="#accordionLesson_1">
                                                                 <div class="accordion-body">
                                                         
                                                                     <div class="video-materi d-flex justify-content-between align-items-center mb-20">
-                                                                        <a href="#{{ $materi_kelas_item->video_materi }}"
+                                                                        <a href=""
                                                                             class="btn-preview btn-preview-materi mt-0">
                                                                             <span class="material-icons mt-0">
                                                                                 play_circle
@@ -794,7 +800,69 @@
                                                                         @endif -->
     
                                                                         <p class="video-title mb-0 flex-sm-fill">
-                                                                            <a href="#{{ $materi_kelas_item->video_materi }}" class="video-title-text line-clamp btn-preview-materi">Nama Materi</a>
+                                                                            <a href="" class="video-title-text line-clamp btn-preview-materi">Nama Materi</a>
+                                                                            <!-- @else
+                                                                                <span
+                                                                                    class="video-title-text line-clamp">{{ $materi_kelas_item->nama_materi }}</span>
+                                                                            @endif -->
+                                                                        </p>
+                                                                        <p class="min mb-0 d-none d-sm-block">
+                                                                            38:00
+                                                                        </p>
+                                                                        <div class="clear"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7 col-12 lessons-col" style="display: none;">
+                                                    <div class="accordion item-lesson"
+                                                        id="accordionLesson_2">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header header w-100 d-flex flex-nowrap justify-content-between align-items-center position-relative"
+                                                                id="headingOne">
+                                                                <button
+                                                                    class="position-absolute accordion-button bg-white p-0 d-flex justify-content-between align-items-center collapsed"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#accordionCollapse_2"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="accordionCollapse_2">
+            
+                                                                    <div
+                                                                        class="d-flex justify-content-start align-items-center">
+                                                                        <div class="number text-center">
+                                                                            <p>
+                                                                                1
+                                                                            </p>
+                                                                        </div>
+                                                                        <p class="title mb-0">
+                                                                            Nama Bagian
+                                                                        </p>
+                                                                    </div>
+                                                                </button>
+                                                            </h2>
+                                                            <div id="accordionCollapse_2"
+                                                                class="accordion-collapse collapse"
+                                                                aria-labelledby="headingOne"
+                                                                data-bs-parent="#accordionLesson_2">
+                                                                <div class="accordion-body">
+                                                        
+                                                                    <div class="video-materi d-flex justify-content-between align-items-center mb-20">
+                                                                        <a href=""
+                                                                            class="btn-preview btn-preview-materi mt-0">
+                                                                            <span class="material-icons mt-0">
+                                                                                play_circle
+                                                                            </span>
+                                                                        </a>
+                                                                        <!-- @else
+                                                                            <span class="material-icons mt-0">
+                                                                                lock
+                                                                            </span>
+                                                                        @endif -->
+    
+                                                                        <p class="video-title mb-0 flex-sm-fill">
+                                                                            <a href="" class="video-title-text line-clamp btn-preview-materi">Nama Materi</a>
                                                                             <!-- @else
                                                                                 <span
                                                                                     class="video-title-text line-clamp">{{ $materi_kelas_item->nama_materi }}</span>
@@ -850,6 +918,10 @@
                                                         </div>
                                                         <div class="rating mt-4 d-flex align-items-center gap-1">
                                                             
+                                                            <img src="images/ic_star.svg" width="22" alt="ic-star" />
+                                                            <img src="images/ic_star.svg" width="22" alt="ic-star" />
+                                                            <img src="images/ic_star.svg" width="22" alt="ic-star" />
+                                                            <img src="images/ic_star.svg" width="22" alt="ic-star" />
                                                             <img src="images/ic_star.svg" width="22" alt="ic-star" />
                                                             <p class="sum mb-0 text-medium ms-1">(123)
                                                             </p>
@@ -940,6 +1012,10 @@
                                                     </p>
                                                 </div>
                                                 <div class="rating mt-auto">
+                                                    <img src="images/ic_star.svg" alt="ic-star">
+                                                    <img src="images/ic_star.svg" alt="ic-star">
+                                                    <img src="images/ic_star.svg" alt="ic-star">
+                                                    <img src="images/ic_star.svg" alt="ic-star">
                                                     <img src="images/ic_star.svg" alt="ic-star">
                                                 </div>
                                             </div>
@@ -1316,524 +1392,13 @@
             </section>
         </section>
 
-        <section class="--bwa-mobile-version d-block d-sm-none">
-            <div class="__detail-kelas" id="topPage">
-                <!-- {{-- Carousel Course Preview --}} -->
-                <section class="mb-20">
-                    <div class="__main-preview course-plyr d-none">
-                        <div class="plyr__video-embed ratio ratio-16x9" id="player">
-                            <iframe
-                                src="https://www.youtube.com/embed/FnWjFLRDWew" title="Trailer BWAMERN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen allowtransparency></iframe>
-                        </div>
-                        <img src="images/thumbnail_bootcamp_1.png" alt="Foto kelas" class="" />
-                    </div>
-                    <div class="__carousel-preview d-none">
-                        <img src="https://img.youtube.com/vi/FnWjFLRDWew/hqdefault.jpg"
-                            alt="Foto kelas" class="" />
-                        <img src="images/thumbnail_bootcamp_1.png"
-                            alt="Foto kelas" class="" />
-                    </div>
-                </section>
+        <!-- btn to top -->
+        <a href="#" class="btn-to-top">
+            <span class="material-icons">
+                arrow_upward
+            </span>
+        </a>
 
-                <!-- {{-- Course Title & Tagline --}} -->
-                <div class="container">
-                    <div class="headline_page">
-                        <h3 class="primary-title">
-                            Full-Stack JavaScript Developer: Website Travel
-                        </h3>
-                        <p class="tagline">
-                            Learn how to build a real project from scratch
-                        </p>
-                    </div>
-                </div>
-
-                <div class="tabs-content-nd">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                        <div class="nav-pills-wrapper d-flex justify-content-start align-items-center overflow-x-scroll"
-                            id="class-detail-swiper">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-capitalize" id="pills-lessonsMobile-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-lessonsMobile" type="button" role="tab"
-                                    aria-controls="pills-lessonsMobile" aria-selected="true">
-                                    Lessons
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active text-capitalize" id="pills-aboutMobile-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-aboutMobile" type="button" role="tab"
-                                    aria-controls="pills-aboutMobile" aria-selected="true">
-                                    About
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-capitalize" id="pills-benefitsMobile-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-benefitsMobile" type="button" role="tab"
-                                    aria-controls="pills-benefitsMobile" aria-selected="true">
-                                    Benefits
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-capitalize" id="pills-reviewsMobile-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-reviewsMobile" type="button" role="tab"
-                                    aria-controls="pills-reviewsMobile" aria-selected="true">
-                                    Reviews
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link text-capitalize" id="pills-toolsMobile-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-toolsMobile" type="button" role="tab"
-                                    aria-controls="pills-toolsMobile" aria-selected="true">
-                                    Tools
-                                </button>
-                            </li>
-                        </div>
-                    </ul>
-
-                    <div class="tab-content" id="pills-tabContent">
-                        <!-- {{-- Lessons --}} -->
-                        <div class="tab-pane fade container" id="pills-lessonsMobile" role="tabpanel"
-                            aria-labelledby="pills-lessonsMobile-tab">
-                            <div class="accordion __course-accordion" id="accordionBWA">
-                                @php
-                                    $number = 1;
-                                @endphp
-                                @forelse ($kelas_detail->bagian as $bagian_kelas_item)
-                                    @php
-                                        $materi_duration = collect($bagian_kelas_item->materi_kelas);
-                                    @endphp
-                                    <div class="accordion-item section-video-list">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }}" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#bwa{{ $bagian_kelas_item->id }}"
-                                                aria-controls="bwa{{ $bagian_kelas_item->id }}">
-                                                <div class="course_details">
-                                                    <span class="rounded-number bg-dark-blue">
-                                                        {{ $number++ }}
-                                                    </span>
-                                                    <div>
-                                                        <div class="section_title">
-                                                            {{ $bagian_kelas_item->nama_bagian }}
-                                                        </div>
-                                                        <span class="text-grey text-sm">
-                                                            {{ count($bagian_kelas_item->materi_kelas) }}
-                                                            lesson{{ count($bagian_kelas_item->materi_kelas) > 1 ? 's' : '' }}
-                                                            •
-                                                            {{ $materi_duration->sum('duration') }} minutes
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </h2>
-                                        <div id="bwa{{ $bagian_kelas_item->id }}"
-                                            class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
-                                            aria-labelledby="headingOne" data-bs-parent="#accordionBWA">
-                                            <div class="accordion-body">
-                                                <ul class="course_item_container">
-                                                    @forelse ($bagian_kelas_item->materi_kelas->sortBy('index_materi')  as $materi_kelas_item)
-                                                        <li class="item-video materi-lock">
-                                                            @if ($materi_kelas_item->tipe_materi == 'preview')
-                                                                <a href="#{{ $materi_kelas_item->video_materi }}"
-                                                                    class="btn-preview-materi">
-                                                                    <img src="{{ asset('themes/front/images/play_btn_blue.svg') }}"
-                                                                        width="26" alt="play" />
-                                                                </a>
-                                                            @else
-                                                                <img src="{{ asset('themes/front/images/svgs/ic_lock.svg') }}"
-                                                                    width="26" alt="lock" />
-                                                            @endif
-                                                            <div class="d-flex flex-column">
-                                                                @if ($materi_kelas_item->tipe_materi == 'preview')
-                                                                    <a href="#{{ $materi_kelas_item->video_materi }}"
-                                                                        class="text-sm text-medium truncate-text text-black  btn-preview-materi">
-                                                                        {{ $materi_kelas_item->nama_materi }}
-                                                                    </a>
-                                                                @else
-                                                                    <div class="text-sm text-medium truncate-text text-black">
-                                                                        {{ $materi_kelas_item->nama_materi }}
-                                                                    </div>
-                                                                @endif
-                                                                <div class="text-grey text-sm">
-                                                                    {{ $materi_kelas_item->duration }} minutes
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    @empty
-                                                    @endforelse
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @empty
-                                @endforelse
-                            </div>
-                        </div>
-                        {{-- About --}}
-                        <div class="tab-pane fade show active" id="pills-aboutMobile" role="tabpanel"
-                            aria-labelledby="pills-aboutMobile-tab">
-                            <div class="__PillsBody">
-                                {{-- Develop Your Skills --}}
-                                <div class="container">
-                                    <div class="section-title">
-                                        Develop Your Skills
-                                    </div>
-                                    <div class="paragraph_about line-clamp-4 height-104 text-sm">
-                                        {!! $kelas_detail->tentang_kelas !!}
-
-                                        <span class="read_more_less">read more</span>
-
-                                        @push('scripts')
-                                            <script src="{{ asset('scripts/mobile-read-more-less.js') }}" type="text/javascript"></script>
-                                        @endpush
-                                    </div>
-                                </div>
-                                {{-- Learn With Expert --}}
-                                <div class="learn-with-expert">
-                                    <div class="section-title container">
-                                        Learn With Expert
-                                    </div>
-                                    <div class="overflow-x-auto d-flex flex-nowrap px-3">
-                                        @foreach ($kelas_detail->authors as $author)
-                                            <div class="mobile_card mr-18">
-                                                <div class="__user_details">
-                                                    <a href="{{ route('front.mentor.index', ['username' => $author->username]) }}">
-                                                        <img src="{{ url($author->avatar) }}" alt="{{ $author->name }}">
-                                                    </a>
-                                                    <a href="{{ route('front.mentor.index', ['username' => $author->username]) }}">
-                                                        <h4  class="primary-text line-clamp color-black">
-                                                            {{ $author->name }}
-                                                        </h4>
-                                                        <p class="secondary-text m-0">
-                                                            {{ $author->level_user }}
-                                                        </p>
-                                                    </a>
-                                                    <!-- <a href="{{ route('front.mentor.index', ['username' => $author->username]) }}"
-                                                        class="stretched-link"></a> -->
-                                                </div>
-                                                <div class="d-flex align-items-start gap-1 mt-auto">
-                                                    <div class="rating_component">
-                                                        @for ($i = 0; $i < 5; $i++)
-                                                            <img src="{{ asset('themes/front/images/ic_star.svg') }}"
-                                                                alt="rating-star" />
-                                                        @endfor
-                                                    </div>
-                                                    <span class="text-sm">
-                                                        ({{ \App\Helpers\NumberFormatter::short($author->class->sum('joined_amount')) }})
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                {{-- Keypoints --}}
-                                @isset($kelas_detail->keypoints)
-                                    <div class="container">
-                                        <div class="section-title">
-                                            Key Points
-                                        </div>
-                                        <ul class="mobile_list_points">
-                                            @foreach ($kelas_detail->keypoints as $keypoint)
-                                                <li class="list">
-                                                    <img src="{{ asset('themes/front/images/ic_check_blue.svg') }}" alt="check"/>
-                                                    <span>
-                                                        {{ $keypoint }}
-                                                    </span>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endisset
-                                {{-- Created For --}}
-                                @isset($kelas_detail->personas)
-                                    <div class="container">
-                                        <div class="section-title">
-                                            Created For
-                                        </div>
-                                        <ul class="mobile_list_points">
-                                            @foreach ($kelas_detail->personas as $personas)
-                                                <li class="list">
-                                                    <img src="{{ asset('themes/front/images/ic_check_blue.svg') }}" alt="check"/>
-                                                    <span>
-                                                        {{ $personas }}
-                                                    </span>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endisset
-                            </div>
-                        </div>
-                        {{-- Benefits --}}
-                        <div class="tab-pane fade container" id="pills-benefitsMobile" role="tabpanel"
-                            aria-labelledby="pills-benefitsMobile-tab">
-                            <div class="section-title">
-                                For Your Career
-                            </div>
-                            <div class="d-flex flex-column" style="gap: 12px;">
-                                {{-- Akses Selamanya --}}
-                                <div class="mobile_card">
-                                    <div class="__user_details mb-0">
-                                        <img src="{{ asset('themes/front/images/svgs/ic_smile_phone.svg') }}" alt="phone">
-                                        <div>
-                                            <div class="primary-text">
-                                                Akses Selamanya
-                                            </div>
-                                            <div class="secondary-text">
-                                                Belajar lebih santai & produktif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @if ($kelas_detail->tipe_kelas == 'Premium')
-                                    {{-- Grup Private --}}
-                                    <div class="mobile_card">
-                                        <div class="__user_details mb-0">
-                                            <img src="{{ asset('themes/front/images/ic_tg.svg') }}" alt="private">
-                                            <div>
-                                                <div class="primary-text">
-                                                    Assets & Grup Private
-                                                </div>
-                                                <div class="secondary-text">
-                                                    Diskusi belajar agar lebih terarah
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {{-- Sertifikat & Portfolio --}}
-                                    <div class="mobile_card">
-                                        <div class="__user_details mb-0">
-                                            <img src="{{ asset('themes/front/images/ic_project.svg') }}" alt="project">
-                                            <div>
-                                                <div class="primary-text">
-                                                    Sertifikat & Portfolio
-                                                </div>
-                                                <div class="secondary-text">
-                                                    Gunakan untuk modal bekerja
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {{-- Akses Freemium Courses --}}
-                                    <div class="mobile_card">
-                                        <div class="__user_details mb-0">
-                                            <img src="{{ asset('themes/front/images/ic_access.svg') }}" alt="access">
-                                            <div>
-                                                <div class="primary-text">
-                                                    Akses Freemium Courses
-                                                </div>
-                                                <div class="secondary-text">
-                                                    Sehingga lebih up to date
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-
-                        </div>
-                        {{-- Reviews --}}
-                        <div class="tab-pane fade container" id="pills-reviewsMobile" role="tabpanel"
-                            aria-labelledby="pills-reviewsMobile-tab">
-                            <div class="section-title mb-2">
-                                <span class="text-green">{{ number_format($count_student) }}</span> <br>
-                                Happy Students
-                            </div>
-                            <div class="d-flex flex-column gap-14px" id="reviewsMobileContainer">
-                                {{-- blade-formatter-disable --}}
-                                @forelse ($review_paginate as $review)
-                                    @if ($review->user)
-                                        @php
-                                            $userRole = $review->user->level_user == "" ? "Lifetime Learner" : ucfirst(Str::limit($review->user->level_user, 30));
-                                            $userName = $review->user->username == null ? 'Lifetime Learner' : $review->user->username
-                                        @endphp
-                                        @component('front.components.card-review-mobile')
-                                            @if ($review->user->username != null)
-                                                @slot('routeUserProfile')
-                                                    {{ route('front.talent.profile', ['username' => $review->user->username]) }}
-                                                @endslot
-                                            @endif
-                                            @slot('avatar',  !isset($review->user->avatar) ?
-                                            asset('themes/front/images/default-avatars.svg') : url($review->user->avatar))
-                                            @slot('username', $userName)
-                                            @slot('role', $userRole)
-                                            @slot('review', $review->description)
-                                            @slot('rating')
-                                                @for ($i = 0; $i < $review->amount; $i++)
-                                                    <img src="{{ asset('themes/front/images/ic_star.svg') }}" alt="ic-star">
-                                                @endfor
-                                            @endslot
-                                        @endcomponent
-                                    @endif
-                                @empty
-                                    Belum ada review
-                                @endforelse
-                                {{-- blade-formatter-enable --}}
-                            </div>
-                            @if ($review_paginate->total() > 3)
-                                <div class="d-grid align-items-center my-3">
-                                    <div class="d-none mx-auto mobileReviewLoader">
-                                        <img src="{{ asset('vendor/laravel-filemanager/img/loader.svg') }}" width="50"
-                                            alt="loader">
-                                    </div>
-                                    <button type="button" class="btn btn-secondary see-more w-100 text-sm" data-page="2"
-                                        data-link="{{ url()->current() }}?page=" data-div="#reviewsMobileContainer"
-                                        data-lastpage="{{ $review_paginate->lastPage() }}">
-                                        Load More Reviews
-                                    </button>
-                                </div>
-                            @endif
-                        </div>
-                        {{-- Tools --}}
-                        <div class="tab-pane fade container" id="pills-toolsMobile" role="tabpanel"
-                            aria-labelledby="pills-toolsMobile-tab">
-                            <div class="section-title">
-                                Tools Pendukung
-                            </div>
-                            <div class="d-flex flex-column" style="gap: 12px;">
-                                @forelse($kelas_detail->tools as $tool)
-                                    @php
-                                        $toolImage = $tool->image == '' ? asset('themes/front/images/logo_bwa_new.svg') : $tool->image;
-                                    @endphp
-                                    <div class="mobile_card">
-                                        <div class="__user_details mb-0">
-                                            <a href="{{ $tool->url }}">
-                                                <img src="{{ $toolImage }}" alt="{{ $tool->name }}" class="rounded-none" />
-                                            </a>
-                                            <a href="{{ $tool->url }}"  class="w-100">
-                                                <h4 class="primary-text color-black">
-                                                    {{ $tool->name }}
-                                                </h4>
-                                                <p class="secondary-text m-0">
-                                                    Software {{ $tool->price }}
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                @empty
-                                    <p>
-                                        Belum ada tools.
-                                    </p>
-                                @endforelse
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {{-- Mobile BOTTOM CONTENT --}}
-            {{-- Banner Beli Kelas --}}
-            <div class="buy-course-mobile">
-                @if ($kelas_saya == null)
-                    @if (($kelas_detail->is_active === 0 || $kelas_detail->is_active === 1) && $kelas_detail->is_upcoming === 1)
-                        <a class="btn btn-sm btn-primary text-sm w-100 label" href="javascript:void(0);"
-                            onclick="getPopupIncoming(this);" data-id="{{ $kelas_detail->id }}">
-                            Add Wishlist
-                        </a>
-                    @elseif ($kelas_detail->is_active === 1 && $kelas_detail->is_upcoming === 0)
-                        {{-- Freemium || Starter --}}
-                        @if ($kelas_detail->tipe_kelas == 'Freemium' || $kelas_detail->tipe_kelas == 'Starter')
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="price">
-                                    <h3>Rp 0</h3>
-                                </div>
-                                <div
-                                    class="actions {{ $kelas_saya == null ? '' : 'w-100 d-flex align-items-center justify-content-between gap-3' }}">
-                                    @auth
-                                        @if ($kelas_saya == null)
-                                            <a class="btn btn-sm btn-primary text-sm"
-                                                href="{{ config('app.class_url') . '/join_kelas/' . $kelas_detail->slug_kelas }}">
-                                                Gabung Kelas
-                                            </a>
-                                        @endif
-                                    @endauth
-
-                                    @guest
-                                        <a class="btn btn-primary text-sm"
-                                            href="{{ route('new-login-flow') }}?redirect={{ config('app.class_url') . '/join_kelas/' . $kelas_detail->slug_kelas }}">
-                                            Gabung Kelas
-                                        </a>
-                                    @endguest
-                                </div>
-                            </div>
-                        @endif
-                        {{-- Premium --}}
-                        @if ($kelas_detail->tipe_kelas == 'Premium' && $kelas_detail->purchase_type !== 'Subscribe')
-                            {{-- Jika member belum beli kelas, tampilkan harga kelas --}}
-                            <div class="price">
-                                @if ($kelas_detail->is_promo == 1)
-                                    @if ($kelas_detail->is_share_cost > 0)
-                                        <h3>Rp
-                                            {{ number_format($kelas_detail->harga_kelas / $kelas_detail->is_share_cost) }}
-                                        </h3>
-                                    @else
-                                        <h3>
-                                            Rp {{ number_format($kelas_detail->harga_kelas) }}
-                                        </h3>
-                                    @endif
-                                    <p class="discount">
-                                        Rp {{ number_format($kelas_detail->origin_price) }}
-                                    </p>
-                                @else
-                                    <h3 class="mt-2">
-                                        Rp {{ number_format($kelas_detail->harga_kelas) }}
-                                    </h3>
-                                @endif
-                            </div>
-                            <div
-                                class="actions {{ $kelas_saya == null ? '' : 'w-100 d-flex align-items-center justify-content-between gap-3' }}">
-                                @auth
-                                    @if ($kelas_saya == null)
-                                        <a class="btn btn-sm btn-primary text-sm"
-                                            href="{{ route('front.courses.checkout', ['slug_kelas' => $kelas_detail->slug_kelas]) }}?thumbnail={{ $thumbnailURL . '.' . $kelas_detail->thumbnails[0]->id }}&main_leads={{ $main_leads_get }}">
-                                            Beli Kelas
-                                        </a>
-                                    @endif
-                                @endauth
-
-                                @guest
-                                    <a class="btn btn-primary"
-                                        href="{{ route('new-login-flow') }}?redirect={{ route('front.courses.checkout', ['slug_kelas' => $kelas_detail->slug_kelas]) }}?thumbnail={{ $thumbnailURL . '.' . $kelas_detail->thumbnails[0]->id }}&main_leads={{ $main_leads_get }}">
-                                        Beli Kelas
-                                    </a>
-                                @endguest
-                            </div>
-                        @endif
-                    @else
-                        <h4 class="text-semibold text-center text-black">
-                            Pendaftaran Kelas Ditutup
-                        </h4>
-                    @endif
-                @else
-                    <div class="actions w-100 d-flex align-items-center justify-content-between gap-3">
-                        <div class="d-flex align-items-center gap-12px flex-shrink">
-                            <img src="images/ic_check_blue.svg" width="24"
-                                alt="check" />
-                            <div class="text-medium text-sm" style="width: 81px;">
-                                Sudah bergabung
-                            </div>
-                        </div>
-                        <a href="{{ route('course_playing', ['slug' => $kelas_detail->slug_kelas]) }}"
-                            class="btn btn-sm btn-primary text-sm">
-                            Lanjut Belajar
-                        </a>
-                    </div>
-                @endif
-            </div>
-
-        </section>
-
-        {{-- button arrow up to top --}}
-        @include('front.pieces.btn-to-top')
-
-        {{-- Admin mode view --}}
-        @auth
-            @php
-                $roleList = ['super', 'admin', 'admingeneral'];
-            @endphp
-            @if (in_array(Auth::user()->getRoleName(), $roleList))
-                @include('front.pieces.admin-mode')
-            @endif
-        @endauth
     </main>
     <!-- end of content section -->
 

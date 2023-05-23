@@ -1004,7 +1004,7 @@ a:hover {
 }
 .btn-secondary.btn-materi.btn-preview-materi {
   width: auto !important;
-  padding: 11px 42px 42px !important;
+  padding: 11px 42px !important;
 }
 .btn-100 {
   width: 100% !important;
@@ -1320,7 +1320,7 @@ a:hover {
   display: block !important;
   width: 26px !important;
   height: 26px !important;
-  background: #e5e9f2 url("/themes/front/images/svgs/ic_arrow-vertical.svg") no-repeat 50% !important;
+  background: #e5e9f2 url("../images/svgs/ic_arrow-vertical.svg") no-repeat 50% !important;
   background-size: 15px !important;
   border-radius: 50% !important;
 }
@@ -3580,7 +3580,7 @@ body .course-playing .accordion .accordion-item.section-video-list button.accord
 body .course-playing .accordion .accordion-item.section-video-list button.accordion-button:not(.collapsed)::after,
 body .course-playing .accordion .accordion-item.section-video-list button.accordion-button::after {
   background: none;
-  background-image: url("/themes/front/images/svgs/ic_arrow-vertical.svg");
+  background-image: url("../images/svgs/ic_arrow-vertical.svg");
 }
 body .course-playing .accordion .accordion-item.section-video-list button.accordion-button::after {
   background: #fff center;
@@ -6308,7 +6308,7 @@ body.set-height {
     cursor: pointer;
   }
   .--bwa-mobile-version .__mobile-checkout .custom-file-input.attachment::before {
-    content: url("/themes/front/images/svgs/ic_clip_blue.svg");
+    content: url("../images/svgs/ic_clip_blue.svg");
     background: transparent;
     outline: 0;
     white-space: nowrap;
@@ -7650,7 +7650,7 @@ body.set-height {
 @media screen and (max-width: 575px) {
   .__course-accordion .accordion-item.section-video-list button.accordion-button:not(.collapsed)::after,
   .__course-accordion .accordion-item.section-video-list button.accordion-button::after {
-    background-image: url("/themes/front/images/svgs/ic_arrow-vertical.svg");
+    background-image: url("../images/svgs/ic_arrow-vertical.svg");
   }
 }
 @media screen and (max-width: 575px) {
@@ -9775,7 +9775,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
   cursor: pointer;
 }
 .basic-blue-card {
-  background: url("/themes/front/images/bg_blue_secure.svg") no-repeat;
+  background: url("../images/bg_blue_secure.svg") no-repeat;
   background-size: cover;
   padding: 30px;
   min-height: 270px;
@@ -10316,7 +10316,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
   cursor: pointer;
 }
 .checkout .payment-details .custom-file-input::before {
-  content: url("/themes/front/images/ic_attachment_link.svg");
+  content: url("../images/ic_attachment_link.svg");
   background: transparent;
   outline: 0;
   white-space: nowrap;
