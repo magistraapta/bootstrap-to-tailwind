@@ -2,6 +2,8 @@ $(document).ready(function () {
   // REQUIRING "appUrl" VARIABLE
   var inputPassword = $(".revealPassword input");
 
+  // ".icon" only for .html in sub folder
+
   var inputPasswordIcon = $(".revealPassword div .icon");
   var openEye = "../../images/svgs/ic_eye.svg";
   var closeEye = "../../images/svgs/ic_eye-off.svg";
