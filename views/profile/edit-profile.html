@@ -247,7 +247,6 @@
         </div>
       </nav>
     </div>
-
     <!-- {{-- Mobile navbar --}} -->
     <div class="--bwa-mobile-version d-sm-none d-block">
       <div class="offcanvas offcanvas-bottom overflow-hidden mobile-navbar-offcanvas" tabindex="-1" id="navbarMobileGuest" aria-labelledby="navbarMobileGuestLabel">
@@ -444,63 +443,147 @@
             </div>
         </section>
 
-        <main class="main-wrapper d-none d-sm-block">
+        <main class="main-wrapper">
             <div class="container-fluid">
     
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="header-primary mb-3">
-                            Settings
-                        </h1>
-                        <p class="subtitle-primary">
-                            Pengaturan akun yang mungkin <br class="desktop"> dibutuhkan selama proses belajar
-                        </p>
+                <header class="vstack">
+                    <a href="../../views/profile/settings.html" class="text-black mb-3 d-block d-sm-none">
+                        <span class="material-icons">
+                            west
+                        </span>
+                    </a>
+                    <h1 class="header-primary mb-3">
+                        Edit Profile
+                    </h1>
+                    <p class="subtitle-primary">
+                        Masukkan informasi yang valid <br class="desktop"> agar proses belajar lebih mudah
+                    </p>
+                </header>
+    
+                <div class="row gy-4 mt-4">
+                    <div class="col-lg-5 col-12">
+                        <div class="basic-form p-0">
+                            <form id="userProfile" class="form-group default-card">    
+                                <!-- {{-- Avatar --}} -->
+                                <div class="mb-3 user-photo-upload vstack">
+                                    <h3 class="title">
+                                        My Avatar (Maks. 1 MB)
+                                    </h3>
+                                    <img id="avatar-src"
+                                        src="../../images/default-avatar.svg"
+                                        class="me-3 avatar my-3" style="object-fit: cover" alt="">
+                                    <div class="user-info">
+                                        <div class="upload">
+                                            <input type="file" name="avatar" id="avatar" class="file_upload avatar-image"
+                                                accept="image/jpg, image/jpeg, image/png" />
+                                            <div id="imageHelp" class="form-text mb-2">Format file jpg, jpeg, png.</div>
+                                            <small class="form-text text-red text-muted d-none"></small>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <!-- {{-- Nama --}} -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nama (Maks. 50 Karakter)</label>
+                                    <input name="name" value="" type="text" 
+                                        class="form-control" id="name">
+                                   
+                                    <small class="form-text text-muted d-none text-red"></small>
+                                </div>
+    
+                                <!-- {{-- Email --}} -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input name="email" value="" type="email" disabled
+                                        class="oh-disabled  form-control" id="email">
+                                    <small id="emailHelp_2" class="form-text text-muted d-none"></small>
+                                </div>
+    
+                                <!-- {{-- Username --}} -->
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input name="username" value="" type="text" class="form-control" id="username">
+                                    <small class="form-text text-muted d-none"></small>
+                                </div>
+    
+                                <!-- {{-- Personal Goal --}} -->
+                                <div class="mb-3">
+                                    <label for="career_goal" class="form-label">Personal Goal</label>
+                                    <select name="career_id" class="form-select-secondary" aria-label="Default select example"
+                                        id="career_goal" required>
+                                        <option value="" disabled>Pilih
+                                            Keahlian</option>
+                                            <option value="" >Frontend Developer</option>
+                                            <option value="" >Frontend Developer</option>
+                                    </select>
+                                    <small class="form-text text-muted d-none text-red"></small>
+                                </div>
+    
+                                <!-- {{-- MyOccupation --}} -->
+                                <div class="mb-3">
+                                    <label for="occupation" class="form-label">My Occupation</label>
+                                    <select name="occupation" class="form-select-secondary" aria-label="Default select example" id="occupation">
+                                        <option value="hide">Pilih Occupation</option>
+                              
+                                            <option >Sekolah</option>
+                                            <option >Kuliah</option>
+                                            <option >Kerja</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3" id="group_organization" style="display: none;">
+                                    <input name="organization" type="text" placeholder="Nama tempat..." value="" class="form-control" id="organization">
+                                </div>
+    
+                                <!-- {{-- Phone Number --}} -->
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input name="phone" value="" type="number" class="form-control" id="phone">
+                                    <small class="form-text text-muted d-none"></small>
+                                </div>
+    
+                                <!-- {{-- City --}} -->
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">City</label>
+                                    <input name="city" value="" type="text" class="form-control" id="city">
+                                    <small class="form-text text-muted d-none"></small>
+                                </div>
+    
+                                <!-- {{-- Nationality --}} -->
+                                <div class="mb-3">
+                                    <label for="nationality" class="form-label">Nationality</label>
+                                    <input name="nationality" value="" type="text" class="form-control" id="nationality">
+                                    <small class="form-text text-muted d-none"></small>
+                                </div>
+    
+                                <!-- {{-- Button --}} -->
+                                <button type="submit" class="btn-100 mt-2 btn btn-primary">
+                                    Save My Profile
+                                </button>
+                                <p class="mt-4 text-center mb-0">
+                                    <a href="https://buildwithangga.com/terms-and-conditions" target="_blank" class="text-link">Terms & Conditions</a>
+                                </p>
+                                <input type="hidden" name="github" value="buildwithangga" />
+                                <input type="hidden" name="dribble" value="buildwithangga" />
+                            </form>
+                        </div>
+                    </div>
+    
+                    <!-- {{-- Customer Support --}} -->
+                    <div class="col-lg-4 col-12">
+                        <div class="basic-blue-card">
+                            <img src="../../images/ic_call_center.svg" alt="icon cs buildwith angga" class="mb-3">
+                            <h4 class="mt-3 mb-3 lh-base">
+                                Hubungi via Instagram
+                            </h4>
+                            <a href="https://www.instagram.com/buildwithangga/" type="button"
+                                class="btn btn-secondary btn-daftar mt-3 w-100" target="_blank">
+                                Contact Us
+                            </a>
+                        </div>
                     </div>
                 </div>
-    
-                <div class="row mt-4 pricing item-roadmap-master gy-4">
-                    <div class="col-lg-4 col-12">
-                        <div class="item-pricing h-100 vstack">
-                            <img src="../../images/ic_roadmap.svg" class="icon" alt="BuildWith Angga">
-                            <h2 class="title mt-4 lh-base">
-                                Course Settings
-                            </h2>
-                            <p class="text-grey my-3">
-                                Mempermudah proses belajar
-                            </p>
-                            <a class="btn btn-secondary mt-auto" href="../course-settings/index.html">Modify</a>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-4 col-12">
-                        <div class="item-pricing h-100 vstack">
-                            <img src="../../images/ic_my_profile.svg" class="icon"
-                                alt="BuildWith Angga">
-                            <h2 class="title mt-4 lh-base">
-                                My Profile
-                            </h2>
-                            <p class="text-grey my-3">
-                                Ubah data diri kamu
-                            </p>
-                            <a class="btn btn-secondary mt-auto" href="edit-profile.html">Edit Now</a>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-4 col-12">
-                        <div class="item-pricing h-100 vstack">
-                            <img src="../../images/ic_my_password.svg" class="icon"
-                                alt="BuildWith Angga">
-                            <h2 class="title mt-4 lh-base">
-                                My Password
-                            </h2>
-                            <p class="text-grey my-3">
-                                Ganti kata sandimu
-                            </p>
-                            <a class="btn btn-secondary mt-auto" href="edit-password.html">Change Now</a>
-                        </div>
-                    </div>
-                </div>
-    
             </div>
         </main>
     </div>
@@ -578,5 +661,18 @@
     <script src="../../scripts/keypress/keypress-2.1.5.min.js"></script>
     <script type="text/javascript" src="../../scripts/quickSearchModal.js"></script>
     <script type="text/javascript" src="../../scripts/loadMoreSearchResult.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#occupation").change(function(){
+                
+                if($('option:selected',this).attr('value') != 'hide'){
+                    $("#group_organization").show();
+                }else{
+                    $("#group_organization").hide();
+                }
+            });
+        });
+    </script>
   </body>
 </html>
