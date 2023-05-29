@@ -1616,7 +1616,7 @@ a:hover {
   width: 26px !important;
   height: 26px !important;
   background: #e5e9f2 !important;
-  background-image: url("/themes/front/images/svgs/ic_arrow-vertical.svg") !important;
+  background-image: url("../images/svgs/ic_arrow-vertical.svg") !important;
   background-size: 15px !important;
   background-position: 50% !important;
   border-radius: 50% !important;
@@ -4343,7 +4343,7 @@ body .course-playing .accordion .accordion-item.section-video-list .accordion-bo
 
 body .course-playing .accordion .accordion-item.section-video-list button.accordion-button:not(.collapsed)::after,
 body .course-playing .accordion .accordion-item.section-video-list button.accordion-button::after {
-  background-image: url("/themes/front/images/svgs/ic_arrow-vertical.svg");
+  background-image: url("../images/svgs/ic_arrow-vertical.svg");
 }
 
 body.dark .course-playing .section-video-list .item-video {
@@ -7660,7 +7660,7 @@ body.set-height {
   }
 
   .--bwa-mobile-version .__mobile-checkout .custom-file-input.attachment::before {
-    content: url("/themes/front/images/svgs/ic_clip_blue.svg");
+    content: url("../images/svgs/ic_clip_blue.svg");
     background: transparent;
     outline: none;
     white-space: nowrap;
@@ -9280,7 +9280,7 @@ body.set-height {
 @media screen and (max-width: 575px) {
   .__course-accordion .accordion-item.section-video-list button.accordion-button:not(.collapsed)::after,
   .__course-accordion .accordion-item.section-video-list button.accordion-button::after {
-    background-image: url("/themes/front/images/svgs/ic_arrow-vertical.svg");
+    background-image: url("../images/svgs/ic_arrow-vertical.svg");
   }
 }
 
@@ -11852,7 +11852,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
 }
 
 .basic-blue-card {
-  background-image: url("/themes/front/images/bg_blue_secure.svg");
+  background-image: url("../images/bg_blue_secure.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px;
@@ -12505,7 +12505,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
 }
 
 .checkout .payment-details .custom-file-input::before {
-  content: url("/themes/front/images/ic_attachment_link.svg");
+  content: url("../images/ic_attachment_link.svg");
   background: transparent;
   outline: none;
   white-space: nowrap;

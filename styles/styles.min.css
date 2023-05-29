@@ -6411,7 +6411,7 @@ body.set-height {
   }
   .--bwa-mobile-version .__journey-mobile.detail-page .accordion-item.section-video-list button.accordion-button:not(.collapsed)::after,
   .--bwa-mobile-version .__journey-mobile.detail-page .accordion-item.section-video-list button.accordion-button::after {
-    background-image: url(/images/ic_arrow-vertical.svg?e4818be60e742e03048b193308ab35dd);
+    background-image: url('../images/ic_arrow-vertical.svg');
     background-size: 11.5px 11.5px;
   }
   .--bwa-mobile-version .__journey-mobile.detail-page .section_title {
@@ -8326,11 +8326,11 @@ body.set-height {
 #faq-section-v3 .accordion-button::after {
   width: 24px;
   height: 24px;
-  background-image: url(../images/ic_plus.svg);
+  background-image: url('../images/ic_plus.svg');
   background-size: cover;
 }
 #faq-section-v3 .accordion-button:not(.collapsed)::after {
-  background-image: url(../images/ic_minus.svg);
+  background-image: url('../images/ic_minus.svg');
 }
 #faq-section-v3 .accordion-body {
   padding-top: 0;
@@ -9337,7 +9337,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: url(/images/ic_arrow_select.svg?55b3579cd42f488ef1aa9063ddc859ba) no-repeat;
+  background: url('../images/ic_arrow_select.svg') no-repeat;
   background-position-x: 95%;
   background-position-y: 20px;
 }
@@ -9363,7 +9363,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
   margin-left: 60px;
 }
 #mentor_dashboard .dynamic-btn {
-  background: transparent url(/images/dashed-line-large.svg?c0a795183d214ef152a07958cdb681e2) no-repeat;
+  background: transparent url('../images/dashed-line-large.svg') no-repeat;
   height: 45px;
   font-weight: 400;
   font-size: 16px;

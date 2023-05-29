@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <meta name="description" content="lorem" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <meta image="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+
+    <meta property="og:title" content="Belajar Coding dan Design Dari Mentor Berpengalaman — BuildWith Angga" />
+    <meta property="og:site_name" content="BuildWith Angga" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="Belajar online di kelas bidang di BuildWith Angga." />
+
+    <title>Belajar di Kelas | BuildWith Angga</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- {{-- Bootsrap 5 cdn --}} -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../styles/nd.css" />
+
+    <!-- {{-- favicon --}} -->
+    <link rel="icon" type="image/png" href="../../../images/favicon.ico" />
+    <link rel="apple-touch-icon" href="../../../images/favicon.ico" />
+  </head>
+
+  <body class="overflow-x-hidden">
+    <div class="container-fluid course-playing">
+      <!-- {{-- navigation bar --}} -->
+      <div class="d-none d-lg-block">
+        <nav class="course-navbar navbar fixed-top navbar-expand-lg navbar-light px-4 pt-3">
+          <a class="navbar-brand me-0" href="../../../index.html">
+            <img src="../../../images/logo_bwa_new.svg" alt="BuildWith Angga" width="50" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ms-0 ms-lg-5" id="navbarNavAltMarkup">
+            <div class="navbar-nav mt-3 mt-lg-0">
+              <a href="../../progress-belajar/index.html" class="nav-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.57 5.92993L3.5 11.9999L9.57 18.0699M20.5 11.9999H3.67" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>My Dashboard</span>
+              </a>
+            </div>
+            <div class="navbar-nav mt-3 mt-lg-0 ms-auto">
+              <li class="nav-item d-flex align-items-center">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="CTRL+P" data-bs-custom-class="font-poppins">
+                  <button type="button" class="nav-icon" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.2929 14.2929C14.6834 13.9024 15.3166 13.9024 15.7071 14.2929L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.2929 15.7071C13.9024 15.3166 13.9024 14.6834 14.2929 14.2929Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </span>
+              </li>
+              <div id="app">
+                <li class="nav-item d-flex align-items-center">
+                  <a href="../notification/index.html">
+                    <button type="button" class="nav-icon position-relative">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.0186 2.91016C8.70862 2.91016 6.01862 5.60016 6.01862 8.91016V11.8002C6.01862 12.4102 5.75862 13.3402 5.44862 13.8602L4.29862 15.7702C3.58862 16.9502 4.07862 18.2602 5.37862 18.7002C9.68862 20.1402 14.3386 20.1402 18.6486 18.7002C19.8586 18.3002 20.3886 16.8702 19.7286 15.7702L18.5786 13.8602C18.2786 13.3402 18.0186 12.4102 18.0186 11.8002V8.91016C18.0186 5.61016 15.3186 2.91016 12.0186 2.91016Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M13.8719 3.19945C12.6626 2.85504 11.3812 2.85504 10.1719 3.19945C10.4619 2.45945 11.1819 1.93945 12.0219 1.93945C12.8619 1.93945 13.5819 2.45945 13.8719 3.19945V3.19945Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.33769 20.6179 9.02132 19.8557 9.01953 19.0605"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+
+                      <img class="position-absolute" src="../../../images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
+                    </button>
+                  </a>
+                </li>
+              </div>
+              <li class="nav-item d-none d-sm-block d-lg-flex align-items-center dropdown">
+                <span class="user-name"> Halo, UserName </span>
+                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img class="user-photo" src="../../../images/default-avatar.svg" alt="" width="50" height="50" style="object-fit: cover" />
+                </a>
+                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink">
+                  <li class="py-1"><a class="dropdown-item" href="../../../index.html">Logout</a></li>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- {{-- new sidebar --}} -->
+      <aside class="d-none d-lg-block pt-4 ps-4 sidebar-aside" id="sbar-toggle">
+        <div class="new-sidebar">
+          <div class="wrapper-mode">
+            <!-- {{-- Hamburger Icon --}} -->
+            <div class="hamburger-menu d-none d-lg-block" id="close" onclick="closeSidebar()">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="50" rx="25" fill="currentColor" id="hamburgerBg" />
+                <rect x="13" y="15" width="20" height="4" rx="2" fill="currentColor" />
+                <rect x="13" y="31" width="15" height="4" rx="2" fill="currentColor" />
+                <rect x="13" y="23" width="24" height="4" rx="2" fill="currentColor" />
+              </svg>
+            </div>
+            <!-- {{-- Theme Toggler --}} -->
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Dark Mode</p>
+              <span class="toggle-theme-button">
+                <input type="checkbox" id="toggle-color-mode" class="toggle-color-mode" />
+                <label class="switch" for="toggle-color-mode"> </label>
+              </span>
+            </div>
+          </div>
+
+          <div class="sidebar-content">
+            <div class="accordion" id="accordionBWA">
+              <!-- {{-- Persiapan Kelas --}} -->
+              <div class="accordion-item section-video-list">
+                <h2 class="accordion-header" id="headingpersiapanKelas">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-persiapanKelas" aria-expanded="false" aria-controls="collapse-persiapanKelas" onclick="buttonAccordion(this)">
+                    <div class="d-flex flex-column">
+                      <h6 class="section-heading-video">Persiapan Kelas</h6>
+                      <span class="section-video-details text-sm fw-light"> Trailer Kelas </span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapse-persiapanKelas" class="accordion-collapse collapse" aria-labelledby="headingpersiapanKelas">
+                  <div class="accordion-body">
+                    <a class="d-flex align-items-center item-video gap-2 bg-blue text-white" target="_blank" href="">
+                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M22 6.81152V11.9115C22 13.1815 21.58 14.2515 20.83 14.9915C20.09 15.7415 19.02 16.1615 17.75 16.1615V17.9715C17.75 18.6515 16.99 19.0615 16.43 18.6815L15.46 18.0415C15.55 17.7315 15.59 17.3915 15.59 17.0315V12.9615C15.59 10.9215 14.23 9.56152 12.19 9.56152H5.4C5.26 9.56152 5.13 9.57152 5 9.58152V6.81152C5 4.26152 6.7 2.56152 9.25 2.56152H17.75C20.3 2.56152 22 4.26152 22 6.81152Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.59 12.9615V17.0315C15.59 17.3915 15.55 17.7315 15.46 18.0415C15.09 19.5115 13.87 20.4315 12.19 20.4315H9.47L6.45 22.4415C6.34876 22.5108 6.23046 22.551 6.10796 22.5578C5.98547 22.5646 5.86346 22.5376 5.75521 22.4799C5.64695 22.4222 5.5566 22.3358 5.49398 22.2303C5.43135 22.1249 5.39885 22.0042 5.4 21.8815V20.4315C4.38 20.4315 3.53 20.0915 2.94 19.5015C2.34 18.9015 2 18.0515 2 17.0315V12.9615C2 11.0615 3.18 9.75152 5 9.58152C5.13 9.57152 5.26 9.56152 5.4 9.56152H12.19C14.23 9.56152 15.59 10.9215 15.59 12.9615Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span>Grup Diskusi</span>
+                    </a>
+                    <a class="d-flex align-items-center item-video" target="_blank" href="">
+                      <i class="icon-play-circle material-icons me-2"> play_circle </i>
+                      <span>Trailer Kelas</span>
+                    </a>
+                    <a class="d-flex align-items-center item-video" href="" target="_blank">
+                      <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12ZM16 16.2059V17.5H8V16.2059H16ZM13.7143 10.3824H16L12 14.9118L8 10.3824H10.2857V6.5H13.7143V10.3824Z"
+                        />
+                      </svg>
+                      <span>Download Materi</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item section-video-list">
+                <h2 class="accordion-header" id="heading1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1" onclick="buttonAccordion(this)">
+                    <div class="d-flex flex-column">
+                      <h6 class="section-heading-video line-clamp-1">Nama Bagian Kelas</h6>
+                      <span class="section-video-details text-sm fw-light"> 2 videos (30 menit) </span>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading1">
+                  <div class="accordion-body">
+                    <a id="materi_aktif" class="d-flex align-items-center item-video justify-content-between gap-2 active scrolled" href="">
+                      <div class="d-flex flex-row align-items-center">
+                        <i class="icon-play-circle material-icons me-2"> play_circle </i>
+                        <div class="d-flex flex-column">
+                          <span class="line-clamp-1">Tools</span>
+                          <span class="fw-normal text-xs">3 menit</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="d-flex align-items-center item-video justify-content-between gap-2" href="">
+                      <div class="d-flex flex-row align-items-center">
+                        <i class="icon-play-circle material-icons me-2"> play_circle </i>
+                        <div class="d-flex flex-column">
+                          <span class="line-clamp-1">Install Laravel</span>
+                          <span class="fw-normal text-xs">3 menit</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="d-flex align-items-center item-video justify-content-between gap-2" href="">
+                      <div class="d-flex flex-row align-items-center">
+                        <i class="icon-play-circle material-icons me-2"> play_circle </i>
+                        <div class="d-flex flex-column">
+                          <span class="line-clamp-1">Database</span>
+                          <span class="fw-normal text-xs">3 menit</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="d-flex align-items-center item-video justify-content-between gap-2" href="">
+                      <div class="d-flex flex-row align-items-center">
+                        <i class="icon-play-circle material-icons me-2"> play_circle </i>
+                        <div class="d-flex flex-column">
+                          <span class="line-clamp-1">User Auth</span>
+                          <span class="fw-normal text-xs">3 menit</span>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="d-flex align-items-center item-video justify-content-between gap-2" href="">
+                      <div class="d-flex flex-row align-items-center">
+                        <i class="icon-play-circle material-icons me-2"> play_circle </i>
+                        <div class="d-flex flex-column">
+                          <span class="line-clamp-1">Migration</span>
+                          <span class="fw-normal text-xs">3 menit</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- {{-- end: new sidebar --}} -->
+
+      <main class="main-wrapper mobile-video-player" id="mainWrapper">
+        <div class="container-fluid mobile-video-wrapper px-0 px-lg-4">
+          <div class="d-flex flex-column">
+            <!-- {{-- Hamburger Icon --}} -->
+            <div class="hamburger-menu d-none d-lg-block position-fixed" id="hamburgerOpenSidebar">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="50" rx="25" fill="currentColor" id="hamburgerBg" />
+                <rect x="13" y="15" width="20" height="4" rx="2" fill="currentColor" />
+                <rect x="13" y="31" width="15" height="4" rx="2" fill="currentColor" />
+                <rect x="13" y="23" width="24" height="4" rx="2" fill="currentColor" />
+              </svg>
+            </div>
+
+            <!-- {{-- Button Beri Review On Mobile-Tablet | Button back to Dashboard Mobile - Tablet --}} -->
+            <div class="heading mt-0 d-block d-lg-none">
+              <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <a href="../../../progress-belajar/index.html" class="d-flex hover-no-underline d-inline align-items-center dashboard-link">
+                  <i class="material-icons me-2">arrow_back</i>
+                  <span>Dashboard</span>
+                </a>
+                <div class="align-items-center justify-content-end d-flex"></div>
+              </div>
+            </div>
+
+            <!-- {{-- Video frame --}} -->
+            <div class="embed-responsive embed-responsive-16by9 video-iframe">
+              <div class="plyr__video-embed" id="player">
+                <iframe
+                  src="https://www.youtube.com/embed/CoRqTc82beE?autoplay=1&?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                  allowfullscreen
+                  allowtransparency
+                  allow="autoplay"
+                  frameborder="0"
+                  id="__existing-iframe-id"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- {{-- Judul Materi On Mobile-Tablet --}} -->
+            <div class="mt-4 d-block d-lg-none">
+              <h1 class="judul-kelas">Nama Materi</h1>
+              <p class="sub-judul mb-0 fw-light">Materi bagian: Nama Bagian</p>
+            </div>
+
+            <!-- {{-- Judul Materi + Button Next On DESKTOP --}} -->
+            <div class="mt-4 d-none d-lg-flex flex-row justify-content-between align-items-start">
+              <div class="d-flex flex-column" style="width: 50%">
+                <h1 class="judul-kelas">Nama Materi</h1>
+                <p class="sub-judul mb-0 fw-light">Materi bagian: Nama Bagian</p>
+              </div>
+
+              <!-- {{-- Action Button --}} -->
+              <div class="align-items-center d-flex ms-auto">
+                <a href="#" data-id="" class="btn btn-primary font-weight-medium btn-done"> Next </a>
+                <a href="" class="d-none btn btn-primary font-weight-medium btn-next-video"> NEXT </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tools-section d-none d-lg-block px-4">
+          <div class="tools-kelas d-flex flex-column">
+            <h6 class="tools-heading text-start">Tools Kelas</h6>
+            <div class="row-item-software">
+              <div class="item-tool">
+                <img height="44" src="../../../images/tools/Acunetix.png" alt="tools" />
+                <a href="" target="_blank">
+                  <p class="text-medium line-clamp-1 mb-0">Acunetix</p>
+                </a>
+              </div>
+              <div class="item-tool">
+                <img height="44" src="../../../images/tools/Anaconda.png" alt="tools" />
+                <a href="" target="_blank">
+                  <p class="text-medium line-clamp-1 mb-0">Anaconda</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- {{-- Bootstrap JavaScript plugin --}} -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- {{-- Used along with quick search --}} -->
+    <!-- @include('front.js.search_component') @stack('scripts') -->
+
+    <script src="../../../scripts/course-playing/darkModeToggle.js"></script>
+    <script src="../../../scripts/course-playing/scrollHelper.js"></script>
+    <!-- {{-- Hamburger Button State --}} -->
+    <script src="../../../scripts/course-playing/sidebarToggler.js"></script>
+
+    <!-- {{-- Use in disabled quiz button --}} -->
+    <script src="../../../scripts/tooltip-bootstrap-5.2.js"></script>
+
+    <script src="../../../scripts/keypress/keypress-2.1.5.min.js"></script>
+    <script type="text/javascript" src="../../../scripts/quickSearchModal.js"></script>
+    <script type="text/javascript" src="../../../scripts/loadMoreSearchResult.js"></script>
+
+    <script>
+      var child = document.querySelectorAll("#materi_aktif");
+
+      for (let i = 0; i < child.length; i++) {
+        let parent = child[i].closest(".accordion-collapse");
+        //console.log(parent)
+        parent.classList.add("show");
+        parent.previousElementSibling.children[0].classList.remove("collapsed");
+        let sectionHeading = parent.previousElementSibling.children[0].children[0].children[0];
+        //console.log(parent.previousElementSibling.children[0].classList)
+        if (sectionHeading.classList.contains("line-clamp-1")) {
+          sectionHeading.classList.remove("line-clamp-1");
+        }
+      }
+
+      function buttonAccordion(el) {
+        const thisSubVideoTitle = el.children[0].children[0].classList;
+        thisSubVideoTitle.toggle("line-clamp-1");
+        //console.log(thisSubVideoTitle)
+      }
+    </script>
+  </body>
+</html>
