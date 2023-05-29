@@ -25,6 +25,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="../../styles/style-porto.css">
+
   </head>
 
   <body>
@@ -446,51 +448,96 @@
 
         <main class="main-wrapper d-none d-sm-block">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <h1 class="header-primary mb-3">
-                            Hasil Karya
-                        </h1>
-                        <p class="subtitle-primary mb-3">
-                            Mari bagikan karya terbaik kamu <br class="desktop"> dan dapatkan pekerjaan IT
+                <div class="vstack">
+                    <div class="heading mb-4">
+                        <h1 class="header-primary mb-3">Pamerkan Karya</h1>
+                        <p class="subtitle-primary">
+                            Langkah awal untuk mendapatkan pekerjaan
                         </p>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="mb-2 text-lg-center text-md-start">
-                            <a class="btn btn-secondary mt-2 me-2" target="_blank"
-                                href="../talent/profile.html">My Profile</a>
-                            <a class="btn btn-primary mt-2" href="">Upload Karya</a>
-                        </div>
-                    </div>
                 </div>
-    
-                <div class="row mt-5 pricing testimonials mentors showcases" id="reviews">
-                    <div class="col-lg-4 col-12">
-                        <div class="item-pricing item-mentor item-showcase">
-                            <a href="">
-                                <div class="featured-course">
-                                    <img src="../../images/cover kelas full stack android developer buildwith angga.png" class="cover img-fluid" alt="Hasil karya Name di BuildWith Angga">
+
+                <!-- {{-- Dropload & Form --}} -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="portofolio" >
+
+                            <div class="row">
+                                <div class="col-12 col-lg-6 mb-md-5">
+                                    
+                                <div class="dropload dropload__ready">
+                                    <div class="dropload-ready">
+                                        <i class="material-icons">cloud_upload</i>
+                                        <p class="header font-weight-normal">Drag & Drop Image</p>
+                                        <p class="info font-weight-light">(dimensi 1048x700px dan ukuran maksimal 2mb)</p>
+                                    </div>
+                                    <div class="dropload-drag">
+                                        <p class="text-gray-300">Drop it, please ...</p>
+                                    </div>
+                                    <!-- <div class="dropload-drop">
+                                        <a href="#" class="btn btn-danger btn-small btn-control"
+                                            id="remove-preview"><i class="material-icons">delete</i></a>
+                                    </div> -->
+                                    <label for="cover" class="stretched-link"></label>
+                                    <input type="file" class="d-none" name="cover" id="cover" />
+
                                 </div>
-                            </a>
-                            <h2 class="header-thirdty mt-4 lh-base">
-                                Project Name
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="item-pricing item-mentor item-showcase">
-                            <a href="">
-                                <div class="featured-course">
-                                    <img src="../../images/cover kelas full stack android developer buildwith angga.png" class="cover img-fluid" alt="Hasil karya Name di BuildWith Angga">
+                                <small class="form-text text-muted d-none" id="error-cover"></small>
+                            </div>
+
+                            <div class="col-12 col-lg-5 basic-form">
+                                <div class="form-group basic-form">
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nama Project</label>
+                                        <input type="text" name="name"
+                                            value="" class="form-control"
+                                            placeholder="Nama Project">
+                                        <small class="form-text text-muted d-none" id="error-name"></small>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Deskripsi Project</label>
+                                        <textarea name="story" class="form-control" placeholder="Deskripsi Project" id="floatingTextarea2" required
+                                            style="height: 100px"></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">URL Project</label>
+                                        <input type="text" name="url"
+                                            value="" class="form-control"
+                                            placeholder="URL Project">
+                                        <small class="form-text text-muted d-none" id="error-url"></small>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Kelas</label>
+                                        <!-- @if (isset($item))
+                                            <input type="text" class="form-control" value="" hidden
+                                                name="kelas_id" id="kelas_id">
+                                        @endif -->
+                                        <select class="form-select-secondary">
+                                            <option value="">Pilih Project Kelas</option>
+                                            <option value="">Nama Kelas</option>
+                                        </select>
+                                        <small class="form-text text-muted d-none" id="error-kelas_id"></small>
+                                    </div>
+
+                                   
+                                    <a href="#" style="width: 100% !important;" class="btn btn-primary mt-4" id="proceed">
+                                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                        <span>Upload Sekarang</span>
+                                    </a>
+                                    <a href="me.html" style="width: 100% !important;" class="btn btn-secondary mt-3">
+                                        <span>Batal</span>
+                                    </a>
                                 </div>
-                            </a>
-                            <h2 class="header-thirdty mt-4 lh-base">
-                                Project Name
-                            </h2>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-    
+            </div>
+
             </div>
         </main>
     </div>
@@ -568,5 +615,33 @@
     <script src="../../scripts/keypress/keypress-2.1.5.min.js"></script>
     <script type="text/javascript" src="../../scripts/quickSearchModal.js"></script>
     <script type="text/javascript" src="../../scripts/loadMoreSearchResult.js"></script>
+
+    <script>
+        // drag drop
+        $(function() {
+            $(document).on("click", "#remove-preview", function(e) {
+                e.preventDefault();
+                $(".dropload").attr("style", "background-image:url()").removeClass("dropload__dropped")
+                    .addClass("dropload__ready")
+                $('#cover').val('');
+            })
+            $(document).on("click", "#proceed", function(e) {
+                e.preventDefault();
+                var elem = this;
+                portfolioForm.toggleLoading(elem, true);
+                portfolioForm.clearErrors();
+
+                var form = $(this).closest('form');
+                var url = form.attr('action');
+                var method = form.attr('method');
+                var data = new FormData($(form)[0]);
+                var cover = $('#cover').prop("files")[0];
+
+                setTimeout(() => {
+                    window.scrollTo(0, 0)
+                }, 100);
+            })
+        })
+    </script>
   </body>
 </html>
