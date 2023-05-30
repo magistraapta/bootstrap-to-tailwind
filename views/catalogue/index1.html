@@ -49,7 +49,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script type="text/javascript" src="../../scripts/desktop-navbar.js"></script>
+    <!-- <script type="text/javascript" src="../../scripts/desktop-navbar.js"></script> -->
     <script src="../../scripts/mobile-navbar.js"></script>
     <script defer type="text/javascript" src="../../scripts/mobile-swiper-config.js"></script>
 
@@ -74,10 +74,6 @@
     <script src="../../scripts/modal-course-trailer.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="../../scripts/btnToTop.js"></script>
-
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
-
-    <!-- <script defer src="js/pages/kelas/browse-kelas.js"></script> -->
   </head>
   <body>
     <section class="--bwa-mobile-version d-sm-none d-block">
@@ -396,9 +392,9 @@
                         </h3>
 
                         <h1 class="header-title mb-0 text-capitalize">
-                            Kelas UI/UX Design
+                            Kelas Design Dan Code
                         </h1>
-                        <p class="subtitle">Belajar mendesain tampilan website atau mobile apps dan juga berkolaborasi dengan tim developer</p>
+                        <p class="subtitle">Mempelajari Design dan Code untuk membangun projek website atau mobile app dari dasar sampai tingkat atas bersama mentor berpengalaman di BuildWith Angga.</p>
                     </div>
                 </div>
             </div>
@@ -406,18 +402,133 @@
         <div id="catalogue-courses-app">
 
             <main id="catalogue-courses-v2">
-            
+                <div class="container-fluid mb-5 text-center">
+                    <h1 class="header-primary mb-3">All Design Courses</h1> 
+                    <div>
+                        <p class="subtitle-primary">
+                            Pelajari ilmu terbaru dari mentor yang
+                            <br class="desktop">berpengalaman di bidangnya
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="px-lg-5">
+                        <div class="container-fluid">
+                            <h2 class="primary-title mb-2">Popular in Design</h2> 
+                            <p class="subtitle-primary text-left">
+                                Pelajari High Income Skills bersama mentor expert
+                            </p>
+                        </div> 
+                        <div class="featured-topics-container">
+                            <div class="position-relative">
+                                <div class="d-flex flex-row justify-content-between align-items-center h-100 basic-card-course featured-class-catalog">
+                                    <a href="index.html" class="d-flex flex-column gap-1 info mt-0 w-100">
+                                        <h3>Figma</h3> 
+                                        <p>Tersedia 1 kelas</p>
+                                    </a> 
+                                    <a href="index.html">
+                                        <img src="../../images/ic_arrow_right.svg" alt="ic_arr">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="container-fluid">
                     <!-- Courses Picked by team -->
+                    <div class="mb-5 container-fluid px-lg-5 px-2 d-block">
+                        <div class="primary-title mb-2">
+                            Picked by Team
+                        </div> 
+                        <p class="subtitle-primary text-start mb-0">
+                            Mulai dengan kelas rekomendasi kami
+                        </p> 
+                        <div class="row d-flex d-md-none d-lg-flex mt-0 gy-4">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                <div class="course-card-responsive">
+                                    <div class="d-flex flex-row flex-md-column">
+                             
+                                      <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas" onclick="trailerSet(this)">
+                                        <img src="../../images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
+                                        <img src="../../images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
+                                      </a>
+                                      <div class="course-detail">
+                                        <h3 class="course-name line-clamp-mobile">
+                                          <a href="views/kelas-online/play-desktop-version.html" style="color: #34364a">Complete Freelancer UI/UX & Illustration Designer: Brief, Wireframe, Visual Design, Portfolio</a>
+                                        </h3>
+                                        <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">
+                                            <span class="origin-price text-grey">Kelas Starter</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="course-footer mt-auto">
+                                      <!-- Star Rating and Joined Amount -->
+                                      <div class="star-rating w-100">
+                                        <img src="../../images/ic_star.svg" alt="star icon" />
+                                        <img src="../../images/ic_star.svg" alt="star icon" />
+                                        <img src="../../images/ic_star.svg" alt="star icon" />
+                                        <img src="../../images/ic_star.svg" alt="star icon" />
+                                        <img src="../../images/ic_star.svg" alt="star icon" />
+                                        <span> (1,234) </span>
+                                      </div>
+                    
+                                      <!-- Icon Level Tooltip -->
+                                      <div class="d-none d-md-block">
+                                        <img data-bs-custom-class="font-poppins" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All Levels" src="../../images/ic_lv_hard.svg" class="icon-level" alt="level" />
+                                      </div>
+                    
+                                      <!-- Author Avatar -->
+                                      <div class="d-block d-md-none">
+                                        <img src="../../images/mentor-galih.png" class="author_avatar" alt="Mentor pengajar di BuildWith Angga Indonesia." />
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>    
             
                     <div class="course-details showcase-details member-profile" id="coursesItem">
                         <div class="row justify-content-center">
                             <div class="col-lg-11 col-12">
+                                <div class="d-block">
+                                    <div class="primary-title mb-2">
+                                        All Design Courses
+                                    </div> 
+                                    <p class="subtitle-primary text-left">
+                                        Tingkatkan keahlian <span class="text-lowercase">Design</span> bersama kami
+                                    </p>
+                                </div>
                                 <div class="row mt-30">
                                     <!-- Catalogue Courses Sort&Filter (Desktop View) -->
                                     <div class="col-lg-2 col-12 d-none d-lg-block course-filter">
                                         <form action="" method="GET" id="filter-class">
                                             <div class="mt-30 follow-scroll" id="content">
+                                                <div class="item-filter">
+                                                    <h3 class="head">Software &amp; Tool</h3> 
+                                                    <div class="child">
+                                                        <label class="container-inp">
+                                                            <input type="checkbox" name="software[]" autocomplete="off" id="1" class="nd-checkbox" value="Figma">
+                                                        </label> 
+                                                        <label for="1" class="label">Figma</label>
+                                                    </div>
+                                                    <div class="child">
+                                                        <label class="container-inp">
+                                                            <input type="checkbox" name="software[]" autocomplete="off" id="2" class="nd-checkbox" value="Adobe XD">
+                                                        </label> 
+                                                        <label for="2" class="label">
+                                                            Adobe XD
+                                                        </label>
+                                                    </div>
+                                                    <div class="child">
+                                                        <label class="container-inp">
+                                                            <input type="checkbox" name="software[]" autocomplete="off" id="3" class="nd-checkbox" value="Blender 3D">
+                                                        </label> 
+                                                        <label for="3" class="label">
+                                                            Blender 3D
+                                                        </label>
+                                                    </div>
+                                                </div>
                                                 <div class="item-filter">
                                                     <h3 class="head">Sort</h3>
                                                     <div class="child">

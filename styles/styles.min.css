@@ -749,7 +749,9 @@ a:hover {
   border-radius: 30px;
 }
 .tutorials-content .header-primary {
-  font: 36px/54px "Poppins";
+  font-family: Poppins;
+  font-size: 36px;
+  line-height: 54px;
   margin-bottom: 30px;
 }
 .tutorials-content ol {
@@ -4742,7 +4744,7 @@ body.dark .quiz-option-item:hover {
   width: 100% !important;
   overflow: hidden;
   padding-bottom: 0;
-  box-shadow: #e7ebf5;
+  box-shadow: 10px 12px 20px 0px rgb(231, 235, 245);
 }
 .select2.select2-container.focused {
   overflow: visible !important;
@@ -4785,7 +4787,7 @@ body.dark .quiz-option-item:hover {
   position: absolute;
   top: 16px;
   right: 12px;
-  background: url("data:image/svg+xml no-repeat center center,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border-style: solid;
@@ -6411,7 +6413,7 @@ body.set-height {
   }
   .--bwa-mobile-version .__journey-mobile.detail-page .accordion-item.section-video-list button.accordion-button:not(.collapsed)::after,
   .--bwa-mobile-version .__journey-mobile.detail-page .accordion-item.section-video-list button.accordion-button::after {
-    background-image: url('../images/ic_arrow-vertical.svg');
+    background-image: url("../images/ic_arrow-vertical.svg");
     background-size: 11.5px 11.5px;
   }
   .--bwa-mobile-version .__journey-mobile.detail-page .section_title {
@@ -8326,11 +8328,11 @@ body.set-height {
 #faq-section-v3 .accordion-button::after {
   width: 24px;
   height: 24px;
-  background-image: url('../images/ic_plus.svg');
+  background-image: url("../images/ic_plus.svg");
   background-size: cover;
 }
 #faq-section-v3 .accordion-button:not(.collapsed)::after {
-  background-image: url('../images/ic_minus.svg');
+  background-image: url("../images/ic_minus.svg");
 }
 #faq-section-v3 .accordion-body {
   padding-top: 0;
@@ -9337,7 +9339,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: url('../images/ic_arrow_select.svg') no-repeat;
+  background: url("../images/ic_arrow_select.svg") no-repeat;
   background-position-x: 95%;
   background-position-y: 20px;
 }
@@ -9363,7 +9365,7 @@ main.browseKelas .skeleton-card .skeleton-footer {
   margin-left: 60px;
 }
 #mentor_dashboard .dynamic-btn {
-  background: transparent url('../images/dashed-line-large.svg') no-repeat;
+  background: transparent url("../images/dashed-line-large.svg") no-repeat;
   height: 45px;
   font-weight: 400;
   font-size: 16px;

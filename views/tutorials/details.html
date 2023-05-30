@@ -39,14 +39,6 @@
     <link rel="icon" type="image/png" href="../../images/favicon.ico" />
     <link rel="apple-touch-icon" href="../../images/favicon.ico" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-    <link rel="stylesheet" href="../../vendor/flickity/flickity.css" />
-    <script src="../../vendor/flickity/flickity.pkgd.js"></script>
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script type="text/javascript" src="../../scripts/desktop-navbar.js"></script>
     <script defer type="text/javascript" src="../../scripts/mobile-navbar.js"></script>
 
@@ -56,8 +48,6 @@
 
     <script type="text/javascript" src="../../scripts/revealPassword.js"></script>
     <script src="../../scripts/login-popup-desktop.js" type="text/javascript"></script>
-
-    <script src="../../scripts/modal-course-trailer.js" type="text/javascript"></script>
   </head>
   <body>
     <section class="--bwa-mobile-version d-sm-none d-block">
@@ -94,7 +84,7 @@
                     <a href="">
                       <img src="../../images/ic_video.svg" alt=" video" class="img-fluid rounded-circle mobile-menu-thumbnail" />
                     </a>
-                    <a href="../bootcamp/bootcamp-katalog.html" class="mobile-menu-name min-w-max-content">Bootcamp</a>
+                    <a href="bootcamp-katalog.html" class="mobile-menu-name min-w-max-content">Bootcamp</a>
                   </div>
                 </div>
               </div>
@@ -343,7 +333,7 @@
 
               <!-- {{-- Bootcamp --}} -->
               <li class="nav-item">
-                <a class="nav-link" href="../bootcamp/bootcamp-katalog.html"> Bootcamp </a>
+                <a class="nav-link" href="bootcamp-katalog.html"> Bootcamp </a>
               </li>
             </ul>
 
@@ -362,47 +352,36 @@
                 <li class="nav-item d-flex align-items-center">
                   <a href="../notification/index.html">
                     <button type="button" class="nav-icon position-relative">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M12.0186 2.91016C8.70862 2.91016 6.01862 5.60016 6.01862 8.91016V11.8002C6.01862 12.4102 5.75862 13.3402 5.44862 13.8602L4.29862 15.7702C3.58862 16.9502 4.07862 18.2602 5.37862 18.7002C9.68862 20.1402 14.3386 20.1402 18.6486 18.7002C19.8586 18.3002 20.3886 16.8702 19.7286 15.7702L18.5786 13.8602C18.2786 13.3402 18.0186 12.4102 18.0186 11.8002V8.91016C18.0186 5.61016 15.3186 2.91016 12.0186 2.91016Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                        />
-                        <path
-                          d="M13.8719 3.19945C12.6626 2.85504 11.3812 2.85504 10.1719 3.19945C10.4619 2.45945 11.1819 1.93945 12.0219 1.93945C12.8619 1.93945 13.5819 2.45945 13.8719 3.19945V3.19945Z"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.33769 20.6179 9.02132 19.8557 9.01953 19.0605"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-miterlimit="10"
-                        />
-                      </svg>
-
-                      <img class="position-absolute" src="../../images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.0186 2.91016C8.70862 2.91016 6.01862 5.60016 6.01862 8.91016V11.8002C6.01862 12.4102 5.75862 13.3402 5.44862 13.8602L4.29862 15.7702C3.58862 16.9502 4.07862 18.2602 5.37862 18.7002C9.68862 20.1402 14.3386 20.1402 18.6486 18.7002C19.8586 18.3002 20.3886 16.8702 19.7286 15.7702L18.5786 13.8602C18.2786 13.3402 18.0186 12.4102 18.0186 11.8002V8.91016C18.0186 5.61016 15.3186 2.91016 12.0186 2.91016Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                            <path d="M13.8719 3.19945C12.6626 2.85504 11.3812 2.85504 10.1719 3.19945C10.4619 2.45945 11.1819 1.93945 12.0219 1.93945C12.8619 1.93945 13.5819 2.45945 13.8719 3.19945V3.19945Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.33769 20.6179 9.02132 19.8557 9.01953 19.0605" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+                        </svg>
+            
+                        <img class="position-absolute" src="../../images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
                     </button>
                   </a>
                 </li>
               </div>
 
               <li class="nav-item d-none d-sm-flex flex-column justify-content-start align-items-start dropdown">
-                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="user-name"> Halo, UserName </span>
-                  <img class="user-photo" src="../../images/default-avatar.svg" alt="" />
+                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="user-name">
+                        Halo, UserName
+                    </span>
+                    <img class="user-photo"
+                        src="../../images/default-avatar.svg"
+                        alt="">
                 </a>
-                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left: auto; right: 0">
+                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left:auto; right:0;">
+                    
                   <li><a class="dropdown-item" href="../kelas-saya/index.html">My Courses</a></li>
-                  <li><a class="dropdown-item" href="talent/profile.html">My Certificates</a></li>
+                  <li><a class="dropdown-item" href="../talent/profile.html">My Certificates</a></li>
                   <li><a class="dropdown-item" href="../progress-belajar/index.html">Progress Belajar</a></li>
                   <li><a class="dropdown-item" href="../profile/settings.html">Settings</a></li>
                   <li><a class="dropdown-item" href="../../index.html">Logout</a></li>
+
                 </ul>
               </li>
             </ul>
@@ -411,178 +390,396 @@
       </nav>
     </div>
 
-    <section class="py-5 course-details showcase-details member-profile d-md-block d-none">
-      <!-- {{-- Tablet/Desktop --}} -->
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3 col-12 text-center">
-            <h1 class="header-primary">
-              Hello, I'm Professional <br class="desktop" />
-              Full-Stack Developer
-            </h1>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-lg-4 col-12 bio-section">
-            <div class="item-showcase mb-5">
-              <img src="../../images/default-avatar.svg" class="photo mb-5" style="object-fit: cover" alt="avatar" />
-              <h2 class="name text-capitalize mb-2">UserName</h2>
-              <p class="role">Member sejak 02 Feb 2021</p>
-              <p class="mt-5">
-                <a class="btn btn-primary btn-masuk btn-100" href="">Hire Me Now</a>
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-8 col-12">
+    <section class="hero-banner-one pt-100 pb-50" id="ebook_page">
+        <div class="container">
             <div class="row">
-              <div class="col-lg-12 col-12 mb-5">
-                <div class="default-card">
-                  <h3 class="primary-title">My Superpower</h3>
-                  <div class="row">
-                    <div class="col-lg-10 offset-lg-1 col-12 position-relative">
-                      <canvas id="myChart" class="override-chart"></canvas>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-5 col-12">
+                            <img src="../../images/2 cover kelas full stack android developer buildwith angga.png" alt="" class="rounded-16px img-fluid">
+                        </div>
+        
+                        <div class="col-lg-5 col-12">
+                            <img src="../../images/logo_bwa_new.svg" class="mt-3" width="50" height="50" alt="logo">
+                            <h2 class="header-title mt-3">
+                                Komponen Dasar UI Design
+                            </h2>
+                            <p class="subtitle mt-3">
+                                Memahami struktur dasar dari user-interface design
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-lg-6 col-12">
+                            <h3>
+                                <strong>Contents</strong>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="row course-categories">
+                            <div class="col-lg-3 col-sm-6 col-12 mb-4">
+                                <div class="item-category mb-3 mb-lg-0 position-relative">
+                                    <div class="footer d-flex justify-content-between align-items-center">
+                                        <div class="info max-w-100">
+                                            <h2 class="title line-clamp position-relative z-10 max-w-100 min-h-48">
+                                                Pengenalan UI Design
+                                                <a href="content.html" class="stretched-link"></a>
+
+                                            </h2>
+                                            <p class="sub">
+                                                Page 5
+                                            </p>
+                                        </div>
+                                        <img src="../../images/ic_arrow_right.svg" alt="arrow right">
+                                    </div>
+                                    <a href="content.html" class="stretched-link"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 col-12 mb-4">
+                                <div class="item-category mb-3 mb-lg-0 position-relative">
+                                    <div class="footer d-flex justify-content-between align-items-center">
+                                        <div class="info max-w-100">
+                                            <h2 class="title line-clamp position-relative z-10 max-w-100 min-h-48">
+                                                Header dan Paragraph
+                                                <a href="content.html" class="stretched-link"></a>
+
+                                            </h2>
+                                            <p class="sub">
+                                                Page 5
+                                            </p>
+                                        </div>
+                                        <img src="../../images/ic_arrow_right.svg" alt="arrow right">
+                                    </div>
+                                    <a href="content.html" class="stretched-link"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 col-12 mb-4">
+                                <div class="item-category mb-3 mb-lg-0 position-relative">
+                                    <div class="footer d-flex justify-content-between align-items-center">
+                                        <div class="info max-w-100">
+                                            <h2 class="title line-clamp position-relative z-10 max-w-100 min-h-48">
+                                                Icon UI Design
+                                                <a href="content.html" class="stretched-link"></a>
+
+                                            </h2>
+                                            <p class="sub">
+                                                Page 5
+                                            </p>
+                                        </div>
+                                        <img src="../../images/ic_arrow_right.svg" alt="arrow right">
+                                    </div>
+                                    <a href="content.html" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section pb-100">
+        <div class="container">
+            <div class="row mt-5 pricing item-roadmap-master">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="d-none d-sm-block">
+        <section class="footer-nd">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="item-footer col-lg-3 col-10">
+                  <img src="../../images/logo_bwa_new.svg" width="50" height="50" alt="logo buildwithangga" />
+                  <p class="mt-4 tagline" style="margin-bottom: 10px">PT. Angga Membangun Indonesia</p>
+                  <p class="tagline" style="margin-bottom: 10px">Jl. KH. Wahid Hasyim Kel No.10D</p>
+                  <p class="tagline" style="margin-bottom: 10px">Jakarta, Indonesia</p>
+                  <p class="tagline" style="margin-bottom: 10px">(021) 50858650</p>
+                  <p class="tagline" style="margin-bottom: 10px">
+                    <a href="mailto:team@buildwithangga.com">team@buildwithangga.com</a>
+                  </p>
+                  <p class="tagline">© 2019-2023 BuildWith Angga</p>
+                </div>
+                <div class="item-footer col-lg-1 col-12"></div>
+                <div class="col-lg-8 col-12">
+                  <div class="row justify-content-between">
+                    <!-- {{-- Start Popular career --}} -->
+                    <div class="item-footer col-lg-3 col-12">
+                      <p class="header-category">Start Popular Career</p>
+                      <ul>
+                        <li>
+                          <a href=""> UI/UX Designer </a>
+                        </li>
+                        <li>
+                          <a href=""> Web Developer </a>
+                        </li>
+                        <li>
+                          <a href=""> Mobile Developer </a>
+                        </li>
+                        <li>
+                          <a href=""> Data Scientist </a>
+                        </li>
+                        <li>
+                          <a href=""> Digital Marketer </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- {{-- Mastering Hot tools --}} -->
+                    <div class="item-footer col-lg-3 col-6">
+                      <p class="header-category">Mastering Hot Tools</p>
+                      <ul>
+                        <li><a href="">Figma</a></li>
+                        <li><a href="">Flutter</a></li>
+                        <li><a href="">React JS</a></li>
+                        <li><a href="">Laravel</a></li>
+                        <li><a href="">Vue JS</a></li>
+                      </ul>
+                    </div>
+                    <!-- {{-- Learn language --}} -->
+                    <div class="item-footer col-lg-3 col-6">
+                      <p class="header-category">Learn Language</p>
+                      <ul>
+                        <li><a href="">PHP</a></li>
+                        <li><a href=""> JavaScript</a></li>
+                        <li><a href="">Dart</a></li>
+                        <li><a href="">HTML & CSS</a></li>
+                        <li><a href="">Kotlin</a></li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg-12 col-12">
-                <div class="tabs-content-nd">
-                  <ul class="nav nav-pills mb-5 gap-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Portfolios</button>
-                    </li>
-                    <!-- <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-tools-tab" data-bs-toggle="pill" data-bs-target="#pills-tools" type="button" role="tab" aria-controls="pills-tools" aria-selected="false">Certificates</button>
-                    </li> -->
-                  </ul>
-                  <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                      <div class="row pricing testimonials mentors showcases">
-                        <div class="col-lg-6 col-12">
-                          <div class="item-pricing item-mentor item-showcase">
-                            <a href="work-detail.html">
-                              <div class="featured-course">
-                                <img src="../../images/cover kelas full stack android developer buildwith angga.png" class="cover img-fluid" alt="Hasil karya belajar di BuildWith Angga" />
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="row">
+                    <div class="item-footer col-lg-3 col-6">
+                      <p class="header-category">Resources</p>
+                      <ul>
+                        <li>
+                          <a href="">Karir HandBook</a>
+                        </li>
+                        <li>
+                          <a href="">Student Rewards</a>
+                        </li>
+                        <li>
+                          <a href="">Free Ebooks</a>
+                        </li>
+                      </ul>
                     </div>
-
-                    <!-- <div class="tab-pane fade" id="pills-tools" role="tabpanel" aria-labelledby="pills-tools-tab">
-                      <div class="row pricing testimonials mentors showcases">
-                        <div class="col-lg-6 col-12">
-                          <div class="item-pricing item-mentor item-showcase">
-                            <a href="">
-                              <div class="featured-course">
-                                <img src="../../images/certificate.jpg" class="cover img-fluid" alt="Sertifikat kelulusan belajar design dan code di BuildWith Angga" />
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="item-footer col-lg-3 col-6">
+                      <p class="header-category">Community</p>
+                      <ul>
+                        <li><a href="">Showcase</a></li>
+                        <li><a href="">Testimonials</a></li>
+                        <li><a href="">Mentor</a></li>
+                        <li><a href="">Webinar</a></li>
+                      </ul>
                     </div>
-                    <div class="tab-pane fade" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab">
-                      <div class="row content">
-                        <div class="col-lg-12 col-12">
-                          <h3 class="title-section">Order My Service</h3>
-                          <p>Masih dalam tahap pengembangan.</p>
-                        </div>
-                      </div>
-                    </div> -->
+                    <div class="item-footer col-lg-3 col-6">
+                      <p class="header-category">Company</p>
+                      <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/@BuildWithAngga">Youtube</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/buildwithangga/">Instagram</a></li>
+                        <li><a target="_blank" href="https://www.tiktok.com/@buildwithangga">TikTok</a></li>
+                      </ul>
+                    </div>
+                    <div class="item-footer col-lg-3 col-md-6 col-12">
+                      <p class="header-category">Useful Links</p>
+                      <ul>
+                        <li><a href="">Privacy & Policy</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a target="_blank" href="https://www.notion.so/galpratama/Jam-Operasional-b806c2c999274568960be51b0de5afda"> Jam Operasional</a></li>
+                        <li><a href="">Cari Kelas</a></li>
+                        <li><a href="">Roadmap Belajar</a></li>
+                        <li><a href="../kelas-online/index.html">All Courses</a></li>
+                        <li><a href="">Cek Sertifikat</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
+    </div>
+    <section class="--bwa-mobile-version d-sm-none d-block">
+        <footer class="d-block d-md-none bg-white" id="footer-mobile">
+            <div class="container">
+                <div class="d-flex justify-content-start align-items-center">
+                    <img src="../../images/logo_bwa_new.svg" width="50" height="50"
+                        alt="logo buildwithangga" class="me-3">
+                    <div class="d-flex flex-column justify-content-center align-items-start">
+                        <div class="mobile-footer-brand">BuildWith Angga</div>
+                        <div class="mobile-footer-copyright">© 2019-2022 BuildWith Angga</div>
+                    </div>
+                </div>
+                <p class="mobile-footer-description">Website untuk belajar design dan code dari <br>
+                    mentor yang sangat berpengalaman<br>
+                    di bidangnya masing-masing.</p>
+        
+                <div class="row gy-3">
+                    <div class="col-6">
+                        <div class="mobile-footer-sub">Dream Career</div>
+                        <div class="d-flex flex-column gap-2">
+                            <a href=""
+                                class="mobile-footer-item d-block">UI Designer</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">UX Designer</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">Website Developer</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">ReactJS Developer</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">Flutter Developer</a>
+                        </div>
+                    </div>
+        
+                    <div class="col-6">
+                        <div class="mobile-footer-sub">Language</div>
+                        <div class="d-flex flex-column gap-2">
+                            <a href=""
+                                class="mobile-footer-item d-block">PHP</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">JavaScript</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">Python</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">Kotlin</a>
+                            <a href=""
+                                class="mobile-footer-item d-block">Golang</a>
+                        </div>
+                    </div>
+        
+                    <div class="col-6">
+                        <div class="mobile-footer-sub">Community</div>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="" class="mobile-footer-item d-block">Showcase</a>
+                            <a href="" class="mobile-footer-item d-block">Mentor</a>
+                            <a href="" class="mobile-footer-item d-block">Testimonials</a>
+                            <a href="" class="mobile-footer-item d-block">Webinar</a>
+                        </div>
+                    </div>
+        
+                    <div class="col-6">
+                        <div class="mobile-footer-sub">Company</div>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="" class="mobile-footer-item d-block">About Us</a>
+                            <a target="_blank" href="https://www.instagram.com/buildwithangga"
+                                class="mobile-footer-item d-block">Instagram</a>
+                            <a target="_blank" href="https://www.tiktok.com/@buildwithangga"
+                                class="mobile-footer-item d-block">TikTok</a>
+                            <a href="" class="mobile-footer-item d-block">Careers</a>
+                        </div>
+                    </div>
+        
+                    <div class="col-12">
+                        <div class="mobile-footer-sub">Office</div>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="mobile-footer-item d-block">PT Angga Membangun Indonesia</div>
+                            <div class="mobile-footer-item d-block">Jl. KH. Wahid Hasyim Kel
+                                No.10D
+                                <div class="mobile-footer-item d-block">
+                                    Jakarta,
+                                    Indonesia</div>
+                            </div>
+                            <div class="mobile-footer-item d-block">(021) 50858650</div>
+                            <a href="mailto:team@buildwithangga.com"
+                                class="mobile-footer-item d-block">team@buildwithangga.com</a>
+                        </div>
+                    </div>
+                </div>
+          </footer>
     </section>
 
     <!-- modal search -->
     <div class="modal fade" id="quickSearchModal" tabindex="-1" aria-labelledby="quickSearchModalLabel" aria-hidden="true">
-      <!-- {{-- Button dismiss --}} -->
-      <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"></button>
-      <div class="modal-dialog modal-dialog-centered">
+    <!-- {{-- Button dismiss --}} -->
+    <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content overflow-hidden position-relative">
-          <div class="modal-header">
+        <div class="modal-header">
             <form autocomplete="off" class="position-relative quick-search-modal w-100" method="GET" action="" id="quickSearchForm">
-              <div class="position-relative">
+            <div class="position-relative">
                 <input type="text" value="keyword" name="keyword" minlength="2" placeholder="Cari kelas, cth: Web development, Freelancer, App development" class="navbar-input-column form-control" id="inputSearchModule3" />
                 <svg width="24" height="24" viewBox="0 0 24 24" class="ic_search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path
+                <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"
                     fill="currentColor"
-                  />
-                  <path
+                />
+                <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M14.2929 14.2929C14.6834 13.9024 15.3166 13.9024 15.7071 14.2929L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.2929 15.7071C13.9024 15.3166 13.9024 14.6834 14.2929 14.2929Z"
                     fill="currentColor"
-                  />
+                />
                 </svg>
                 <a href="javascript:void(0);" class="clear-field-x d-none" id="clear_field">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#999AA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M6 6L18 18" stroke="#999AA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
+                </svg>
                 </a>
-              </div>
+            </div>
             </form>
-          </div>
-          <div class="modal-body">
-            <!-- {{-- Dummy Body --}} -->
-          </div>
         </div>
-      </div>
+        <div class="modal-body">
+            <!-- {{-- Dummy Body --}} -->
+        </div>
+        </div>
     </div>
+    </div>
+    <!-- login pop-up -->
+    <section class="ground-login gate px-2 px-lg-0">
+    <div class="box-870">
+        <div class="ic-close">
+        <img src="../../images/ic_close.svg" alt="hamburger-menu" />
+        </div>
+        <div class="row mx-0">
+        <div class="col-md-6 col-12 showcase d-none d-md-block p-0">
+            <img src="../../images/belajar-coding-product-design-kelas-online-buildwith-angga.png" class="banner-login" alt="belajar design web development buildwithangga" />
+        </div>
 
-    <script src="../../scripts/circlechart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" crossorigin="anonymous"></script>
-
-    <script>
-      // <block:setup:1>
-      const data = {
-        labels: ["Frontend", "Backend", "Business", "User Interface", "User Experience", "Design", "IOT"],
-        datasets: [
-          {
-            label: "My Interests",
-            data: [35, 10, 38, 5, 1, 20, 17],
-            fill: true,
-            backgroundColor: "rgba(36, 71, 249, 0.2)",
-            borderColor: "#3D58FF",
-            pointBackgroundColor: "#fff",
-            pointBorderColor: "#3D58FF",
-            pointHoverBackgroundColor: "#3D58FF",
-            pointHoverBorderColor: "#fff",
-            pointBorderWidth: 3,
-            pointRadius: 4,
-            tension: 0.2,
-          },
-        ],
-      };
-    </script>
-
-    <script>
-      // === include 'setup' then 'config' above ===
-      // My Superpower - Desktop
-      var myChart = new Chart(document.getElementById("myChart"), {
-        type: "radar",
-        data: data,
-        options: {
-          plugins: {
-            legend: {
-              display: false,
-            },
-          },
-        },
-      });
-    </script>
+        <!-- {{-- Sign In Form --}} -->
+        <div class="col-md-6 col-12 p-5 content sign-in-form">
+            <h3 class="header-thirdty">Sign In</h3>
+            <article class="form-group p-0 mt-30">
+            <form action="">
+                
+                <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" />
+                
+                </div>
+                <div class="mb-2">
+                <label for="password" class="form-label">Password</label>
+                <div class="revealPassword">
+                    <input name="password" type="password" class="form-control" id="password" />
+                    <div>
+                    <img class="icon" src="../../images/svgs/ic_eye.svg" alt="eye"/>
+                    </div>
+                </div>
+                </div>
+                <div class="mb-2">
+                
+                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
+                
+                </div>
+                <p class="flr">
+                <a href="" class="text-link"> Lupa Password </a>
+                </p>
+                <button type="submit" class="mt-4 btn btn-primary btn-lg btn-login">Sign In</button>
+                
+                <a class="btn btn-secondary mt-3 w-100 btn-100" href="front.start.signup?main_leads=gate">Create New Account</a>
+                
+            </form>
+            <div class="divider my-4"></div>
+            <a class="btn btn-dark btn-google" href=""> <img src="../../images/ic_google.svg" alt="BuildWith Angga" /> Masuk / Daftar </a>
+            </article>
+        </div>
+        </div>
+    </div>
+    </section>
   </body>
 </html>

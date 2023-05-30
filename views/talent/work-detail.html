@@ -411,87 +411,121 @@
       </nav>
     </div>
 
-    <section class="py-5 course-details showcase-details member-profile d-md-block d-none">
-      <!-- {{-- Tablet/Desktop --}} -->
+    <section class="py-5 course-details showcase-details" id="master">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3 col-12 text-center">
-            <h1 class="header-primary">
-              Hello, I'm Professional <br class="desktop" />
-              Full-Stack Developer
-            </h1>
+        <div class="row mb-5">
+          <div class="col-lg-12 col-12 text-center">
+            <span class="badge rounded-pill badge-nd">#MyBestProjectEver</span>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3 col-12 text-center">
+            <h1 class="header-primary">example</h1>
+          </div>
+        </div>
         <div class="row mt-5">
-          <div class="col-lg-4 col-12 bio-section">
-            <div class="item-showcase mb-5">
-              <img src="../../images/default-avatar.svg" class="photo mb-5" style="object-fit: cover" alt="avatar" />
-              <h2 class="name text-capitalize mb-2">UserName</h2>
-              <p class="role">Member sejak 02 Feb 2021</p>
-              <p class="mt-5">
-                <a class="btn btn-primary btn-masuk btn-100" href="">Hire Me Now</a>
+          <div class="col-lg-8 col-12">
+            <img src="../../images/Furniture Marketplace Design Mobile App.png" alt="Hasil karya projek belajar design dan code di BuildWith Angga" class="thumbnail-project img-fluid" />
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="item-showcase">
+              <img src="../../images/default-avatar.svg" class="photo mb-5" alt="avatar" />
+              <h2 class="name">UserName</h2>
+              <p class="role">Lifetime Learner</p>
+              <p class="mb-3 mt-5">
+                <a class="btn btn-primary btn-masuk btn-100" href="" target="_blank">Live Preview</a>
+              </p>
+              <p>
+                <a class="btn btn-secondary btn-daftar btn-100" href="profile.html">Member Profile</a>
               </p>
             </div>
           </div>
-          <div class="col-lg-8 col-12">
-            <div class="row">
-              <div class="col-lg-12 col-12 mb-5">
-                <div class="default-card">
-                  <h3 class="primary-title">My Superpower</h3>
-                  <div class="row">
-                    <div class="col-lg-10 offset-lg-1 col-12 position-relative">
-                      <canvas id="myChart" class="override-chart"></canvas>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-12 col-12">
+            <div class="tabs-content-nd">
+              <ul class="nav nav-pills mb-5 gap-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">About</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-tools-tab" data-bs-toggle="pill" data-bs-target="#pills-tools" type="button" role="tab" aria-controls="pills-tools" aria-selected="false">Tools</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <div class="row content">
+                    <div class="col-lg-7 col-12">
+                      <h3 class="title-section">Tentang Projek</h3>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse officiis recusandae harum omnis sequi dolorum ipsa quod consectetur modi impedit.
+                      <h3 class="title-section mt-5 mb-2 mb-md-3 pt-2 pb-1">Projek Dari Kelas</h3>
+                      <div class="row gy-4">
+                        <div class="col-md-7 col-12">
+                          <div class="course-card-responsive">
+                            <div class="d-flex flex-row flex-md-column">
+                              <a
+                                href="#"
+                                class="position-relative z-10 thumbnailContainer"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalTrailerCourse"
+                                data-trailer="course.trailer_kelas"
+                                data-course-name="course.nama_kelas"
+                                onclick="trailerSet(this)"
+                              >
+                                <img src="../../images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
+                                <img src="../../images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
+                              </a>
+                              <div class="course-detail">
+                                <h3 class="course-name line-clamp-mobile">
+                                  <a href="../kelas-online/play-desktop-version.html" style="color: #34364a">Complete Freelancer UI/UX & Illustration Designer: Brief, Wireframe, Visual Design, Portfolio</a>
+                                </h3>
+
+                                <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">Rp <span class="">720,000</span></div>
+                              </div>
+                            </div>
+
+                            <div class="course-footer mt-auto">
+                              <!-- Star Rating and Joined Amount -->
+                              <div class="star-rating w-100">
+                                <img src="../../images/ic_star.svg" alt="star icon" />
+                                <img src="../../images/ic_star.svg" alt="star icon" />
+                                <img src="../../images/ic_star.svg" alt="star icon" />
+                                <img src="../../images/ic_star.svg" alt="star icon" />
+                                <img src="../../images/ic_star.svg" alt="star icon" />
+                                <span> (1,234) </span>
+                              </div>
+
+                              <!-- Icon Level Tooltip -->
+                              <div class="d-none d-md-block">
+                                <img data-bs-custom-class="font-poppins" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All Levels" src="../../images/ic_lv_hard.svg" class="icon-level" alt="level" />
+                              </div>
+
+                              <!-- Author Avatar -->
+                              <div class="d-block d-md-none">
+                                <img src="../../images/mentor-galih.png" class="author_avatar" alt="Mentor pengajar di BuildWith Angga Indonesia." />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-12 col-12">
-                <div class="tabs-content-nd">
-                  <ul class="nav nav-pills mb-5 gap-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Portfolios</button>
-                    </li>
-                    <!-- <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-tools-tab" data-bs-toggle="pill" data-bs-target="#pills-tools" type="button" role="tab" aria-controls="pills-tools" aria-selected="false">Certificates</button>
-                    </li> -->
-                  </ul>
-                  <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                      <div class="row pricing testimonials mentors showcases">
-                        <div class="col-lg-6 col-12">
-                          <div class="item-pricing item-mentor item-showcase">
-                            <a href="work-detail.html">
-                              <div class="featured-course">
-                                <img src="../../images/cover kelas full stack android developer buildwith angga.png" class="cover img-fluid" alt="Hasil karya belajar di BuildWith Angga" />
-                              </div>
-                            </a>
-                          </div>
-                        </div>
+                <div class="tab-pane fade" id="pills-tools" role="tabpanel" aria-labelledby="pills-tools-tab">
+                  <div class="row content">
+                    <div class="col-lg-7 col-12">
+                      <h3 class="title-section">Tools Pendukung</h3>
+                      <p class="subtitle-section">Alat kerja selama mengerjakan projek</p>
+                    </div>
+                  </div>
+                  <div class="row content mt-3">
+                    <div class="col-lg-3 col-12">
+                      <div class="item-review">
+                        <img src="../../images/tools/logo_tailwind.png" class="photo mb-4" alt="logo" />
+                        <h2 class="name mt-3">Tailwind</h2>
+                        <p class="role">Software Gratis</p>
                       </div>
                     </div>
-
-                    <!-- <div class="tab-pane fade" id="pills-tools" role="tabpanel" aria-labelledby="pills-tools-tab">
-                      <div class="row pricing testimonials mentors showcases">
-                        <div class="col-lg-6 col-12">
-                          <div class="item-pricing item-mentor item-showcase">
-                            <a href="">
-                              <div class="featured-course">
-                                <img src="../../images/certificate.jpg" class="cover img-fluid" alt="Sertifikat kelulusan belajar design dan code di BuildWith Angga" />
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab">
-                      <div class="row content">
-                        <div class="col-lg-12 col-12">
-                          <h3 class="title-section">Order My Service</h3>
-                          <p>Masih dalam tahap pengembangan.</p>
-                        </div>
-                      </div>
-                    </div> -->
                   </div>
                 </div>
               </div>
@@ -540,49 +574,23 @@
         </div>
       </div>
     </div>
-
-    <script src="../../scripts/circlechart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" crossorigin="anonymous"></script>
-
-    <script>
-      // <block:setup:1>
-      const data = {
-        labels: ["Frontend", "Backend", "Business", "User Interface", "User Experience", "Design", "IOT"],
-        datasets: [
-          {
-            label: "My Interests",
-            data: [35, 10, 38, 5, 1, 20, 17],
-            fill: true,
-            backgroundColor: "rgba(36, 71, 249, 0.2)",
-            borderColor: "#3D58FF",
-            pointBackgroundColor: "#fff",
-            pointBorderColor: "#3D58FF",
-            pointHoverBackgroundColor: "#3D58FF",
-            pointHoverBorderColor: "#fff",
-            pointBorderWidth: 3,
-            pointRadius: 4,
-            tension: 0.2,
-          },
-        ],
-      };
-    </script>
-
-    <script>
-      // === include 'setup' then 'config' above ===
-      // My Superpower - Desktop
-      var myChart = new Chart(document.getElementById("myChart"), {
-        type: "radar",
-        data: data,
-        options: {
-          plugins: {
-            legend: {
-              display: false,
-            },
-          },
-        },
-      });
-    </script>
+    <!-- modal trailer -->
+    <div class="modal fade" id="modalTrailerCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header text-black d-flex align-items-center gap-3">
+            <h6 class="modal-title" id="staticBackdropLabel"></h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="embed-responsive embed-responsive-16by9 video-iframe">
+              <div class="plyr__video-embed" id="player">
+                <iframe allowfullscreen allowtransparency allow="autoplay" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
