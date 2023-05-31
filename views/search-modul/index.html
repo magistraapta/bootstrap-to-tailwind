@@ -39,6 +39,14 @@
     <link rel="icon" type="image/png" href="../../images/favicon.ico" />
     <link rel="apple-touch-icon" href="../../images/favicon.ico" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../../vendor/flickity/flickity.css" />
+    <script src="../../vendor/flickity/flickity.pkgd.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script type="text/javascript" src="../../scripts/desktop-navbar.js"></script>
     <script defer type="text/javascript" src="../../scripts/mobile-navbar.js"></script>
 
@@ -48,10 +56,6 @@
 
     <script type="text/javascript" src="../../scripts/revealPassword.js"></script>
     <script src="../../scripts/login-popup-desktop.js" type="text/javascript"></script>
-    
-    <script src="../../scripts/modal-course-trailer.js" type="text/javascript"></script>
-    
-    <script type="text/javascript" src="../../scripts/btnToTop.js"></script>
   </head>
   <body>
     <section class="--bwa-mobile-version d-sm-none d-block">
@@ -394,125 +398,156 @@
       </nav>
     </div>
 
-    <div class="btn-search-mobile d-block d-sm-none search-module">
+    <section class="py-5 search-module">
         <div class="container">
+
             <div class="row">
-                <div class="col-12">
+                <div class="col-lg-12 text-center">
+                    <h1 class="header-primary mb-3">
+                        Get It Quick
+                    </h1>
+                    <p class="subtitle-primary">
+                        Temukan berbagai kelas yang dapat <br class="desktop"> meningkatkan keahlian IT kita
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-12 col-12">
                     <form class="search">
-                        <input type="text" value="" name="keyword" id="inputSearchModule2"
-                            minlength="2" required placeholder="Mau cari kelas apa?" autofocus
-                            class="form-control search-input-home">
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="position-relative">
+                                    <input type="text"
+                                        value=""
+                                        name="keyword" minlength="2" required placeholder="Cari kelas website design"
+                                        autofocus
+                                        class="form-control search-input-nav">
+                                    <p class="invalid-nav mt-2 mb-0 text-sm text-red"></p>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-12">
+                                <button type="submit"
+                                    class="btn btn-secondary btn-search bg-blue text-white btn-100-mobile">Search</button>
+                            </div>
+                        </div>
+                        <div class="top-keyword mt-4 d-none d-sm-block">
+                            Paling Dicari: &nbsp;
+                            <a href="" class="btn btn-sm btn-secondary py-2 px-3 me-2">Flutter</a>
+                            <a href="" class="btn btn-sm btn-secondary py-2 px-3 me-2">Javascript</a>
+                            <a href="" class="btn btn-sm btn-secondary py-2 px-3 me-2">Laravel</a>
+                            <a href="" class="btn btn-sm btn-secondary py-2 px-3 me-2">React JS</a>
+                            <a href="" class="btn btn-sm btn-secondary py-2 px-3 me-2">PHP</a>
+                        </div>
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <section class="py-5 course-details showcase-details member-profile" id="master">
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 col-12 text-center">
-                    <h1 class="header-primary">
-                        Webinar Title
-                    </h1>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-8 col-12 offset-lg-2">
-                    <div class="course-plyr">
-                        <div class="plyr__video-embed ratio video-place ratio-16x9" id="player">
-                            <iframe
-                                src="https://www.youtube.com/embed/T1D2Eki3GUg?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&autoplay=1"
-                                allowfullscreen allowtransparency allow="autoplay"></iframe>
+            @if (request()->keyword)
+                <div class="sub-categories roadmap">
+                    @if ($promo_courses->count() > 0)
+                        <div class="row mt-5 course-categories">
+                            <div class="col-lg-12 col-12 mb-3">
+                                <h4 class="header-cate ms-2">
+                                    Sedang Promo!
+                                </h4>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-8 col-12 offset-lg-2">
-                    <div class="tabs-content-nd">
-                        <div class="tabs-content-nd overflow-hidden">
-                            <ul class="nav nav-pills mb-4 d-flex gap-3" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active text-capitalize" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="true">
-                                        about
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link  text-capitalize" id="pills-courses-tab" data-bs-toggle="pill" data-bs-target="#pills-courses" type="button" role="tab" aria-controls="pills-courses" aria-selected="false" tabindex="-1">
-                                        courses
-                                    </button>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
-                                    <div class="row content">
-                                        <div class="col-lg-9 col-12">
-                                            <h3 class="title-section mt-4">
-                                                About Webinar
+                        <div class="row gy-4">
+                            @forelse ($promo_courses as $course)
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                    <div class="course-card-responsive">
+                                        <div class="d-flex flex-row flex-md-column">
+                                          <!-- Course Thumbnail and Course Trailer -->
+                                          <a href="#" class="position-relative z-10 thumbnailContainer" data-bs-toggle="modal" data-bs-target="#modalTrailerCourse" data-trailer="course.trailer_kelas" data-course-name="course.nama_kelas" onclick="trailerSet(this)">
+                                            <img src="images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
+                                            <img src="images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
+                                          </a>
+                                          <div class="course-detail">
+                                            <!-- Course Title & Link -->
+                                            <h3 class="course-name line-clamp-mobile">
+                                              <!-- {{ course . nama_kelas }} -->
+                                              <a href="views/kelas-online/play-desktop-version.html" style="color: #34364a">Complete Freelancer UI/UX & Illustration Designer: Brief, Wireframe, Visual Design, Portfolio</a>
                                             </h3>
-                                            Mempelajari Tentang Easy Convert Figma to Elementor
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="tab-pane fade " id="pills-courses" role="tabpanel" aria-labelledby="pills-courses-tab">
-                                    <div class="row gy-4 mt-4">
-                                        <div class="col-md-6 col-12 me-0">
-                                            <div class="course-card-responsive">
-                                                <div class="d-flex flex-row flex-md-column">
-                                                  <a
-                                                    href="#"
-                                                    class="position-relative z-10 thumbnailContainer"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#modalTrailerCourse"
-                                                    data-trailer="course.trailer_kelas"
-                                                    data-course-name="course.nama_kelas"
-                                                    onclick="trailerSet(this)"
-                                                  >
-                                                    <img src="../../images/play_btn_blue.svg" alt="trailer" class="_btn-play" />
-                                                    <img src="../../images\thumbnail\thumbnail_roadmap-1.webp" style="" class="thumbnail-course" alt="`Kelas di BuildWith Angga`" />
-                                                  </a>
-                                                  <div class="course-detail">
-                                                    <h3 class="course-name line-clamp-mobile">
-                                                      <a href="../kelas-online/play-desktop-version.html" style="color: #34364a">Complete Freelancer UI/UX & Illustration Designer: Brief, Wireframe, Visual Design, Portfolio</a>
-                                                    </h3>
-                            
-                                                    <div class="d-flex mt-2 align-items-center gap-1 course-price-wrapper">Rp <span class="">720,000</span></div>
-                                                  </div>
-                                                </div>
-                            
-                                                <div class="course-footer mt-auto">
-                                                  <!-- Star Rating and Joined Amount -->
-                                                  <div class="star-rating w-100">
-                                                    <img src="../../images/ic_star.svg" alt="star icon" />
-                                                    <img src="../../images/ic_star.svg" alt="star icon" />
-                                                    <img src="../../images/ic_star.svg" alt="star icon" />
-                                                    <img src="../../images/ic_star.svg" alt="star icon" />
-                                                    <img src="../../images/ic_star.svg" alt="star icon" />
-                                                    <span> (1,234) </span>
-                                                  </div>
-                            
-                                                  <!-- Icon Level Tooltip -->
-                                                  <div class="d-none d-md-block">
-                                                    <img data-bs-custom-class="font-poppins" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All Levels" src="../../images/ic_lv_hard.svg" class="icon-level" alt="level" />
-                                                  </div>
-                            
-                                                  <!-- Author Avatar -->
-                                                  <div class="d-block d-md-none">
-                                                    <img src="../../images/mentor-galih.png" class="author_avatar" alt="Mentor pengajar di BuildWith Angga Indonesia." />
+                        
+                                            <div class="d-flex mt-2 align-items-center gap-1">
+                                              <div>
+                                                <div>
+                                                  <div class="d-flex gap-2 align-items-center">
+                                                    <span class="disc-price blink_me">Rp 690.000</span>
+                        
+                                                    <div>
+                                                      <span class="origin-price">Rp 30.000 </span>
+                                                    </div>
                                                   </div>
                                                 </div>
                                               </div>
+                                            </div>
+                                          </div>
                                         </div>
-                                    </div>
+                        
+                                        <div class="course-footer mt-auto">
+                                          <!-- Star Rating and Joined Amount -->
+                                          <div class="star-rating w-100">
+                                            <img src="images/ic_star.svg" alt="star icon" />
+                                            <img src="images/ic_star.svg" alt="star icon" />
+                                            <img src="images/ic_star.svg" alt="star icon" />
+                                            <img src="images/ic_star.svg" alt="star icon" />
+                                            <img src="images/ic_star.svg" alt="star icon" />
+                                            <span> (1,234) </span>
+                                          </div>
+                        
+                                          <!-- Icon Level Tooltip -->
+                                          <div class="d-none d-md-block">
+                                            <img data-bs-custom-class="font-poppins" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All Levels" src="images/ic_lv_hard.svg" class="icon-level" alt="level" />
+                                          </div>
+                        
+                                          <!-- Author Avatar -->
+                                          <div class="d-block d-md-none">
+                                            <img src="images/mentor-galih.png" class="author_avatar" alt="Mentor pengajar di BuildWith Angga Indonesia." />
+                                          </div>
+                                        </div>
+                                      </div>
                                 </div>
+                            @empty
+                                <div class="col-lg-4 col-12">
+                                    <p>
+                                        There is no course for
+                                        "{{ preg_replace('/[^A-Za-z0-9 -:]/', '', strip_tags(request()->keyword)) }}"
+                                    </p>
+                                </div>
+                            @endforelse
+                        </div>
+                    @endif
+
+                    <div class="row mt-5 course-categories">
+                        <div class="col-lg-12 col-12 mb-3">
+                            <h4 class="header-cate ms-2">
+                                Result ({{ $courses->count() }})
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row gy-4">
+                        @forelse ($courses as $course)
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                @include('components.course-card-responsive', [
+                                    'data' => $course,
+                                    'main_leads' => 'searchresult',
+                                ])
                             </div>
-                        </div>                    
+                        @empty
+                            <div class="col-lg-4 col-12">
+                                <p>
+                                    There is no course for
+                                    "{{ preg_replace('/[^A-Za-z0-9 -:]/', '', strip_tags(request()->keyword)) }}"
+                                </p>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
-            </div>
+            @endif
+
         </div>
     </section>
 
@@ -810,30 +845,20 @@
         </div>
     </div>
     </section>
-    <!-- modal trailer -->
-    <div class="modal fade" id="modalTrailerCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header text-black d-flex align-items-center gap-3">
-            <h6 class="modal-title" id="staticBackdropLabel"></h6>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body p-0">
-            <div class="embed-responsive embed-responsive-16by9 video-iframe">
-              <div class="plyr__video-embed" id="player">
-                <iframe allowfullscreen allowtransparency allow="autoplay" frameborder="0" ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- btn to top -->
-    <a href="#" class="btn-to-top">
-        <span class="material-icons">
-            arrow_upward
-        </span>
-    </a>
+    <script type="text/javascript">
+        $('.search-input-nav').keydown(function(e) {
+            // enter has keyCode = 13, change it if you want to use another button
+            if (e.keyCode == 13) {
+                if (this.value.length < 3) {
+                    $('.search-input-nav').addClass("is-invalid");
+                    $('.invalid-nav').text('Keyword minimal berisi 3 karakter.');
+                    return false
+                } else {
+                    this.form.submit();
+                }
+            }
+        });
+    </script>
   </body>
 </html>
