@@ -47,6 +47,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css"
+      integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA=="
+      crossorigin="anonymous"
+    />
+
     <script type="text/javascript" src="../../scripts/desktop-navbar.js"></script>
     <script defer type="text/javascript" src="../../scripts/mobile-navbar.js"></script>
 
@@ -56,8 +63,6 @@
 
     <script type="text/javascript" src="../../scripts/revealPassword.js"></script>
     <script src="../../scripts/login-popup-desktop.js" type="text/javascript"></script>
-
-    <script src="../../scripts/pages/handbook.js" type="text/javascript"></script>
   </head>
   <body>
     <section class="--bwa-mobile-version d-sm-none d-block">
@@ -362,36 +367,47 @@
                 <li class="nav-item d-flex align-items-center">
                   <a href="../notification/index.html">
                     <button type="button" class="nav-icon position-relative">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.0186 2.91016C8.70862 2.91016 6.01862 5.60016 6.01862 8.91016V11.8002C6.01862 12.4102 5.75862 13.3402 5.44862 13.8602L4.29862 15.7702C3.58862 16.9502 4.07862 18.2602 5.37862 18.7002C9.68862 20.1402 14.3386 20.1402 18.6486 18.7002C19.8586 18.3002 20.3886 16.8702 19.7286 15.7702L18.5786 13.8602C18.2786 13.3402 18.0186 12.4102 18.0186 11.8002V8.91016C18.0186 5.61016 15.3186 2.91016 12.0186 2.91016Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                            <path d="M13.8719 3.19945C12.6626 2.85504 11.3812 2.85504 10.1719 3.19945C10.4619 2.45945 11.1819 1.93945 12.0219 1.93945C12.8619 1.93945 13.5819 2.45945 13.8719 3.19945V3.19945Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.33769 20.6179 9.02132 19.8557 9.01953 19.0605" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
-                        </svg>
-            
-                        <img class="position-absolute" src="../../images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.0186 2.91016C8.70862 2.91016 6.01862 5.60016 6.01862 8.91016V11.8002C6.01862 12.4102 5.75862 13.3402 5.44862 13.8602L4.29862 15.7702C3.58862 16.9502 4.07862 18.2602 5.37862 18.7002C9.68862 20.1402 14.3386 20.1402 18.6486 18.7002C19.8586 18.3002 20.3886 16.8702 19.7286 15.7702L18.5786 13.8602C18.2786 13.3402 18.0186 12.4102 18.0186 11.8002V8.91016C18.0186 5.61016 15.3186 2.91016 12.0186 2.91016Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M13.8719 3.19945C12.6626 2.85504 11.3812 2.85504 10.1719 3.19945C10.4619 2.45945 11.1819 1.93945 12.0219 1.93945C12.8619 1.93945 13.5819 2.45945 13.8719 3.19945V3.19945Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.33769 20.6179 9.02132 19.8557 9.01953 19.0605"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-miterlimit="10"
+                        />
+                      </svg>
+
+                      <img class="position-absolute" src="../../images/ic_red_ellipse.svg" alt="ellipse" style="top: 13px; right: 13px" />
                     </button>
                   </a>
                 </li>
               </div>
 
               <li class="nav-item d-none d-sm-flex flex-column justify-content-start align-items-start dropdown">
-                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="user-name">
-                        Halo, UserName
-                    </span>
-                    <img class="user-photo"
-                        src="../../images/default-avatar.svg"
-                        alt="">
+                <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="user-name"> Halo, UserName </span>
+                  <img class="user-photo" src="../../images/default-avatar.svg" alt="" />
                 </a>
-                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left:auto; right:0;">
-                    
+                <ul class="mt-2 dropdown-menu dropdown-nd" aria-labelledby="dropdownMenuLink" style="left: auto; right: 0">
                   <li><a class="dropdown-item" href="../kelas-saya/index.html">My Courses</a></li>
                   <li><a class="dropdown-item" href="../talent/profile.html">My Certificates</a></li>
                   <li><a class="dropdown-item" href="../progress-belajar/index.html">Progress Belajar</a></li>
                   <li><a class="dropdown-item" href="../profile/settings.html">Settings</a></li>
                   <li><a class="dropdown-item" href="../../index.html">Logout</a></li>
-
                 </ul>
               </li>
             </ul>
@@ -400,356 +416,136 @@
       </nav>
     </div>
 
-    <section class="py-5 roadmap handbook d-none d-sm-block">
-        <div class="container" id="handbook">
-            <div class="row mb-4">
-                <div class="col-lg-12 text-center">
-                    <h1 class="header-primary mb-3">
-                        HandBook
-                    </h1>
-                    <p class="subtitle-primary">
-                        Panduan lengkap untuk membangun karir <br class="desktop"> di masa depan yang lebih baik
-                    </p>
-                </div>
-            </div>
+    <section class="gate">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-12">
             <div class="row">
-                <div class="row search col-lg-8 col-12 mx-lg-auto mx-0">
-                    <div class="col-lg-8 col-12 mb-lg-0 mb-3">
-                        <input id="search-input" type="text" value="" name="keyword" minlength="2" required placeholder="Cari handbook kelas" autofocus class="form-control">
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <button type="button" onclick="submitSearch()" class="btn btn-secondary btn-search bg-blue text-white w-100">Search</button>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex flex-wrap flex-row mt-5 pricing item-roadmap-master" id="list-item">
-                <div class="item-roadmap d-flex flex-column col-xl-4 col-md-6 col-12 px-md-4 px-0">
-                    <div class="item-pricing">
-                        <img src="../../images/ic_roadmap.svg" class="icon" alt="handbook">
-                        <h2 class="title mt-5 lh-base handbook-title-width">
-                            Front End website Developer
-                        </h2>
-                        <a class="btn btn-secondary mt-5"
-                            href="details.html">View Details</a>
-                    </div>
-                </div>
-                <div class="item-roadmap d-flex flex-column col-xl-4 col-md-6 col-12 px-md-4 px-0">
-                    <div class="item-pricing">
-                        <img src="../../images/ic_roadmap.svg" class="icon" alt="handbook">
-                        <h2 class="title mt-5 lh-base handbook-title-width">
-                            Full-stack website Developer
-                        </h2>
-                        <a class="btn btn-secondary mt-5"
-                            href="details.html">View Details</a>
-                    </div>
-                </div>
-                <div class="item-roadmap d-flex flex-column col-xl-4 col-md-6 col-12 px-md-4 px-0">
-                    <div class="item-pricing">
-                        <img src="../../images/ic_roadmap.svg" class="icon" alt="handbook">
-                        <h2 class="title mt-5 lh-base handbook-title-width">
-                            User Experience Designer
-                        </h2>
-                        <a class="btn btn-secondary mt-5"
-                            href="details.html">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="d-none d-sm-block">
-      <section class="footer-nd">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="item-footer col-lg-3 col-10">
-              <img src="../../images/logo_bwa_new.svg" width="50" height="50" alt="logo buildwithangga" />
-              <p class="mt-4 tagline" style="margin-bottom: 10px">PT. Angga Membangun Indonesia</p>
-              <p class="tagline" style="margin-bottom: 10px">Jl. KH. Wahid Hasyim Kel No.10D</p>
-              <p class="tagline" style="margin-bottom: 10px">Jakarta, Indonesia</p>
-              <p class="tagline" style="margin-bottom: 10px">(021) 50858650</p>
-              <p class="tagline" style="margin-bottom: 10px">
-                <a href="mailto:team@buildwithangga.com">team@buildwithangga.com</a>
-              </p>
-              <p class="tagline">© 2019-2023 BuildWith Angga</p>
-            </div>
-            <div class="item-footer col-lg-1 col-12"></div>
-            <div class="col-lg-8 col-12">
-              <div class="row justify-content-between">
-                <!-- {{-- Start Popular career --}} -->
-                <div class="item-footer col-lg-3 col-12">
-                  <p class="header-category">Start Popular Career</p>
-                  <ul>
-                    <li>
-                      <a href="../handbook/details.html"> UI/UX Designer </a>
-                    </li>
-                    <li>
-                      <a href="../handbook/details.html"> Web Developer </a>
-                    </li>
-                    <li>
-                      <a href="../handbook/details.html"> Mobile Developer </a>
-                    </li>
-                    <li>
-                      <a href="../handbook/details.html"> Data Scientist </a>
-                    </li>
-                    <li>
-                      <a href="../handbook/details.html"> Digital Marketer </a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- {{-- Mastering Hot tools --}} -->
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Mastering Hot Tools</p>
-                  <ul>
-                    <li><a href="../catalogue/index.html">Figma</a></li>
-                    <li><a href="../catalogue/index.html">Flutter</a></li>
-                    <li><a href="../catalogue/index.html">React JS</a></li>
-                    <li><a href="../catalogue/index.html">Laravel</a></li>
-                    <li><a href="../catalogue/index.html">Vue JS</a></li>
-                  </ul>
-                </div>
-                <!-- {{-- Learn language --}} -->
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Learn Language</p>
-                  <ul>
-                    <li><a href="../catalogue/index.html">PHP</a></li>
-                    <li><a href="../catalogue/index.html"> JavaScript</a></li>
-                    <li><a href="../catalogue/index.html">Dart</a></li>
-                    <li><a href="../catalogue/index.html">HTML & CSS</a></li>
-                    <li><a href="../catalogue/index.html">Kotlin</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="row">
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Resources</p>
-                  <ul>
-                    <li>
-                      <a href="../handbook/index.html">Karir HandBook</a>
-                    </li>
-                    <li>
-                      <a href="../rewards/index.html">Student Rewards</a>
-                    </li>
-                    <li>
-                      <a href="../tutorials/index.html">Free Ebooks</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Community</p>
-                  <ul>
-                    <li><a href="../talent/index.html">Showcase</a></li>
-                    <li><a href="../review/index.html">Testimonials</a></li>
-                    <li><a href="../mentor/list-mentor.html">Mentor</a></li>
-                    <li><a href="../webinar/index.html">Webinar</a></li>
-                  </ul>
-                </div>
-                <div class="item-footer col-lg-3 col-6">
-                  <p class="header-category">Company</p>
-                  <ul>
-                    <li><a href="../faq/timeline.html">About</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
-                    <li><a href="../carrers/index.html">Careers</a></li>
-                    <li><a target="_blank" href="https://www.youtube.com/@BuildWithAngga">Youtube</a></li>
-                    <li><a target="_blank" href="https://www.instagram.com/buildwithangga/">Instagram</a></li>
-                    <li><a target="_blank" href="https://www.tiktok.com/@buildwithangga">TikTok</a></li>
-                  </ul>
-                </div>
-                <div class="item-footer col-lg-3 col-md-6 col-12">
-                  <p class="header-category">Useful Links</p>
-                  <ul>
-                    <li><a href="../faq/pp.html">Privacy & Policy</a></li>
-                    <li><a href="../faq/tnc.html">Terms & Conditions</a></li>
-                    <li><a target="_blank" href="https://www.notion.so/galpratama/Jam-Operasional-b806c2c999274568960be51b0de5afda"> Jam Operasional</a></li>
-                    <li><a href="../search-modul/index.html">Cari Kelas</a></li>
-                    <li><a href="../journey/index.html">Roadmap Belajar</a></li>
-                    <li><a href="../kelas-online/index.html">All Courses</a></li>
-                    <li><a href="../faq/cek-sertifikat.html">Cek Sertifikat</a></li>
-                  </ul>
+              <div class="col-lg-12 col-12">
+                <div class="content">
+                  <h1 class="header-primary">My Certificate</h1>
+                  <p class="subtitle-primary mt-3 mb-5">
+                    Masukkan kode unik sertifikat untuk <br class="desktop" />
+                    pemeriksaan lebih lanjut pada sistem kami
+                  </p>
+                  <div class="form-group">
+                    <form id="form-certificate-check">
+                      <div class="mb-3">
+                        <label for="kodeUnikSertifikat" class="form-label">Kode unik</label>
+                        <input type="text" name="code_unique" class="form-control" id="kodeUnikSertifikat" aria-describedby="kodeUnikSertifikatHelp" />
+                        <small class="form-text text-danger error-code_unique"></small>
+                      </div>
+                      <button type="submit" class="mt-2 btn btn-primary btn-lg">Check Now</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="col-lg-1 col-12"></div>
+
+          <div class="col-lg-7 col-12">
+            <div class="div result-sertifikat my-5">
+              <img src="../../images/sertifikat.png" alt="3D Blender dan UI UX Landing Page" class="img-fluid br-16 d-none" id="sertif" />
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
-    <section class="--bwa-mobile-version d-sm-none d-block">
-        <footer class="d-block d-md-none bg-white" id="footer-mobile">
-            <div class="container">
-                <div class="d-flex justify-content-start align-items-center">
-                    <img src="../../images/logo_bwa_new.svg" width="50" height="50"
-                        alt="logo buildwithangga" class="me-3">
-                    <div class="d-flex flex-column justify-content-center align-items-start">
-                        <div class="mobile-footer-brand">BuildWith Angga</div>
-                        <div class="mobile-footer-copyright">© 2019-2022 BuildWith Angga</div>
-                    </div>
-                </div>
-                <p class="mobile-footer-description">Website untuk belajar design dan code dari <br>
-                    mentor yang sangat berpengalaman<br>
-                    di bidangnya masing-masing.</p>
-        
-                <div class="row gy-3">
-                    <div class="col-6">
-                        <div class="mobile-footer-sub">Dream Career</div>
-                        <div class="d-flex flex-column gap-2">
-                            <a href=""
-                                class="mobile-footer-item d-block">UI Designer</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">UX Designer</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">Website Developer</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">ReactJS Developer</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">Flutter Developer</a>
-                        </div>
-                    </div>
-        
-                    <div class="col-6">
-                        <div class="mobile-footer-sub">Language</div>
-                        <div class="d-flex flex-column gap-2">
-                            <a href=""
-                                class="mobile-footer-item d-block">PHP</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">JavaScript</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">Python</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">Kotlin</a>
-                            <a href=""
-                                class="mobile-footer-item d-block">Golang</a>
-                        </div>
-                    </div>
-        
-                    <div class="col-6">
-                        <div class="mobile-footer-sub">Community</div>
-                        <div class="d-flex flex-column gap-2">
-                            <a href="" class="mobile-footer-item d-block">Showcase</a>
-                            <a href="" class="mobile-footer-item d-block">Mentor</a>
-                            <a href="" class="mobile-footer-item d-block">Testimonials</a>
-                            <a href="" class="mobile-footer-item d-block">Webinar</a>
-                        </div>
-                    </div>
-        
-                    <div class="col-6">
-                        <div class="mobile-footer-sub">Company</div>
-                        <div class="d-flex flex-column gap-2">
-                            <a href="" class="mobile-footer-item d-block">About Us</a>
-                            <a target="_blank" href="https://www.instagram.com/buildwithangga"
-                                class="mobile-footer-item d-block">Instagram</a>
-                            <a target="_blank" href="https://www.tiktok.com/@buildwithangga"
-                                class="mobile-footer-item d-block">TikTok</a>
-                            <a href="" class="mobile-footer-item d-block">Careers</a>
-                        </div>
-                    </div>
-        
-                    <div class="col-12">
-                        <div class="mobile-footer-sub">Office</div>
-                        <div class="d-flex flex-column gap-2">
-                            <div class="mobile-footer-item d-block">PT Angga Membangun Indonesia</div>
-                            <div class="mobile-footer-item d-block">Jl. KH. Wahid Hasyim Kel
-                                No.10D
-                                <div class="mobile-footer-item d-block">
-                                    Jakarta,
-                                    Indonesia</div>
-                            </div>
-                            <div class="mobile-footer-item d-block">(021) 50858650</div>
-                            <a href="mailto:team@buildwithangga.com"
-                                class="mobile-footer-item d-block">team@buildwithangga.com</a>
-                        </div>
-                    </div>
-                </div>
-          </footer>
+      </div>
     </section>
 
     <!-- modal search -->
     <div class="modal fade" id="quickSearchModal" tabindex="-1" aria-labelledby="quickSearchModalLabel" aria-hidden="true">
-    <!-- {{-- Button dismiss --}} -->
-    <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"></button>
-    <div class="modal-dialog modal-dialog-centered">
+      <!-- {{-- Button dismiss --}} -->
+      <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content overflow-hidden position-relative">
-        <div class="modal-header">
+          <div class="modal-header">
             <form autocomplete="off" class="position-relative quick-search-modal w-100" method="GET" action="" id="quickSearchForm">
-            <div class="position-relative">
+              <div class="position-relative">
                 <input type="text" value="keyword" name="keyword" minlength="2" placeholder="Cari kelas, cth: Web development, Freelancer, App development" class="navbar-input-column form-control" id="inputSearchModule3" />
                 <svg width="24" height="24" viewBox="0 0 24 24" class="ic_search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
+                  <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"
                     fill="currentColor"
-                />
-                <path
+                  />
+                  <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M14.2929 14.2929C14.6834 13.9024 15.3166 13.9024 15.7071 14.2929L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.2929 15.7071C13.9024 15.3166 13.9024 14.6834 14.2929 14.2929Z"
                     fill="currentColor"
-                />
+                  />
                 </svg>
                 <a href="javascript:void(0);" class="clear-field-x d-none" id="clear_field">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#999AA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M6 6L18 18" stroke="#999AA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                  </svg>
                 </a>
-            </div>
+              </div>
             </form>
-        </div>
-        <div class="modal-body">
+          </div>
+          <div class="modal-body">
             <!-- {{-- Dummy Body --}} -->
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
     </div>
     <!-- login pop-up -->
     <section class="ground-login gate px-2 px-lg-0">
-    <div class="box-870">
+      <div class="box-870">
         <div class="ic-close">
-        <img src="../../images/ic_close.svg" alt="hamburger-menu" />
+          <img src="../../images/ic_close.svg" alt="hamburger-menu" />
         </div>
         <div class="row mx-0">
-        <div class="col-md-6 col-12 showcase d-none d-md-block p-0">
+          <div class="col-md-6 col-12 showcase d-none d-md-block p-0">
             <img src="../../images/belajar-coding-product-design-kelas-online-buildwith-angga.png" class="banner-login" alt="belajar design web development buildwithangga" />
-        </div>
+          </div>
 
-        <!-- {{-- Sign In Form --}} -->
-        <div class="col-md-6 col-12 p-5 content sign-in-form">
+          <!-- {{-- Sign In Form --}} -->
+          <div class="col-md-6 col-12 p-5 content sign-in-form">
             <h3 class="header-thirdty">Sign In</h3>
             <article class="form-group p-0 mt-30">
-            <form action="">
-                
+              <form action="">
                 <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" />
-                
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-2">
-                <label for="password" class="form-label">Password</label>
-                <div class="revealPassword">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="revealPassword">
                     <input name="password" type="password" class="form-control" id="password" />
                     <div>
-                    <img class="icon" src="../../images/svgs/ic_eye.svg" alt="eye"/>
+                      <img class="icon" src="../../images/svgs/ic_eye.svg" alt="eye" />
                     </div>
-                </div>
+                  </div>
                 </div>
                 <div class="mb-2">
-                
-                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
-                
+                  <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
                 </div>
                 <p class="flr">
-                <a href="" class="text-link"> Lupa Password </a>
+                  <a href="" class="text-link"> Lupa Password </a>
                 </p>
                 <button type="submit" class="mt-4 btn btn-primary btn-lg btn-login">Sign In</button>
-                
+
                 <a class="btn btn-secondary mt-3 w-100 btn-100" href="front.start.signup?main_leads=gate">Create New Account</a>
-                
-            </form>
-            <div class="divider my-4"></div>
-            <a class="btn btn-dark btn-google" href=""> <img src="../../images/ic_google.svg" alt="BuildWith Angga" /> Masuk / Daftar </a>
+              </form>
+              <div class="divider my-4"></div>
+              <a class="btn btn-dark btn-google" href=""> <img src="../../images/ic_google.svg" alt="BuildWith Angga" /> Masuk / Daftar </a>
             </article>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
     </section>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#form-certificate-check button").on("click", function () {
+          $("#sertif").toggleClass("d-none");
+        });
+      });
+    </script>
   </body>
 </html>
