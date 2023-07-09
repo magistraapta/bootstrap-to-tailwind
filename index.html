@@ -31,6 +31,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="styles/nd.css" /> -->
     <link rel="stylesheet" href="styles/styles.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="dist/output.css" />
 
     <link rel="icon" type="image/png" href="images/favicon.ico" />
@@ -568,187 +569,188 @@
     
       <!-- {{-- Mobile Versions - End --}} -->
     </section>
-    <div class="d-none d-sm-block ">
-      <nav class="navbar navbar-expand-xl navbar-light navbar-nd" id="navbar-desktop">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo_bwa_new.svg" width="50" height="50" class="d-inline-block align-top" alt="logo buildwithangga" />
+    <div class="hidden sm:block ">
+      <nav class=" flex justify-center border py-[25px]">
+        <div class="w-[1340px] flex items-center" >
+          <a href="#" class="mr-[50px] ">
+            <img src="/images/logo_bwa_new.png" width="50" alt="">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="basic-menus navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="sale-guest.html"> Flash Sale </a>
-              </li>
-              <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="listKelasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Kelas </a>
-                <ul class="dropdown-menu __2022" aria-labelledby="listKelasDropdown">
-                  <li class="sidecontent">
-                    <p>Trusted by 900K+ Students</p>
-                    <h5>
-                      Build Your <br />
-                      Future Career
-                    </h5>
-                    <p>
-                      Explore kelas gratis dan berbayar <br />
-                      bersama mentor expert
-                    </p>
-                    <a href="views/kelas-online/index.html" class="btn btn-primary">All Courses</a>
-                    <img src="images/silhouette-project-bwa.png" alt="icon buildwith angga" />
-                  </li>
-                  <li class="dropdown-item">
-                    <div class="row row-cols-lg-3 row-cols-2 dd-item-list">
-                      <div class="col">
-                        <a href="views/catalogue/index.html">
-                          <p>UI/UX Design</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Graphic Design</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Web Development</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Data Analysis</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Android Development</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>iOS Development</p>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="views/catalogue/index.html">
-                          <p>HTML & CSS</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>JavaScript</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>PHP</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Python</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Kotlin</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Java</p>
-                        </a>
-                      </div>
-                      <div class="col">
-                        <a href="views/catalogue/index.html">
-                          <p>Figma</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Laravel</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Flutter</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>React Native</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>Vue JS</p>
-                        </a>
-                        <a href="views/catalogue/index.html">
-                          <p>React JS</p>
-                        </a>
-                      </div>
+          <div class=" w-[500px] mr-[263px]">
+            <ul class="flex justify-between font-medium">
+                <li>Flash Sale</li>
+                <li>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-[#34364a]  rounded-lg text-sm text-center inline-flex items-center" type="button">Kelas<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdown" class="z-40 hidden bg-white divide-y rounded-[16px]">
+                        <ul class="flex " >
+                            <li class="text-center bg-[#030334] items-center rounded-l-[16px] relative flex flex-col  ">
+                                <div class=" py-[53px] px-[33px] ">
+                                    <p class="text-[#47bb8e] text-[12px] font-semibold">Trusted by 900K students</p>
+                                    <h5 class="text-[24px] font-bold text-white leading-[36px]">
+                                        Build Your <br />
+                                        Future Career
+                                    </h5>
+                                    <p class="text-[14px] text-[#a9a4bc] font-normal">
+                                    Explore kelas gratis dan berbayar <br />
+                                    bersama mentor expert
+                                    </p>
+                                </div>
+                                <img src="../images/silhouette-project-bwa.png" alt="Image"  class="max-w-[294px] w-full absolute bottom-0 left-0">
+                                <a class="z-10 relative bg-[#2447f9] text-[16px] text-white rounded-[50px] font-bold px-[24px] py-[12px]">
+                                    All Course
+                                </a>
+                            </li>
+                            <li class="ml-[30px] py-[50px] mr-[38px]">
+                                <div class="grid grid-cols-3 gap-x-[50px]">
+                                    <div class="grid grid-rows-6 gap-y-[20px]">
+                                        <a href="views/catalogue/index.html">
+                                            <p class="">UI/UX Design</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Graphic Design</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Web Development</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Data Analysis</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Android Development</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">iOS Development</p>
+                                          </a>
+                                    </div>
+                                    <div class="grid grid-rows-6 gap-y-[20px]">
+                                        <a href="views/catalogue/index.html">
+                                            <p class="">HTML & CSS</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">JavaScript</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">PHP</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Python</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Kotlin</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Java</p>
+                                          </a>
+                                    </div>
+                                    <div class="grid grid-rows-6 gap-y-[20px]">
+                                        <a href="views/catalogue/index.html">
+                                            <p class="">Figma</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Laravel</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Flutter</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">React Native</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">Vue JS</p>
+                                          </a>
+                                          <a href="views/catalogue/index.html">
+                                            <p class="">React JS</p>
+                                          </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- {{-- Alur Belajar --}} -->
-              <li class="nav-item d-flex flex-column justify-content-start align-items-start dropdown">
-                <a class="nav-link dropdown-toggle" href="views/journey/index.html" id="listAlurBelajarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Alur Belajar </a>
-                <ul class="dropdown-menu __2022" aria-labelledby="listAlurBelajarDropdown">
-                  <li class="sidecontent">
-                    <p>Trusted by 900K+ Students</p>
-                    <h5>
-                      Follow Our <br />
-                      Best Roadmap
-                    </h5>
-                    <p>
-                      Panduan mentor expert untuk <br />
-                      belajar jadi lebih terarah
-                    </p>
-                    <a href="views/journey/index.html" class="btn btn-primary">All Roadmap</a>
-                    <img src="images/silhouette-roadmap-bwa.png" alt="roadmap" />
-                  </li>
-                  <div class="dd-item-list">
-                    <!-- {{-- Full-Stack Website Developer --}} -->
-                    <li class="dropdown-item">
-                      <a href="views/journey/show.html">
-                        <img src="images/ic_appcode.svg" class="icon" alt="bwa-icon" />
-                      </a>
-                      <a href="views/journey/show.html">
-                        <h3 class="title">Full-Stack Website Developer</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                      </a>
-                    </li>
-                    <!-- {{-- UI/UX Designer --}} -->
-                    <li class="dropdown-item">
-                      <a href="views/journey/show.html">
-                        <img src="images/ic_design.svg" class="icon" alt="bwa-icon" />
-                      </a>
-                      <a href="views/journey/show.html">
-                        <h3 class="title">UI/UX Designer</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                      </a>
-                    </li>
-                    <!-- {{-- Mobile App Developer --}} -->
-                    <li class="dropdown-item">
-                      <a href="views/journey/show.html">
-                        <img src="images/ic_flutter.svg" class="icon" alt="bwa-icon" />
-                      </a>
-                      <a href="views/journey/show.html">
-                        <h3 class="title">Mobile App Developer</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                      </a>
-                    </li>
-                    <!-- {{-- Product Manager --}} -->
-                    <li class="dropdown-item">
-                      <a href="views/journey/show.html">
-                        <img src="images/ic_flag.svg" class="icon" alt="bwa-icon" />
-                      </a>
-                      <a href="views/journey/show.html">
-                        <h3 class="title">Product Manager</h3>
-                        <p class="subtitle">Rekomendasi oleh mentor expert</p>
-                      </a>
-                    </li>
-                  </div>
-                </ul>
-              </li>
-
-              <!-- {{-- Bootcamp --}} -->
-              <li class="nav-item">
-                <a class="nav-link" href="views/bootcamp/bootcamp-katalog.html"> Bootcamp </a>
-              </li>
+                </li>
+                <li>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown-1" class="text-[#34364a] font- rounded-lg text-sm text-[16px] text-center inline-flex items-center" type="button">Alur Belajar<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdown-1" class="z-40 hidden bg-white divide-y rounded-[16px]">
+                        <ul class="flex" >
+                            <li class="text-center bg-[#030334] items-center rounded-l-[16px] relative flex flex-col">
+                                <div class=" py-[63px] px-[44px] ">
+                                    <p class="text-[#47bb8e] text-[12px] font-semibold">Trusted by 900K students</p>
+                                    <h5 class="text-[24px] font-bold text-white leading-[36px]">
+                                        Follow Our <br />
+                                        Best Roadmap
+                                    </h5>
+                                    <p class="text-[14px] text-[#a9a4bc] font-normal">
+                                        Panduan mentor expert untuk <br />
+                                        belajar jadi lebih terarah
+                                    </p>
+                                </div>
+                                    <a class="z-10 relative bg-[#2447f9] text-[16px] text-white rounded-[50px] font-bold px-[24px] py-[12px]">
+                                        All Roadmap
+                                      </a>
+                                    <img src="../images/silhouette-roadmap-bwa.png" alt="Image"  class="max-w-[294px] w-full absolute bottom-0 left-0">
+                            </li>
+                            <li class="py-[50px] px-[38px]">
+                                <div class="grid grid-cols-1 gap-y-[24px]">
+                                    <div class="flex items-center gap-x-[14px]">
+                                        <a href="views/journey/show.html">
+                                            <img src="../images/ic_appcode.svg" class="icon" width="48" alt="bwa-icon" />
+                                          </a>
+                                          <a href="views/journey/show.html">
+                                            <h3 class="text-[#34364a] font-medium capitalize">Full-Stack Website Developer</h3>
+                                            <p class="text-[14px] text-[#999aa4] font-light">Rekomendasi oleh mentor expert</p>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-x-[14px]">
+                                        <a href="views/journey/show.html">
+                                            <img src="../images/ic_design.svg" class="icon" width="48" alt="bwa-icon" />
+                                          </a>
+                                          <a href="views/journey/show.html">
+                                            <h3 class="text-[#34364a] font-medium capitalize">UI/UX Designer</h3>
+                                            <p class="text-[14px] text-[#999aa4] font-light">Rekomendasi oleh mentor expert</p>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-x-[14px]">
+                                        <a href="views/journey/show.html">
+                                            <img src="../images/ic_flutter.svg" class="icon" alt="bwa-icon" />
+                                          </a>
+                                          <a href="views/journey/show.html">
+                                            <h3 class="text-[#34364a] font-medium capitalize">Mobile App Developer</h3>
+                                            <p class="text-[14px] text-[#999aa4] font-light">Rekomendasi oleh mentor expert</p>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center gap-x-[14px]">
+                                        <a href="views/journey/show.html">
+                                            <img src="../images/ic_flag.svg" class="icon" alt="bwa-icon" />
+                                          </a>
+                                          <a href="views/journey/show.html">
+                                            <h3 class="text-[#34364a] font-medium capitalize">Product Manager</h3>
+                                            <p class="text-[14px] text-[#999aa4] font-light">Rekomendasi oleh mentor expert</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Bootcamp</li>
             </ul>
-
-            <!-- {{-- RIGHT Menu --}} -->
-            <ul class="navbar-nav right-menu ms-auto">
-              <li class="nav-item d-flex align-items-center">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="CTRL+P" data-bs-custom-class="font-poppins">
-                  <button type="button" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#quickSearchModal">
-                    <img class="search" src="images/ic_search.svg" alt="search buildwith angga" />
-                  </button>
-                </span>
-              </li>
-              <li class="nav-item wrap-btn-daftar">
-                <a class="btn btn-secondary btn-auth btn-daftar d-xl-none" href="">Masuk</a>
-                <button class="btn btn-secondary btn-auth btn-daftar btn-auth d-none d-xl-flex justify-content-center align-items-center" style="width: 160px !important">Masuk/Daftar</button>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <ul class=" flex ml-[263px] gap-x-[20px] items-center">
+          <li>
+              <button class="bg-[#e5e9f2] rounded-[100px] p-[12px] ">
+                  <img src="../images/ic_search_white.svg" width="30" alt="">
+              </button>
+          </li>
+          <li>
+              <button class="bg-[#e5e9f2] rounded-[100px] p-[12px] text-[#34364a] font-semibold py-[12px] px-[24px]">
+                  Masuk/Daftar
+              </button>
+          </li>
+      </ul>
         </div>
       </nav>
       <!-- hero -->
@@ -829,7 +831,7 @@
           </div>
 
           <!-- {{-- Companies --}} -->
-          <div class="lg:flex mt-70 ml-[-24px]">
+          <div class="lg:flex mt-70">
             <img src="images/landing-page/hero/companies-x-bwa.svg" alt="BuildWithAngga" />
           </div>
         </div>
@@ -2035,5 +2037,6 @@
         $(".flickity-viewport").css("overflow", "visible");
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
   </body>
 </html>
